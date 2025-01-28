@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.accordion {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.accordion-header {
+    padding: 15px;
+    background: #f1f1f1;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-header:first-child {
+    border-top: none;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0 15px;
+    border-top: 1px solid #ddd;
+}

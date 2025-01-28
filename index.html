@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трехуровневый Аккордеон</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="accordion-header">Массив</div>
+        <div class="accordion-content">
+            <div class="accordion-header">Массив — это структура данных, используемая в программировании для хранения
+                коллекции однотипных элементов. Массивы
+                позволяют организовать данные в упорядоченную последовательность, что облегчает доступ и управление
+                элементами</div>
+            <div class="accordion-content">
+                <div class="accordion-header">Упорядоченность:</div>
+                <div class="accordion-content">Элементы массива хранятся в определенном порядке, и каждому элементу
+                    присваивается индекс, который
+                    указывает на его позицию. Индексы начинаются с 0 в большинстве языков программирования.
+                </div>
+                <div class="accordion-header">Однотипность:</div>
+                <div class="accordion-content">
+                    В классических массивах все элементы имеют один и тот же тип данных (например, все элементы могут
+                    быть
+                    числами, строками и т. д.). В некоторых языках, таких как JavaScript, могут быть массивы с
+                    элементами разных типов.
+                </div>
+                <div class="accordion-header">Пример одномерного массива:</div>
+                <div class="accordion-content">
+                    const fruits = ['apple', 'banana', 'cherry'];
+                </div>
+                <div class="accordion-header">Пример двумерного массива:</div>
+                <div class="accordion-content">
+                    const matrix = [
+                    [1, 2, 3],
+                    [4, 5, 6],
+                    [7, 8, 9]
+                    ];
+                </div>
+                <div class="accordion-header">Основные операции с массивами:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Доступ к элементам: Элементы массива можно получать по индексу (например, fruits[0] вернет
+                            'apple').</li>
+                        <li>Изменение элементов: Можно изменять элементы массива, используя индексы (например, fruits[1]
+                            =
+                            'orange').</li>
+                        <li>Итерация: Можно проходить по массиву с помощью циклов (например, for, foreach и т.д.).</li>
+                        <li>Добавление и удаление: Зависит от языка, но многие имеют встроенные методы для добавления и
+                            удаления
+                            элементов
+                            (например, push и pop в JavaScript).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-header">Методы массива</div>
+            <div class="accordion-content">
+                <div class="accordion-header">Изменение массива</div>
+                <div class="accordion-content">
+                    <div class="accordion-header">push(element): Добавляет один или несколько элементов в конец массива
+                        и возвращает новую длину массива.
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>const fruits = ['apple', 'banana'];</li>
+                            <li>console.log(fruits); // ['apple', 'banana']</li>
+                            <li>fruits.push('cherry');</li>
+                            <li>console.log(fruits); // ['apple', 'banana', 'cherry']</li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header">pop(): Удаляет последний элемент массива и возвращает его
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>const fruits = ['apple', 'banana'];</li>
+                            <li>console.log(fruits); // ['apple', 'banana', 'cherry']</li>
+                            <li>const lastFruit = fruits.pop();</li>
+                            <li>console.log(lastFruit); // 'cherry'</li>
+                            <li>console.log(fruits); // ['apple', 'banana']</li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header">shift(): Удаляет первый элемент массива и возвращает его.
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>const fruits = ['apple', 'banana', 'cherry'];</li>
+                            <li>console.log(fruits); // ['apple', 'banana', 'cherry']</li>
+                            <li>const firstFruit = fruits.shift();</li>
+                            <li>console.log(firstFruit); // 'apple'</li>
+                            <li>console.log(fruits); // ['banana', 'cherry']</li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header">unshift(element): Добавляет один или несколько элементов в начало
+                        массива и возвращает новую длину массива.
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>const fruits = ['banana', 'cherry'];</li>
+                            <li>console.log(fruits); // ['banana', 'cherry']</li>
+                            <li>fruits.unshift('apple');</li>
+                            <li>console.log(fruits); // ['apple', 'banana', 'cherry']</li>
+                        </ul>
+                    </div>
+                    <div class="accordion-header">splice(start, deleteCount, item1, item2, ...): Удаляет, заменяет или
+                        добавляет элементы в массив, начиная с указанного
+                        индекса..
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>start - индекс с которого начнется изменение массива, "-1" - послений элемент массива,
+                                "-2"
+                                предпоследний и т.д.</li>
+                            <li>deleteCount - количество удаляемых элементов включая start и элементы идущие за ним</li>
+                            <li>item - новые элементы массива встают на место start</li>
+                            <li>const fruits = ['apple', 'banana', 'cherry'];</li>
+                            <li>console.log(fruits); // ['apple', 'banana', 'cherry']</li>
+                            <li>fruits.splice(1, 1, 'orange');</li>
+                            <li>console.log(fruits); // ['apple', 'orange', 'cherry']</li>
+                        </ul>
+                    </div>
+                    <!-- ////////////////////////////////////////////////////////////////////////////// -->
+                    <div class="accordion-header">slice(start, end): Возвращает новый массив, содержащий копию части
+                        оригинального массива.
+                    </div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>start - индекс с которого начинается копирование</li>
+                            <li>end - индекс на котором заканчивается копирование, не включая этот элемент (не
+                                обязательный)</li>
+                            <li>const fruits = ['apple', 'banana', 'cherry'];</li>
+                            <li>const citrus = fruits.slice(1);</li>
+                            <li>console.log(citrus); // ['banana', 'cherry']</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-header">1</div>
+        <div class="accordion-content">
+            <div class="accordion-header">2</div>
+            <div class="accordion-content">
+                <div class="accordion-header">3</div>
+                <div class="accordion-content">текст</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<!-- 2. Поиск и фильтрация
+
+indexOf(element): Возвращает индекс первого найденного элемента. Если элемент не найден, возвращает -1.
+
+
+javascript
+
+Копировать код
+const fruits = ['apple', 'banana', 'cherry'];
+const index = fruits.indexOf('banana'); // 1
+
+find(callback): Возвращает первый элемент массива, который удовлетворяет условию, заданному в функции.
+
+
+javascript
+
+Копировать код
+const numbers = [1, 2, 3, 4, 5];
+const found = numbers.find(num => num > 3); // 4
+
+filter(callback): Создает новый массив с элементами, которые прошли проверку, заданную в функции.
+
+
+javascript
+
+Копировать код
+const numbers = [1, 2, 3, 4, 5];
+const evens = numbers.filter(num => num % 2 === 0); // [2, 4]
+3. Итерация
+
+forEach(callback): Выполняет указанную функцию один раз для каждого элемента массива.
+
+
+javascript
+
+Копировать код
+const fruits = ['apple', 'banana', 'cherry'];
+fruits.forEach(fruit => console.log(fruit));
+
+map(callback): Создает новый массив, заполняя его результатами вызова функции для каждого элемента.
+
+
+javascript
+
+Копировать код
+const fruits = ['apple', 'banana', 'cherry'];
+const lengths = fruits.map(fruit => fruit.length); // [5, 6, 6]
+4. Сортировка и преобразование
+
+sort(compareFunction): Сортирует элементы массива на месте и возвращает отсортированный массив.
+
+
+javascript
+
+Копировать код
+const numbers = [4, 2, 5, 1, 3];
+numbers.sort(); // [1, 2, 3, 4, 5]
+
+reverse(): Разворачивает элементы массива на месте.
+
+
+javascript
+
+Копировать код
+const fruits = ['apple', 'banana', 'cherry'];
+fruits.reverse(); // ['cherry', 'banana', 'apple']
+
+join(separator): Объединяет все элементы массива в строку, используя указанную строку в качестве разделителя.
+
+
+javascript
+
+Копировать код
+const fruits = ['apple', 'banana', 'cherry'];
+const result = fruits.join(', '); // 'apple, banana, cherry'
+5. Другие методы
+
+includes(element): Проверяет, содержит ли массив определенный элемент, возвращает true или false.
+
+
+javascript
+
+Копировать код
+const fruits = ['apple', 'banana', 'cherry'];
+const hasBanana = fruits.includes('banana'); // true
+
+concat(array): Объединяет два или более массивов и возвращает новый массив.
+
+
+javascript
+
+Копировать код
+const fruits1 = ['apple', 'banana'];
+const fruits2 = ['cherry', 'orange'];
+const allFruits = fruits1.concat(fruits2); // ['apple', 'banana', 'cherry', 'orange']
+
+every(callback): Проверяет, удовлетворяют ли все элементы массива условию, заданному в функции.
+
+
+javascript
+
+Копировать код
+const numbers = [1, 2, 3, 4, 5];
+const allPositive = numbers.every(num => num > 0); // true
+Эти методы предоставляют мощный инструментарий для работы с массивами в JavaScript. -->
