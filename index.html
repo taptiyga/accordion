@@ -12,23 +12,37 @@
     <div class="accordion">
         <div class="accordion-header">МАССИВ</div>
         <div class="accordion-content">
-            <div class="accordion-header">Определение</div>
+            <div class="accordion-header level-2">Определение</div>
             <div class="accordion-content">
-                В JavaScript массив — это специальный объект, который используется для хранения упорядоченных коллекций
-                значений.
-                Массивы в JavaScript имеют несколько особенностей и методов, которые делают их мощным инструментом для
-                работы с данными.
+                <ul>
+                    <li>В JavaScript массив — это специальный объект, который используется для хранения упорядоченных
+                        коллекций
+                        значений.</li>
+                    <li> Массивы в JavaScript имеют несколько особенностей и методов, которые делают их мощным
+                        инструментом для
+                        работы с данными.</li>
+                </ul>
+
+
             </div>
-            <div class="accordion-header">Создание массива</div>
+            <div class="accordion-header level-2">Создание массива</div>
             <div class="accordion-content">
-                <div class="accordion-header">с использованием литералов массива</div>
-                <div class="accordion-content">let fruits = ['apple', 'banana', 'orange'];</div>
-                <div class="accordion-header">с помощью конструктора Array</div>
-                <div class="accordion-content">let numbers = new Array(1, 2, 3, 4, 5);</div>
+                <div class="accordion-header level-3">с использованием литералов массива</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let fruits = ['apple', 'banana', 'orange'];</li>
+                    </ul>
+                </div>
+                <div class="accordion-header level-3">с помощью конструктора Array</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let numbers = new Array(1, 2, 3, 4, 5);</li>
+                    </ul>
+                </div>
             </div>
-            <div class="accordion-header">Доступ к элементам массива</div>
+            <div class="accordion-header level-2">Доступ к элементам массива</div>
             <div class="accordion-content">
-                <div class="accordion-header">вы можете получить доступ к элементам массива, используя их индекс
+                <div class="accordion-header level-3">вы можете получить доступ к элементам массива, используя их индекс
                     (нумерация начинается с 0):</div>
                 <div class="accordion-content">
                     <ul>
@@ -39,9 +53,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="accordion-header">Изменение элементов массива</div>
+            <div class="accordion-header level-2">Изменение элементов массива</div>
             <div class="accordion-content">
-                <div class="accordion-header">вы можете изменять элементы массива, обращаясь к их индексу:</div>
+                <div class="accordion-header level-3">вы можете изменять элементы массива, обращаясь к их индексу:</div>
                 <div class="accordion-content">
                     <ul>
                         <li>let fruits = ['apple', 'banana', 'orange'];</li>
@@ -50,11 +64,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="accordion-header">Методы массива</div>
+            <div class="accordion-header level-2">Методы массива</div>
             <div class="accordion-content">
-                <div class="accordion-header">изменение массива</div>
+                <div class="accordion-header level-3">изменение массива</div>
                 <div class="accordion-content">
-                    <div class="accordion-header">push(element): добавляет один или несколько элементов в конец массива
+                    <div class="accordion-header level-4">push(element): добавляет один или несколько элементов
+                        в конец
+                        массива
                         и возвращает новую длину массива.</div>
                     <div class="accordion-content">
                         <ul>
@@ -64,7 +80,8 @@
                             <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
                         </ul>
                     </div>
-                    <div class="accordion-header">pop(): удаляет последний элемент массива и возвращает его.</div>
+                    <div class="accordion-header level-4">pop(): удаляет последний элемент массива и возвращает его.
+                    </div>
                     <div class="accordion-content">
                         <ul>
                             <li>let fruits = ['apple', 'banana', 'orange'];</li>
@@ -74,17 +91,19 @@
                             <li>console.log(fruits); // ['apple', 'banana']</li>
                         </ul>
                     </div>
-                    <div class="accordion-header">shift(): удаляет первый элемент массива и возвращает его.</div>
+                    <div class="accordion-header level-4">shift(): удаляет первый элемент массива и возвращает его.
+                    </div>
                     <div class="accordion-content">
                         <ul>
                             <li>let fruits = ['apple', 'banana', 'orange'];</li>
                             <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
                             <li>let firstFruit = fruits.shift();</li>
                             <li>console.log(firstFruit); // 'apple'</li>
-                            <li>console.log(fruits); // ['banana', 'orange']</li>
+                            <li>console.log(fruits); // level-4['banana', 'orange']</li>
                         </ul>
                     </div>
-                    <div class="accordion-header">unshift(element): добавляет один или несколько элементов в начало
+                    <div class="accordion-header level-4">unshift(element): добавляет один или несколько элементов в
+                        начало
                         массива и возвращает новую длину массива.</div>
                     <div class="accordion-content">
                         <ul>
@@ -103,9 +122,10 @@
 
 
 
-                <div class="accordion-header">изменение и поиск данных</div>
+                <div class="accordion-header level-3">изменение и поиск данных</div>
                 <div class="accordion-content">
-                    <div class="accordion-header">splice(start, deleteCount, item1, item2, ...): изменяет содержимое
+                    <div class="accordion-header level-4">splice(start, deleteCount, item1, item2, ...): изменяет
+                        содержимое
                         массива, удаляя или добавляя элементы.</div>
                     <div class="accordion-content">
                         <ul>
@@ -115,7 +135,8 @@
                             <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
                         </ul>
                     </div>
-                    <div class="accordion-header">pop(): удаляет последний элемент массива и возвращает его.</div>
+                    <div class="accordion-header level-4">pop(): удаляет последний элемент массива и возвращает его.
+                    </div>
                     <div class="accordion-content">
                         <ul>
                             <li>let fruits = ['apple', 'banana', 'orange'];</li>
@@ -125,7 +146,8 @@
                             <li>console.log(fruits); // ['apple', 'banana']</li>
                         </ul>
                     </div>
-                    <div class="accordion-header">shift(): удаляет первый элемент массива и возвращает его.</div>
+                    <div class="accordion-header level-4">shift(): удаляет первый элемент массива и возвращает его.
+                    </div>
                     <div class="accordion-content">
                         <ul>
                             <li>let fruits = ['apple', 'banana', 'orange'];</li>
@@ -135,7 +157,8 @@
                             <li>console.log(fruits); // ['banana', 'orange']</li>
                         </ul>
                     </div>
-                    <div class="accordion-header">unshift(element): добавляет один или несколько элементов в начало
+                    <div class="accordion-header level-4">unshift(element): добавляет один или несколько элементов в
+                        начало
                         массива и возвращает новую длину массива.</div>
                     <div class="accordion-content">
                         <ul>
@@ -169,11 +192,11 @@
 
 
 
-        <div class="accordion-header">1</div>
+        <div class="accordion-header level-1">1</div>
         <div class="accordion-content">
-            <div class="accordion-header">2</div>
+            <div class="accordion-header level-2">2</div>
             <div class="accordion-content">
-                <div class="accordion-header">3</div>
+                <div class="accordion-header level-3">3</div>
                 <div class="accordion-content">текст</div>
             </div>
         </div>
