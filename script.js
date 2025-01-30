@@ -30,8 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-let fruits = ['apple', 'banana', 'orange'];
-console.log(fruits); // ['apple', 'banana', 'orange']
-let allLongFruits = fruits.every(fruit => fruit.length > 2); // true или false
-console.log(allLongFruits); // true
-console.log(fruits); // ['orange', 'banana', 'apple']
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+let person = new Person('Иван', 30);
+console.log(person); // { name: 'Иван', age: 30, isStudent: false }

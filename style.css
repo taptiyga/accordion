@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 ul {
@@ -40,7 +40,7 @@ li {
     display: none;
     padding: 0 0px;
     border-top: 1px solid #ddd;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .active {
@@ -50,17 +50,17 @@ li {
 .level-2 {
     padding: 12px 15px;
     background-color: #e7e7e7;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .level-3 {
     padding: 9px 15px;
     background-color: #dddddd;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .level-4 {
     padding: 9px 15px;
     background-color: #d4d4d4;
-    font-size: 13px;
+    font-size: 15px;
 }
