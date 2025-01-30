@@ -29,3 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits); // ['apple', 'banana', 'orange']
+let allLongFruits = fruits.every(fruit => fruit.length > 2); // true или false
+console.log(allLongFruits); // true
+console.log(fruits); // ['orange', 'banana', 'apple']

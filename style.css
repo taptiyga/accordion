@@ -1,7 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
 body {
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 16px;
+}
+
+ul {
+    padding: 10px 10px 10px 20px;
+}
+
+li {
+    margin-bottom: 5px;
 }
 
 .accordion {
