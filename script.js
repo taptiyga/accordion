@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+let fruits = ['apple', 'banana', 'orange'];
+console.log(fruits); // ['apple', 'banana', 'orange']
+fruits.splice(1, 1, 'grape'); // Меняет 'banana' на 'grape'
 // Пошаговое объяснение
 
 // Добавление обработчика события для загрузки страницы:
@@ -117,8 +121,3 @@ document.addEventListener("DOMContentLoaded", () => {
 //                     Итог
 // Таким образом, этот код создает аккордеон, позволяющий пользователю открывать и закрывать содержимое, скрывая все остальные открытые секции на том же уровне.Если пользователь кликнет по заголовку, соответствующее содержимое откроется или закроется, в зависимости от его текущего состояния.
 
-const fruits = ['apple', 'banana', 'cherry'];
-console.log(fruits)
-const citrus = fruits.slice(1); // ['banana', 'cherry']
-console.log(citrus)
-console.log(fruits)
