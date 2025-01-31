@@ -374,6 +374,154 @@
 
 
 
+
+
+
+
+
+
+
+        <!-- ОБЪЕКТЫ -->
+        <div class="accordion-header level-1">ОБЪЕКТЫ</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <ul>
+                    <li> В JavaScript объекты представляют собой коллекции свойств, где каждое свойство состоит из ключа
+                        и
+                        значения. Объекты
+                        могут содержать различные типы данных, включая строки, числа, массивы и даже другие объекты. Они
+                        являются основным
+                        способом организации и хранения данных в JavaScript.
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Определение конец -->
+            <!-- Создание объектов -->
+            <div class="accordion-header level-2">Создание объектов</div>
+            <div class="accordion-content">
+                <!-- литерал объекта -->
+                <div class="accordion-header level-3">литерал объекта</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30,<br>
+                            &emsp;isStudent: false<br>
+                            };</li>
+                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
+                    </ul>
+                </div>
+                <!-- литерал объекта конец -->
+                <!-- конструктор объекта -->
+                <div class="accordion-header level-3">конструктор объекта</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = new Object();<br>
+                            person.name = 'Иван';<br>
+                            person.age = 30;<br>
+                            person.isStudent = false;</li>
+                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
+                    </ul>
+                </div>
+                <!-- конструктор объекта конец -->
+                <!-- классы (ES6) -->
+                <div class="accordion-header level-3">классы (ES6)</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>class Person {<br>
+                            &emsp;constructor(name, age) {<br>
+                            &emsp;&emsp;this.name = name;<br>
+                            &emsp;&emsp;this.age = age;<br>
+                            &emsp;}<br>
+                            }</li>
+                        <li>let person = new Person('Иван', 30);<br>
+                            console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
+                    </ul>
+                </div>
+                <!-- классы (ES6) конец -->
+            </div>
+            <!-- Создание объектов конец -->
+            <!-- Доступ к свойствам -->
+            <div class="accordion-header level-2">Доступ к свойствам</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">свойства объекта можно получить с помощью точечной нотации или
+                    квадратных скобок:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30<br>
+                            };
+                        </li>
+                        <li>console.log(person.name); // 'Иван'</li>
+                        <li>console.log(person['age']); // 30</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Доступ к свойствам конец -->
+            <!-- Изменение свойств -->
+            <div class="accordion-header level-2">Изменение свойств</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">свойства объекта можно изменять с помощью точечной нотации или
+                    квадратных скобок:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30<br>
+                            };</li>
+                        <li>person.age = 31;</li>
+                        <li>console.log(person); // {name: 'Иван', age: 31}</li>
+                        <li>person['age'] = 32;</li>
+                        <li>console.log(person); // {name: 'Иван', age: 32}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Изменение свойств конец -->
+            <!-- Добавление и удаление свойств -->
+            <div class="accordion-header level-2">Добавление и удаление свойств</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">свойства объекта можно добавлять и удалять с помощью точечной
+                    нотации или
+                    квадратных скобок:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30<br>
+                            };</li>
+                        <li>person.gender = 'мужской'; // person['gender'] = 'мужской'; добавление свойства</li>
+                        <li>console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}</li>
+                        <li>delete person.age; // delete person['age']; удаление свойства</li>
+                        <li>console.log(person); // {name: 'Иван', gender: 'мужской'}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Добавление и удаление свойств конец -->
+
+
+        </div>
+        <!-- ОБЪЕКТЫ конец-->
+        <!-- ФУНКЦИИ -->
+        <div class="accordion-header level-1">ФУНКЦИИ</div>
+        <div class="accordion-content">
+            <div class="accordion-header level-2">2</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">3</div>
+                <div class="accordion-content">текст</div>
+            </div>
+        </div>
+        <!-- ФУНКЦИИ конец -->
+
+
+
+
+
+
+
         <!-- <div class="accordion-header level-2">2</div>
         <div class="accordion-content">
             <div class="accordion-header level-3">3</div>
@@ -388,85 +536,6 @@
 
         <!-- <div class="accordion-header level-3">3</div>
 <div class="accordion-content">текст</div> -->
-
-
-
-
-
-
-
-        <div class="accordion-header level-1">ОБЪЕКТЫ</div>
-        <div class="accordion-content">
-            <div class="accordion-header level-2">Определение</div>
-            <div class="accordion-content">
-                <ul>
-                    <li> В JavaScript объекты представляют собой коллекции свойств, где каждое свойство состоит из ключа
-                        и
-                        значения. Объекты
-                        могут содержать различные типы данных, включая строки, числа, массивы и даже другие объекты. Они
-                        являются основным
-                        способом организации и хранения данных в JavaScript.
-                    </li>
-                </ul>
-
-            </div>
-            <div class="accordion-header level-2">Создание объектов</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">Литерал объекта</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30,<br>
-                            &emsp;isStudent: false<br>
-                            };</li>
-                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
-                    </ul>
-                </div>
-                <div class="accordion-header level-3">Конструктор объекта</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = new Object();<br>
-                            person.name = 'Иван';<br>
-                            person.age = 30;<br>
-                            person.isStudent = false;</li>
-                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
-                    </ul>
-                </div>
-                <div class="accordion-header level-3">Классы (ES6)</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>class Person {<br>
-                            &emsp;constructor(name, age) {<br>
-                            &emsp;&emsp;this.name = name;<br>
-                            &emsp;&emsp;this.age = age;<br>
-                            &emsp;}<br>
-                            }</li>
-                        <li>let person = new Person('Иван', 30);<br>
-                            console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="accordion-header level-1">ФУНКЦИИ</div>
-        <div class="accordion-content">
-            <div class="accordion-header level-2">2</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">3</div>
-                <div class="accordion-content">текст</div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -498,53 +567,6 @@
 </html>
 <!-- 
 
-
-Вот основные моменты, которые стоит знать об объектах в JavaScript:
-
-### 
-
-- ****:
-
-```
-
-```
-- ****:
-
-```
-
-```
-- ****:
-
-```
-
-```
-
-### Доступ к свойствам
-
-Свойства объекта можно получить с помощью точечной нотации или квадратных скобок:
-
-```
-console.log(person.name); // 'Иван'
-console.log(person['age']); // 30
-```
-
-### Изменение свойств
-
-Вы можете изменять значения свойств объекта:
-
-```
-person.age = 31;
-console.log(person.age); // 31
-```
-
-### Добавление и удаление свойств
-
-Вы можете добавлять новые свойства или удалять существующие:
-
-```
-person.gender = 'мужской'; // добавление свойства
-delete person.isStudent; // удаление свойства
-```
 
 ### Итерация по свойствам
 

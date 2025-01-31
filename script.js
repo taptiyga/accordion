@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-}
+let person = {
+    name: 'Иван',
+    age: 30
+};
 
-let person = new Person('Иван', 30);
-console.log(person); // { name: 'Иван', age: 30, isStudent: false }
+person.gender = 'мужской'; // или person['gender'] = 'мужской'; добавление свойства
+console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}
+delete person.age; // или delete person['age']; удаление свойства
+console.log(person); // {name: 'Иван', gender: 'мужской'}
