@@ -29,13 +29,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-let person = {
-    name: 'Иван',
-    age: 30
-};
-
-person.gender = 'мужской'; // или person['gender'] = 'мужской'; добавление свойства
-console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}
-delete person.age; // или delete person['age']; удаление свойства
-console.log(person); // {name: 'Иван', gender: 'мужской'}

@@ -12,6 +12,10 @@ body {
     font-size: 18px;
 }
 
+p {
+    padding: 10px;
+}
+
 ul {
     padding: 10px 10px 10px 20px;
 }
