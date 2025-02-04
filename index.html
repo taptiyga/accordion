@@ -714,362 +714,713 @@
 
 
 
-        <!-- МАССИВ -->
-        <div class="accordion-header">МАССИВ</div>
+        <!-- МАССИВЫ -->
+        <div class="accordion-header level-1">МАССИВЫ</div>
         <div class="accordion-content">
-            <!-- Определение -->
-            <div class="accordion-header level-2">Определение</div>
+            <!-- Методы массивов -->
+            <div class="accordion-header level-2">Методы массивов</div>
             <div class="accordion-content">
-                <ul>
-                    <li>В JavaScript массив — это специальный объект, который используется для хранения упорядоченных
-                        коллекций
-                        значений.</li>
-                    <li> Массивы в JavaScript имеют несколько особенностей и методов, которые делают их мощным
-                        инструментом для
-                        работы с данными.</li>
-                </ul>
-            </div>
-            <!-- Определение конец -->
-            <!-- Создание массива -->
-            <div class="accordion-header level-2">Создание массива</div>
-            <div class="accordion-content">
-                <!-- с использованием литералов массива -->
-                <div class="accordion-header level-3">с использованием литералов массива</div>
+                <!-- добавление элементов -->
+                <div class="accordion-header level-3">добавление элементов</div>
                 <div class="accordion-content">
-                    <ul>
-                        <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                    </ul>
-                </div>
-                <!-- с использованием литералов массива конец -->
-                <!-- с помощью конструктора Array -->
-                <div class="accordion-header level-3">с помощью конструктора Array</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let numbers = new Array(1, 2, 3, 4, 5);</li>
-                    </ul>
-                </div>
-                <!-- с помощью конструктора Array -->
-            </div>
-            <!-- Создание массива конец -->
-            <!-- Доступ к элементам массива -->
-            <div class="accordion-header level-2">Доступ к элементам массива</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">вы можете получить доступ к элементам массива, используя их индекс
-                    (нумерация начинается с 0):</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                        <li>console.log(fruits[0]); // apple</li>
-                        <li>let numbers = new Array(1, 2, 3, 4, 5);</li>
-                        <li>console.log(numbers[2]); // 3</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Доступ к элементам массива конец -->
-            <!-- Изменение элементов массива -->
-            <div class="accordion-header level-2">Изменение элементов массива</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">вы можете изменять элементы массива, обращаясь к их индексу:</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                        <li>fruits[1] = 'grape';</li>
-                        <li>console.log(fruits); // ['apple', 'grape', 'orange']</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Изменение элементов массива конец -->
-            <!-- Наиболее распространенные методы массивов -->
-            <div class="accordion-header level-2">Наиболее распространенные методы массивов:</div>
-            <div class="accordion-content">
-                <!-- изменение массива -->
-                <div class="accordion-header level-3">изменение массива</div>
-                <div class="accordion-content">
-                    <!-- push(element): -->
-                    <div class="accordion-header level-4">push(element): добавляет один или несколько элементов
-                        в конец
-                        массива
-                        и возвращает новую длину массива.</div>
+                    <!-- push(): -->
+                    <div class="accordion-header level-4">push(): Этот метод добавляет один или несколько элементов в
+                        конец массива и возвращает новую длину массива.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana']</li>
-                            <li>fruits.push('orange');</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana'];<br>
+                            console.log(fruits); //['apple', 'banana]<br>
+                            fruits.push('orange');<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']
+                        </p>
                     </div>
-                    <!-- push(element): конец -->
+                    <!-- push(): конец-->
+                    <!-- unshift(): -->
+                    <div class="accordion-header level-4">unshift(): Этот метод добавляет один или несколько элементов в
+                        начало массива и также возвращает новую длину
+                        массива.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana'];<br>
+                            console.log(fruits); // ['apple', 'banana']<br>
+                            fruits.unshift('orange');<br>
+                            console.log(fruits); // ['orange', 'apple', 'banana']
+                        </p>
+                    </div>
+                    <!-- unshift(): конец-->
+                    <!-- splice(): -->
+                    <div class="accordion-header level-4">splice(): Этот метод может использоваться для добавления
+                        элементов в произвольное место массива. Он изменяет
+                        содержимое массива, удаляя или заменяя существующие элементы и/или добавляя новые.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana']; <br>
+                            console.log(fruits); // ['apple', 'banana']<br>
+                            fruits.splice(1, 0, 'orange'); // добавляет 'orange' на индекс 1<br>
+                            console.log(fruits); // ['apple', 'orange', 'banana']
+                        </p>
+                    </div>
+                    <!-- splice(): конец-->
+                    <!-- Расширение массива с помощью оператора распространения (...): -->
+                    <div class="accordion-header level-4">Расширение массива с помощью оператора распространения (...):
+                        Вы можете создать новый массив, добавляя элементы к
+                        существующему массиву.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana']; <br>
+                            console.log(fruits); // ['apple', 'banana'] <br>
+                            let newFruits = [...fruits, 'orange']; <br>
+                            console.log(newFruits); // ['apple', 'banana', 'orange']
+                        </p>
+                    </div>
+                    <!-- Расширение массива с помощью оператора распространения (...): конец-->
+                    <!-- concat(): -->
+                    <div class="accordion-header level-4">concat(): Этот метод объединяет два или более массивов и
+                        возвращает новый массив. Вы можете использовать его для
+                        добавления элементов.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana'];<br>
+                            console.log(fruits); // ['apple', 'banana']<br>
+                            let newFruits = fruits.concat('orange');<br>
+                            console.log(newFruits); // ['apple', 'banana', 'orange']
+                        </p>
+                    </div>
+                    <!-- concat(): конец-->
+                </div>
+                <!-- добавление элементов конец-->
+                <!-- удаление элементов -->
+                <div class="accordion-header level-3">удаление элементов</div>
+                <div class="accordion-content">
                     <!-- pop(): -->
-                    <div class="accordion-header level-4">pop(): удаляет последний элемент массива и возвращает его.
-                    </div>
+                    <div class="accordion-header level-4">pop(): Удаляет последний элемент из массива и возвращает его.
+                        Если массив пуст, возвращает undefined.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let lastFruit = fruits.pop();</li>
-                            <li>console.log(lastFruit); // 'orange'</li>
-                            <li>console.log(fruits); // ['apple', 'banana']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            let lastFruit = fruits.pop();<br>
+                            console.log(lastFruit) // 'orange'<br>
+                            console.log(fruits); // ['apple', 'banana']
+                        </p>
                     </div>
-                    <!-- pop(): конец -->
+                    <!-- pop(): конец-->
                     <!-- shift(): -->
-                    <div class="accordion-header level-4">shift(): удаляет первый элемент массива и возвращает его.
-                    </div>
+                    <div class="accordion-header level-4">shift(): Удаляет первый элемент из массива и возвращает его.
+                        Если
+                        массив пуст, возвращает undefined.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let firstFruit = fruits.shift();</li>
-                            <li>console.log(firstFruit); // 'apple'</li>
-                            <li>console.log(fruits); // level-4['banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            let firstFruit = fruits.shift();<br>
+                            console.log(firstFruit); // 'apple'<br>
+                            console.log(fruits); // ['banana', 'orange']
+                        </p>
                     </div>
-                    <!-- shift(): конец -->
-                    <!-- unshift(element): -->
-                    <div class="accordion-header level-4">unshift(element): добавляет один или несколько элементов в
-                        начало
-                        массива и возвращает новую длину массива.</div>
+                    <!-- shift(): конец-->
+                    <!-- splice(): -->
+                    <div class="accordion-header level-4">splice(): Может использоваться для удаления элементов из
+                        произвольного места массива. Он изменяет содержимое
+                        массива, удаляя или заменяя существующие элементы и/или добавляя новые.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>fruits.unshift('kiwi');</li>
-                            <li>console.log(fruits); // ['kiwi', 'apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            let removedFruits = fruits.splice(1, 1); // Удаляет 1 элемент с индекса 1<br>
+                            console.log(fruits); // ['apple', 'orange']<br>
+                            console.log(removedFruits); // ['banana']
+                        </p>
                     </div>
-                    <!-- unshift(element): конец -->
+                    <!-- splice(): конец-->
+                    <!-- filter(): -->
+                    <div class="accordion-header level-4">filter(): Создает новый массив с элементами, которые прошли
+                        проверку, заданную в предоставленной функции. Это
+                        позволяет "удалить" элементы, которые не соответствуют условию.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            let filteredFruits = fruits.filter(fruit => fruit !== 'banana'); // Удаляет 'banana'<br>
+                            console.log(filteredFruits); // ['apple', 'orange']<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']
+                        </p>
+                    </div>
+                    <!-- filter(): конец-->
+                    <!-- slice(): -->
+                    <div class="accordion-header level-4">slice(): Хотя этот метод не удаляет элементы, он может
+                        использоваться для создания нового массива, исключая
+                        определенные элементы.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            let newFruits = fruits.slice(1); // Создает новый массив, начиная с индекса 1<br>
+                            console.log(newFruits); // ['banana', 'orange']<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']
+                        </p>
+                    </div>
+                    <!-- slice(): конец-->
                 </div>
-                <!-- изменение массива конец -->
-                <!-- изменение и поиск данных -->
-                <div class="accordion-header level-3">изменение и поиск данных</div>
+                <!-- удаление элементов конец-->
+                <!-- изменение элементов массива -->
+                <div class="accordion-header level-3">изменение элементов массива</div>
                 <div class="accordion-content">
-                    <!-- splice -->
-                    <div class="accordion-header level-4">splice(start, deleteCount, item1, item2, ...): изменяет
-                        содержимое массива, удаляя или добавляя элементы.</div>
+                    <!-- Прямое присваивание: -->
+                    <div class="accordion-header level-4">Прямое присваивание: Вы можете изменить элемент массива,
+                        обратившись к его индексу и присвоив новое значение.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let removed = fruits.splice(0, 2, 'strawberry', 'kiwi');</li>
-                            <li>0 - индекс изменяемого элемента</li>
-                            <li>2 - количество удаляемых элементов, включая 'start'</li>
-                            <li>'strawberry', 'kiwi' - добавлякмые элементы на место 'start'</li>
-                            <li>console.log(removed); // ['apple', 'banana']</li>
-                            <li>console.log(fruits); // ['strawberry', 'kiwi', 'orange']</li>
-                        </ul>
+                        let fruits = ['apple', 'banana', 'orange'];<br>
+                        console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                        fruits[1] = 'kiwi'; // Изменяет 'banana' на 'kiwi'<br>
+                        console.log(fruits); // ['apple', 'kiwi', 'orange']
                     </div>
-                    <!-- splice конец -->
-                    <!-- slice -->
-                    <div class="accordion-header level-4">slice(start, end): возвращает новый массив, который является
-                        копией части исходного массива.
-                    </div>
+                    <!-- Прямое присваивание: конец-->
+                    <!-- splice(): -->
+                    <div class="accordion-header level-4">splice(): Этот метод может использоваться не только для
+                        добавления и удаления элементов, но и для замены
+                        существующих элементов.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let citrus = fruits.slice(0, 2);</li>
-                            <li>0 - индекс стартового элемента</li>
-                            <li>2 - индекс элемента до которого обрезать не включая его</li>
-                            <li>console.log(citrus); // ['apple', 'banana']</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange', 'strawberry'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange', 'strawberry']<br>
+                            fruits.splice(1, 2, 'kiwi', 'grape'); // Удаляет 2 элемента начиная с индекса 1 и добавляет
+                            'kiwi' и 'grape' с индекса 1<br>
+                            console.log(fruits); // ['apple', 'kiwi', 'grape', 'strawberry']
+                        </p>
                     </div>
-                    <!-- slice конец -->
-                    <!-- indexOf -->
-                    <div class="accordion-header level-4">indexOf(element): возвращает первый индекс, по которому данный
-                        элемент может быть найден.
-                    </div>
+                    <!-- splice(): конец-->
+                    <!-- map(): -->
+                    <div class="accordion-header level-4">map(): Этот метод создает новый массив, в котором каждый
+                        элемент изменен в соответствии с заданной функцией.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let index = fruits.indexOf('banana');</li>
-                            <li>console.log(index); // 1</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            let updatedFruits = fruits.map(fruit => fruit === 'banana' ? 'kiwi' : fruit);<br>
+                            console.log(updatedFruits); // ['apple', 'kiwi', 'orange']<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']
+                        </p>
                     </div>
-                    <!-- indexOf конец -->
-                    <!-- includes -->
-                    <div class="accordion-header level-4">includes(element): проверяет, содержит ли массив
-                        определённый элемент, возвращает true или false.</div>
+                    <!-- map(): конец-->
+                    <!-- forEach(): -->
+                    <div class="accordion-header level-4">forEach(): Этот метод позволяет выполнить функцию для каждого
+                        элемента массива. Однако он не возвращает новый
+                        массив, поэтому для изменения элементов нужно использовать прямое присваивание.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let hasApple = fruits.includes('kiwi');</li>
-                            <li>console.log(hasApple); // false</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            fruits.forEach((fruit, index) => {<br>
+                            &emsp;if (fruit === 'banana') {<br>
+                            &emsp;&emsp;fruits[index] = 'kiwi'; // Изменяет 'banana' на 'kiwi'<br>
+                            &emsp;}<br>
+                            });<br>
+                            console.log(fruits); // ['apple', 'kiwi', 'orange']
+                        </p>
                     </div>
-                    <!-- includes конец -->
+                    <!-- forEach(): конец-->
+                    <!-- fill(): -->
+                    <div class="accordion-header level-4">fill(): Этот метод заполняет все элементы массива статическим
+                        значением от начального до конечного индекса.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']<br>
+                            fruits.fill('kiwi', 1, 2); // Заполняет элемент с индекса 1 до 2 значением 'kiwi'<br>
+                            console.log(fruits); // ['apple', 'kiwi', 'orange']
+                        </p>
+                    </div>
+                    <!-- fill(): конец-->
                 </div>
-                <!-- изменение и поиск данных конец -->
-                <!-- итерация по массиву -->
-                <div class="accordion-header level-3">итерация по массиву</div>
+                <!-- изменение элементов массива конец-->
+                <!-- поиск элементов массива -->
+                <div class="accordion-header level-3">поиск элементов массива</div>
                 <div class="accordion-content">
-                    <!-- forEach -->
-                    <div class="accordion-header level-4">forEach(callback): выполняет указанную 'callback' функцию один
-                        раз для
+                    <!-- indexOf(): -->
+                    <div class="accordion-header level-4">indexOf(): Возвращает первый индекс, по которому данный
+                        элемент может быть найден в массиве, или -1, если элемент
+                        не найден.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let index = fruits.indexOf('banana'); // 1<br>
+                            console.log(index);
+                        </p>
+                    </div>
+                    <!-- indexOf(): конец-->
+                    <!-- find(): -->
+                    <div class="accordion-header level-3">find(): Возвращает значение первого найденного элемента в
+                        массиве, который удовлетворяет предоставленной функции.
+                        Если ни один элемент не удовлетворяет условию, возвращает undefined.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let foundFruit = fruits.find(fruit => fruit.startsWith('b'));<br>
+                            console.log(foundFruit); // 'banana'
+                        </p>
+                    </div>
+                    <!-- find(): конец-->
+                    <!-- findIndex(): -->
+                    <div class="accordion-header level-3">findIndex(): Возвращает индекс первого элемента в массиве,
+                        который удовлетворяет предоставленной функции. Если ни
+                        один элемент не удовлетворяет условию, возвращает -1.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let foundIndex = fruits.findIndex(fruit => fruit.startsWith('o')); <br>
+                            console.log(foundIndex); // 2
+                        </p>
+                    </div>
+                    <!-- findIndex(): конец-->
+                </div>
+                <!-- поиск элементов массива конец-->
+                <!-- фильтрация элементов массива -->
+                <div class="accordion-header level-3">фильтрация элементов массива</div>
+                <div class="accordion-content">
+                    <!-- filter(): -->
+                    <div class="accordion-header level-4">filter(): Создает новый массив с элементами, которые прошли
+                        проверку, заданную в предоставленной функции.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let filteredFruits = fruits.filter(fruit => fruit.includes('n'));<br>
+                            console.log(filteredFruits); // ['banana', 'orange']
+                        </p>
+                    </div>
+                    <!-- filter(): конец-->
+                    <!-- some(): -->
+                    <div class="accordion-header level-3">some(): Проверяет, удовлетворяет ли хотя бы один элемент
+                        массива условию, заданному в предоставленной функции.
+                        Возвращает true или false.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let hasBanana = fruits.some(fruit => fruit === 'banana');<br>
+                            console.log(hasBanana); // true
+                        </p>
+                    </div>
+                    <!-- some(): конец-->
+                    <!-- every(): -->
+                    <div class="accordion-header level-3">every(): Проверяет, удовлетворяют ли все элементы массива
+                        условию, заданному в предоставленной функции. Возвращает
+                        true или false.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let allHaveA = fruits.every(fruit => fruit.includes('n'));<br>
+                            console.log(allHaveA); // false
+                        </p>
+                    </div>
+                    <!-- every(): конец-->
+                </div>
+                <!-- фильтрация элементов массива конец-->
+                <!-- сортировка элементов массива -->
+                <div class="accordion-header level-3">сортировка элементов массива</div>
+                <div class="accordion-content">
+                    <!-- sort(): -->
+                    <div class="accordion-header level-4">sort(): Этот метод сортирует элементы массива на месте и
+                        возвращает отсортированный массив. По умолчанию сортировка
+                        происходит по строковому значению.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['banana', 'apple', 'orange'];<br>
+                            fruits.sort(); // Сортирует массив по алфавиту<br>
+                            console.log(fruits); // ['apple', 'banana', 'orange']
+                        </p>
+                        <p>Для сортировки чисел необходимо передать функцию сравнения:</p>
+                        <p>
+                            let numbers = [10, 2, 5, 1, 8];<br>
+                            numbers.sort((a, b) => a - b); // Сортирует массив по возрастанию<br>
+                            console.log(numbers); // [1, 2, 5, 8, 10]
+                        </p>
+                        <p>
+                            let numbers = [10, 2, 5, 1, 8];<br>
+                            numbers.sort((a, b) => b - a); // Сортирует массив по убыванию<br>
+                            console.log(numbers); // [1, 2, 5, 8, 10]</p>
+                    </div>
+                    <!-- sort(): конец-->
+                </div>
+                <!-- сортировка элементов массива конец-->
+                <!-- преобразование элементов массива -->
+                <div class="accordion-header level-3">преобразование элементов массива</div>
+                <div class="accordion-content">
+                    <!-- reduce(): -->
+                    <div class="accordion-header level-4">reduce(): Этот метод применяет функцию к аккумулятору и
+                        каждому элементу массива (слева направо), чтобы уменьшить его до
+                        одного значения.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3, 4];<br>
+                            let sum = numbers.reduce((accumulator, current) => accumulator + current, 0);<br>
+                            console.log(sum); // 10
+                        </p>
+                    </div>
+                    <!-- reduce(): конец-->
+                    <!-- flat(): -->
+                    <div class="accordion-header level-3">flat(): Этот метод создает новый массив с элементами всех
+                        подмассивов, объединенными в один уровень.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let nestedArray = [1, [2, 3], [4, 5]];<br>
+                            let flatArray = nestedArray.flat();<br>
+                            console.log(flatArray); // [1, 2, 3, 4, 5]
+                        </p>
+                    </div>
+                    <!-- flat(): конец-->
+                    <!-- map(): -->
+                    <div class="accordion-header level-3">map(): Как уже упоминалось, этот метод создает новый массив, в
+                        котором каждый элемент изменен в соответствии с заданной
+                        функцией.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3];<br>
+                            let doubled = numbers.map(num => num * 2);<br>
+                            console.log(doubled); // [2, 4, 6]
+                        </p>
+                    </div>
+                    <!-- map(): конец-->
+                </div>
+                <!-- преобразование элементов массива конец-->
+                <!-- объединение массивов -->
+                <div class="accordion-header level-3">объединение массивов</div>
+                <div class="accordion-content">
+                    <!-- concat(): -->
+                    <div class="accordion-header level-4">concat(): Этот метод используется для объединения двух или
+                        более массивов.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let array1 = [1, 2];<br>
+                            let array2 = [3, 4];<br>
+                            let combined = array1.concat(array2);<br>
+                            console.log(combined); // [1, 2, 3, 4]
+                        </p>
+                    </div>
+                    <!-- concat(): конец-->
+                    <!-- spread operator: -->
+                    <div class="accordion-header level-3">spread operator: Также можно использовать оператор
+                        распространения для объединения массивов.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let array1 = [1, 2];<br>
+                            let array2 = [3, 4];<br>
+                            let combined = [...array1, ...array2];<br>
+                            console.log(combined); // [1, 2, 3, 4]
+                        </p>
+                    </div>
+                    <!-- spread operator: конец-->
+                </div>
+                <!-- объединение массивов конец-->
+                <!-- итерация по элементам массива -->
+                <div class="accordion-header level-3">итерация по элементам массива</div>
+                <div class="accordion-content">
+                    <!-- forEach(): -->
+                    <div class="accordion-header level-4">forEach(): Этот метод выполняет указанную функцию один раз для
                         каждого элемента массива.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>fruits.forEach(fruit => console.log(fruit));</li>
-                            <li>// apple</li>
-                            <li>// banana</li>
-                            <li>// orange</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            fruits.forEach(fruit => {<br>
+                            &emsp;console.log(fruit);<br>
+                            });<br>
+                            // Вывод: apple, banana, orange
+                        </p>
                     </div>
-                    <!-- forEach конец -->
-                </div>
-                <!-- итерация по массиву конец -->
-                <!-- фильтрация и преобразование данных -->
-                <div class="accordion-header level-3">фильтрация и преобразование данных</div>
-                <div class="accordion-content">
-                    <!-- filter -->
-                    <div class="accordion-header level-4">filter(callback): создаёт новый массив с элементами, которые
-                        прошли тест, заданный функцией.</div>
+                    <!-- forEach(): конец-->
+                    <!-- for...of: -->
+                    <div class="accordion-header level-4">for...of: Этот цикл позволяет перебрать элементы массива,
+                        предоставляя доступ к каждому элементу.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let longFruits = fruits.filter(fruit => fruit.length > 5);</li>
-                            <li>console.log(longFruits); // ['banana', 'orange']</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            for (let fruit of fruits) {<br>
+                            &emsp;console.log(fruit);<br>
+                            }<br>
+                            // Вывод: apple, banana, orange
+                        </p>
                     </div>
-                    <!-- filter конец -->
-                    <!-- map -->
-                    <div class="accordion-header level-4">map(callback)**: создаёт новый массив с результатами вызова
-                        функции для каждого элемента.</div>
+                    <!-- for...of: конец-->
+                    <!-- for...in: -->
+                    <div class="accordion-header level-4">for...in: Этот цикл используется для перебора индексов
+                        массива. Однако его лучше использовать для объектов, так
+                        как он может не работать должным образом с массивами.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let upperCaseFruits = fruits.map(fruit => fruit.toUpperCase());</li>
-                            <li>console.log(upperCaseFruits); // ['APPLE', 'BANANA', 'ORANGE']</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            for (let index in fruits) {<br>
+                            &emsp;console.log(fruits[index]);<br>
+                            }<br>
+                            // Вывод: apple, banana, orange
+                        </p>
                     </div>
-                    <!-- map конец -->
-                </div>
-                <!-- фильтрация и преобразование данных конец -->
-                <!-- сортировка и объединение -->
-                <div class="accordion-header level-3">сортировка и объединение</div>
-                <div class="accordion-content">
-                    <!-- sort -->
-                    <div class="accordion-header level-4">sort(compareFunction): сортирует элементы массива на месте и
-                        возвращает массив.</div>
+                    <!-- for...in: конец-->
+                    <!-- map(): -->
+                    <div class="accordion-header level-4">map(): Этот метод создает новый массив, содержащий результаты
+                        вызова указанной функции для каждого элемента
+                        массива.</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['banana', 'apple', 'orange'];</li>
-                            <li>console.log(fruits); // ['banana', 'apple', 'orange']</li>
-                            <li>fruits.sort(); // Сортировка по алфавиту</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                        </ul>
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let upperCaseFruits = fruits.map(fruit => fruit.toUpperCase());<br>
+                            console.log(upperCaseFruits); // ['APPLE', 'BANANA', 'ORANGE']
+                        </p>
                     </div>
-                    <!-- sort конец -->
-                    <!-- reverse -->
-                    <div class="accordion-header level-4">reverse(): инвертирует порядок элементов массива.</div>
+                    <!-- map(): конец-->
+                    <!-- примененик итерации -->
+                    <div class="accordion-header level-4">примененик итерации</div>
                     <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>fruits.reverse();</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
-                    </div>
-                    <!-- reverse конец -->
-                    <!-- concat -->
-                    <div class="accordion-header level-4">concat(array1, array2, ...): объединяет два или более массивов
-                        и возвращает новый массив.</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let allFruits = fruits.concat(['pear', 'pineapple']);</li>
-                            <li>console.log(allFruits); // ['apple', 'banana', 'orange', 'pear', 'pineapple']</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
-                    </div>
-                    <!-- concat конец -->
-                    <!-- join -->
-                    <div class="accordion-header level-4">join(separator): объединяет все элементы массива в строку,
-                        разделяя их указанным разделителем.</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let fruitString = fruits.join(', ');</li>
-                            <li>console.log(fruitString); // apple, banana, orange</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
-                    </div>
-                    <!-- join конец -->
-                </div>
-                <!-- сортировка и объединение конец -->
+                        <p>
+                            Итерация по массивам позволяет выполнять различные операции, такие как:</p>
+                        <p>- Применение функций к каждому элементу массива.</p>
 
-                <!-- уникальные возможности -->
-                <div class="accordion-header level-3">уникальные возможности</div>
-                <div class="accordion-content">
-                    <!-- find(callback) -->
-                    <div class="accordion-header level-4">find(callback): возвращает первый элемент, который
-                        соответствует условию, заданному в функции.</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let foundFruit = fruits.find(fruit => fruit.length > 5);</li>
-                            <li>console.log(foundFruit); // banana</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
+                        <p>- Изменение значений элементов.</p>
+
+                        <p>- Сбор данных в новый массив или объект.</p>
+
+                        <p> Выбор метода итерации зависит от конкретной задачи и желаемого результата. Например, если
+                            нужно просто выполнить
+                            действие для каждого элемента, лучше использовать forEach(). Если нужно создать новый массив
+                            на основе существующего, то
+                            подойдет map().
+                        </p>
                     </div>
-                    <!-- find(callback) конец -->
-                    <!-- findIndex -->
-                    <div class="accordion-header level-4">findIndex(callback): возвращает индекс первого элемента,
-                        который соответствует условию, или -1, если не найдено.</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let index = fruits.findIndex(fruit => fruit.length > 5);</li>
-                            <li>console.log(index); // 1</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
-                    </div>
-                    <!-- findIndex конец -->
-                    <!-- some -->
-                    <div class="accordion-header level-4">some(callback): проверяет, удовлетворяет ли хотя бы один
-                        элемент массива условию, возвращаемому функцией.</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let hasLongFruit = fruits.some(fruit => fruit.length > 5); // true или false</li>
-                            <li>console.log(hasLongFruit); // true</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
-                    </div>
-                    <!-- some -->
-                    <!-- every -->
-                    <div class="accordion-header level-4">every(callback): проверяет, удовлетворяют ли все элементы
-                        массива условию, возвращаемому функцией.</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>let fruits = ['apple', 'banana', 'orange'];</li>
-                            <li>console.log(fruits); // ['apple', 'banana', 'orange']</li>
-                            <li>let allLongFruits = fruits.every(fruit => fruit.length > 2); // true или false</li>
-                            <li>console.log(allLongFruits); // true</li>
-                            <li>console.log(fruits); // ['orange', 'banana', 'apple']</li>
-                        </ul>
-                    </div>
-                    <!-- every конец -->
+                    <!-- примененик итерации конец-->
                 </div>
-                <!-- уникальные возможности конец -->
+                <!-- итерация по элементам массива конец-->
+                <!-- методы проверки массивов -->
+                <div class="accordion-header level-3">методы проверки массивов</div>
+                <div class="accordion-content">
+                    <!-- includes(): -->
+                    <div class="accordion-header level-4">includes(): Этот метод проверяет, содержит ли массив
+                        определённый элемент, и возвращает true или false.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits.includes('banana')); // true<br>
+                            console.log(fruits.includes('grape')); // false
+                        </p>
+                    </div>
+                    <!-- includes(): конец-->
+                    <!-- indexOf(): -->
+                    <div class="accordion-header level-4">indexOf(): Этот метод возвращает первый индекс, по которому
+                        данный элемент может быть найден в массиве, или -1,
+                        если элемент не найден.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            console.log(fruits.indexOf('banana')); // 1<br>
+                            console.log(fruits.indexOf('grape')); // -1
+                        </p>
+                    </div>
+                    <!-- indexOf(): конец-->
+                    <!-- find(): -->
+                    <div class="accordion-header level-4">find(): Этот метод возвращает значение первого элемента
+                        массива, который удовлетворяет предоставленной функции.
+                        Если ни один элемент не удовлетворяет, возвращает undefined.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3, 4, 5];<br>
+                            let found = numbers.find(num => num > 3);<br>
+                            console.log(found); // 4
+                        </p>
+                    </div>
+                    <!-- find(): конец-->
+                    <!-- some(): -->
+                    <div class="accordion-header level-4">some(): Этот метод проверяет, удовлетворяет ли хотя бы один
+                        элемент массива условию, заданному в предоставленной
+                        функции. Возвращает true или false.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3, 4, 5];<br>
+                            let hasEven = numbers.some(num => num % 2 === 0);<br>
+                            console.log(hasEven); // true
+                        </p>
+                    </div>
+                    <!-- some(): конец-->
+                    <!-- every(): -->
+                    <div class="accordion-header level-4">every(): Этот метод проверяет, удовлетворяют ли все элементы
+                        массива условию, заданному в предоставленной функции.
+                        Возвращает true или false.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [2, 4, 6, 8];<br>
+                            let allEven = numbers.every(num => num % 2 === 0);<br>
+                            console.log(allEven); // true
+                        </p>
+                    </div>
+                    <!-- every(): конец-->
+                    <!-- применение -->
+                    <div class="accordion-header level-4">применение</div>
+                    <div class="accordion-content">
+                        <p>
+                            Методы проверки массивов позволяют:</p>
+                        <p>- Определять наличие элементов в массиве.</p>
+
+                        <p>- Находить элементы по заданным критериям.</p>
+
+                        <p>- Проверять условия для одного или всех элементов массива.</p>
+
+                        <p>Выбор метода проверки зависит от конкретной задачи. Например, если нужно узнать, есть ли
+                            элемент в массиве, лучше
+                            использовать includes(). Если нужно найти элемент по условию, подойдет find().
+                        </p>
+                    </div>
+                    <!-- применение конец-->
+                </div>
+                <!-- методы проверки массивов конец-->
+                <!-- копирование массивов -->
+                <div class="accordion-header level-3">копирование массивов</div>
+                <div class="accordion-content">
+                    <!-- Метод slice(): -->
+                    <div class="accordion-header level-4">Метод slice(): Этот метод возвращает новый массив, содержащий
+                        копию части исходного массива. Если не передать
+                        аргументы, он создаст полную копию массива.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let originalArray = [1, 2, 3, 4, 5];<br>
+                            let copiedArray = originalArray.slice();<br>
+                            console.log(copiedArray); // [1, 2, 3, 4, 5]
+                        </p>
+                    </div>
+                    <!-- Метод slice(): конец-->
+                    <!-- Оператор распространения (spread operator): -->
+                    <div class="accordion-header level-3">Оператор распространения (spread operator): С помощью
+                        оператора ... можно создать новый массив, который будет
+                        содержать элементы другого массива.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let originalArray = [1, 2, 3, 4, 5];<br>
+                            let copiedArray = [...originalArray];<br>
+                            console.log(copiedArray); // [1, 2, 3, 4, 5]
+                        </p>
+                    </div>
+                    <!-- Оператор распространения (spread operator): конец-->
+                </div>
+                <!-- копирование массивов конец-->
+                <!-- метод преобразования массивов в строки -->
+                <div class="accordion-header level-3">метод преобразования массивов в строки</div>
+                <div class="accordion-content">
+                    <!-- join(): -->
+                    <div class="accordion-header level-4">join(): Этот метод объединяет все элементы массива в строку,
+                        используя указанный разделитель. Если разделитель не
+                        указан, по умолчанию используется запятая.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange'];<br>
+                            let result = fruits.join(', ');<br>
+                            console.log(result); // "apple, banana, orange"
+                        </p>
+                    </div>
+                    <!-- join(): конец-->
+                    <!-- toString(): -->
+                    <div class="accordion-header level-4">toString(): Этот метод возвращает строковое представление
+                        массива, элементы которого также разделены запятыми.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3, 4, 5];<br>
+                            let result = numbers.toString();<br>
+                            console.log(result); // "1,2,3,4,5"
+                        </p>
+                    </div>
+                    <!-- toString(): конец-->
+                    <!-- String(): -->
+                    <div class="accordion-header level-4">String(): Преобразует массив в строку, используя метод
+                        toString().</div>
+                    <div class="accordion-content">
+                        <p>
+                            let mixedArray = [1, 'apple', true];<br>
+                            let result = String(mixedArray);<br>
+                            console.log(result); // "1,apple,true"
+                        </p>
+                    </div>
+                    <!-- String(): конец-->
+                    <!-- применение -->
+                    <div class="accordion-header level-4">применение</div>
+                    <div class="accordion-content">
+                        <p>
+                            Преобразование массивов в строки позволяет:</p>
+                        <p> - Формировать удобочитаемые представления данных для отображения.</p>
+
+                        <p> - Подготавливать данные для передачи в другие функции или API.</p>
+
+                        <p>- Упрощать работу с текстовыми данными, когда необходимо объединить элементы массива в одну
+                            строку.</p>
+
+                        <p>Выбор метода преобразования зависит от конкретной задачи. Например, если нужно создать строку
+                            с определённым
+                            разделителем, лучше использовать join(). Если же требуется просто получить строковое
+                            представление массива, можно
+                            воспользоваться toString().
+                        </p>
+                    </div>
+                    <!-- применение конец-->
+                </div>
+                <!-- метод преобразования массивов в строки конец-->
+                <!-- методы преобразования строк в массив -->
+                <div class="accordion-header level-3">методы преобразования строк в массив</div>
+                <div class="accordion-content">
+                    <!-- Метод split(): -->
+                    <div class="accordion-header level-4">Метод split(): Этот метод разбивает строку на массив подстрок,
+                        используя указанный разделитель. Если разделитель
+                        не указан, строка будет разбита на массив, содержащий один элемент — саму строку.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let str = "apple,banana,orange";<br>
+                            let fruitsArray = str.split(",");<br>
+                            console.log(fruitsArray); // ["apple", "banana", "orange"]
+                        </p>
+                    </div>
+                    <!-- Метод split(): конец-->
+                    <!-- Метод Array.from(): -->
+                    <div class="accordion-header level-4">Метод Array.from(): Этот метод создает новый массив из
+                        массивоподобного или итерируемого объекта. Например, можно
+                        использовать его для преобразования строки в массив символов.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let str = "hello";<br>
+                            let charArray = Array.from(str);<br>
+                            console.log(charArray); // ["h", "e", "l", "l", "o"]
+                        </p>
+                    </div>
+                    <!-- Метод Array.from(): конец-->
+                    <!-- Оператор распространения (spread operator): -->
+                    <div class="accordion-header level-4">Оператор распространения (spread operator): С помощью
+                        оператора ... можно преобразовать строку в массив символов.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let str = "world";<br>
+                            let charArray = [...str];<br>
+                            console.log(charArray); // ["w", "o", "r", "l", "d"]
+                        </p>
+                    </div>
+                    <!-- Оператор распространения (spread operator): конец-->
+                    <!-- применение -->
+                    <div class="accordion-header level-4">применение</div>
+                    <div class="accordion-content">
+                        <p>
+                            Преобразование строк в массивы позволяет:</p>
+                        <p> - Разделять текстовые данные на отдельные элементы для дальнейшей обработки.</p>
+
+                        <p> - Упрощать манипуляции с текстом, например, при анализе или изменении отдельных символов или
+                            слов.</p>
+
+                        <p> - Подготавливать данные для работы с массивами, когда необходимо выполнять операции, такие
+                            как фильтрация или
+                            сортировка.</p>
+
+                        <p> Выбор метода преобразования зависит от конкретной задачи. Например, если нужно разбить
+                            строку на слова или элементы,
+                            лучше использовать split(). Если требуется получить массив символов, можно воспользоваться
+                            Array.from() или оператором
+                            распространения.
+                        </p>
+                    </div>
+                    <!-- применение конец-->
+                </div>
+                <!-- методы преобразования строк в массив конец-->
             </div>
-            <!-- Наиболее распространенные методы массивов конец -->
+            <!-- Методы массивов конец-->
         </div>
-        <!-- МАССИВ конец -->
+        <!-- МАССИВЫ конец -->
 
 
 
