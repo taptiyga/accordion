@@ -360,9 +360,14 @@
                     которые могут изменяться
                     в процессе выполнения программы. Они позволяют разработчикам сохранять значения и обращаться к ним
                     по имени, что делает
-                    код более читаемым и управляемым.</p>
-                <p>переменные объявляются с помощь "let" и "const"</p>
-                <p>в старом коде можно встретить объявление с помощью "var"</p>
+                    код более читаемым и управляемым.<br>
+                    переменные объявляются с помощь "let" и "const"<br>
+                    в старом коде можно встретить объявление с помощью "var"</p>
+                <p>декларирование let x;</p>
+                <p>присваивание x = 5;</p>
+                <p>обычно делается и декларирование и присваивание в одной строке <br> let x = 5;<br>let a = 1, b=2,
+                    c=3;</p>
+                <p>константы сразу декларируются с присваением <br> const y = 5;</p>
             </div>
             <!-- Определение конец-->
             <!-- var -->
@@ -606,88 +611,144 @@
             <!-- Примитивные типы данных -->
             <div class="accordion-header level-2">Примитивные типы данных</div>
             <div class="accordion-content">
-                <!-- Number -->
-                <div class="accordion-header level-3">Number</div>
+                <!-- number -->
+                <div class="accordion-header level-3">number</div>
                 <div class="accordion-content">
                     <p>Представляет числовые значения, как целые, так и дробные.</p>
-                    <p>let num = 42;<br>
-                        let pi = 3.14;</p>
+                    <p>const num = 42;<br>
+                        const pi = 3.14;<br>
+                        console.log(typeof num) // number
+                    </p>
                 </div>
-                <!-- Number конец-->
-                <!-- Boolean -->
-                <div class="accordion-header level-3">Boolean</div>
+                <!-- number конец-->
+                <!-- string -->
+                <div class="accordion-header level-3">string</div>
+                <div class="accordion-content">
+                    <p>Представляет строковые значения. Всё что записано в ковычках является строкой.</p>
+                    <p>
+                        const firstName = "Dmitrii";<br>
+                        console.log(typeof firstName); // string<br>
+                        const age = '41';<br>
+                        console.log(typeof age); // string
+                    </p>
+                </div>
+                <!-- string конец-->
+                <!-- boolean -->
+                <div class="accordion-header level-3">boolean</div>
                 <div class="accordion-content">
                     <p>Представляет логические значения: true или false.</p>
-                    <p>let isActive = true;<br>
-                        let isComplete = false;</p>
+                    <p>
+                        const isActive = true;<br>
+                        console.log(typeof isActive); // boolean<br>
+                        const isComplete = false;<br>
+                        console.log(typeof isComplete); // boolean
+                    </p>
                 </div>
-                <!-- Boolean конец-->
-                <!-- Null -->
-                <div class="accordion-header level-3">Null</div>
+                <!-- boolean конец-->
+                <!-- null -->
+                <div class="accordion-header level-3">null</div>
                 <div class="accordion-content">
                     <p>Представляет намеренное отсутствие значения. Это специальное значение, которое указывает на
                         "ничто".</p>
-                    <p>let y = null;</p>
+                    <p>
+                        const city = null;
+                        console.log(typeof city); // object историческая ошибка, оставленная для обратной совместимоси
+                    </p>
                 </div>
-                <!-- Null конец-->
-                <!-- Symbol (введен в ES6): -->
-                <div class="accordion-header level-3">Symbol (введен в ES6):</div>
+                <!-- null конец-->
+                <!-- undefined -->
+                <div class="accordion-header level-3">undefined</div>
+                <div class="accordion-content">
+                    <p>Представляет отсутствие значения, значение не определено</p>
+                    <p>
+                        let day;<br>
+                        console.log(day) // undefined<br>
+                        console.log(typeof day); // undefined<br>
+                        day = undefined;<br>
+                        console.log(day); // undefined
+                    </p>
+                </div>
+                <!-- undefined конец-->
+                <!-- symbol (введен в ES6): -->
+                <div class="accordion-header level-3">symbol (введен в ES6):</div>
                 <div class="accordion-content">
                     <p>Представляет уникальные и неизменяемые значения, которые могут быть использованы в качестве
                         идентификаторов для свойств
                         объектов.</p>
-                    <p>const uniqueId = Symbol('id');</p>
+                    <p>
+                        const uniqueId = Symbol('id');<br>
+                        console.log(typeof uniqueId); // symbol
+                    </p>
                 </div>
-                <!-- Symbol (введен в ES6): конец-->
-                <!-- BigInt (введен в ES11): -->
-                <div class="accordion-header level-3">BigInt (введен в ES11):</div>
+                <!-- symbol (введен в ES6): конец-->
+                <!-- bigInt (введен в ES11): -->
+                <div class="accordion-header level-3">bigInt (введен в ES11):</div>
                 <div class="accordion-content">
                     <p>Представляет целые числа произвольной длины. Используется для работы с числами, которые превышают
                         пределы типа Number.</p>
-                    <p>const bigNumber = BigInt(123456789012345678901234567890);</p>
-                </div>
-                <!-- BigInt (введен в ES11): конец-->
-            </div>
-            <!-- Примитивные типы данных конец-->
-            <!-- Сложные типы данных -->
-            <div class="accordion-header level-2">Сложные типы данны</div>
-            <div class="accordion-content">
-                <!-- Object: -->
-                <div class="accordion-header level-3">Object:</div>
-                <div class="accordion-content">
-                    <p>Представляет коллекцию свойств, где каждое свойство имеет ключ и значение. Объекты могут
-                        содержать любые типы данных,
-                        включая другие объекты.</p>
                     <p>
-                        let person = {<br>
-                        &emsp;name: "Alice",<br>
-                        &emsp;age: 25,<br>
-                        &emsp;isStudent: false<br>
-                        };
+                        const bigNumber = BigInt(123456789012345678901234567890);<br>
+                        console.log(typeof bigNumber); // bigint<br>
+                        const bigNumberN = 123456789012345678901234567890n;<br>
+                        console.log(typeof bigNumberN); // bigint
                     </p>
                 </div>
-                <!-- Object: конец-->
-                <!-- Array: -->
-                <div class="accordion-header level-3">Array:</div>
-                <div class="accordion-content">
-                    <p>Специальный тип объекта, который представляет упорядоченные коллекции значений. Элементы массива
-                        могут быть любого типа.</p>
-                    <p>let fruits = ["apple", "banana", "cherry"];</p>
-                </div>
-                <!-- Array: конец-->
-                <!-- Function: -->
-                <div class="accordion-header level-3">Function:</div>
-                <div class="accordion-content">
-                    <p>Функции в JavaScript также являются объектами. Они могут быть присвоены переменным, переданы как
-                        аргументы и возвращены
-                        из других функций.</p>
-                    <p>function greet() {<br>
-                        &emsp;console.log("Hello!");<br>
-                        }</p>
-                </div>
-                <!-- Function: конец-->
+                <!-- bigInt (введен в ES11): конец-->
             </div>
-            <!-- Сложные типы данных конец-->
+            <!-- Примитивные типы данных конец-->
+            <!-- Ссылочные типы данных -->
+            <div class="accordion-header level-2">Ссылочные типы данных</div>
+            <div class="accordion-content">
+                <!-- object: -->
+                <div class="accordion-header level-3">object</div>
+                <div class="accordion-content">
+                    <!-- объекты -->
+                    <div class="accordion-header level-4">объекты</div>
+                    <div class="accordion-content">
+                        <p>Представляет коллекцию свойств, где каждое свойство имеет ключ и значение. Объекты могут
+                            содержать любые типы данных,
+                            включая другие объекты.</p>
+                        <p>
+                            const person = {<br>
+                            &emsp;name: "Alice",<br>
+                            &emsp;age: 25,<br>
+                            &emsp;isStudent: false<br>
+                            &emsp;isActive<br>
+                            };<br>
+                            console.log(typeof person); // object
+                        </p>
+                    </div>
+                    <!-- объекты конец-->
+                    <!-- массивы -->
+                    <div class="accordion-header level-4">массивы</div>
+                    <div class="accordion-content">
+                        <p>Специальный тип объекта, который представляет упорядоченные коллекции значений. Элементы
+                            массива
+                            могут быть любого типа.</p>
+                        <p>
+                            let fruits = ["apple", "banana", "cherry"];<br>
+                            console.log(typeof fruits) // object
+                        </p>
+                    </div>
+                    <!-- массивы конец-->
+                    <!-- функции -->
+                    <div class="accordion-header level-4">функции</div>
+                    <div class="accordion-content">
+                        <p>Функции в JavaScript также являются объектами. Они могут быть присвоены переменным, переданы
+                            как
+                            аргументы и возвращены
+                            из других функций.</p>
+                        <p>function greet() {<br>
+                            &emsp;console.log("Hello!");<br>
+                            }<br>
+                            console.log(typeof greet); // function, но относится к объетам
+                        </p>
+                    </div>
+                    <!-- функции конец-->
+                </div>
+                <!-- object: конец-->
+            </div>
+            <!-- Ссылочные типы данных конец-->
             <!-- Рекомендации по использованию типов данных -->
             <div class="accordion-header level-2">Рекомендации по использованию типов данных</div>
             <div class="accordion-content">
@@ -702,18 +763,6 @@
             <!-- Рекомендации по использованию типов данных конец-->
         </div>
         <!-- ТИПЫ ДАННЫХ конец -->
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- МАССИВЫ -->
         <div class="accordion-header level-1">МАССИВЫ</div>
         <div class="accordion-content">
@@ -1620,51 +1669,3 @@
 </body>
 
 </html>
-<!-- 
-
-
-### Итерация по свойствам
-
-Для перебора свойств объекта можно использовать цикл for...in:
-
-```
-for (let key in person) {
-console.log(key + ': ' + person[key]);
-}
-```
-
-### Вложенные объекты
-
-Объекты могут содержать другие объекты:
-
-```
-let student = {
-name: 'Иван',
-courses: {
-math: 5,
-english: 4
-}
-};
-
-console.log(student.courses.math); // 5
-```
-
-### Методы объектов
-
-Объекты могут содержать функции, которые называются методами:
-
-```
-let person = {
-name: 'Иван',
-greet: function() {
-console.log('Привет, ' + this.name);
-}
-};
-
-person.greet(); // 'Привет, Иван'
-```
-
-### Заключение
-
-Объекты в JavaScript являются мощным инструментом для организации данных и создания сложных структур. Они позволяют
-создавать более понятный и управляемый код, что делает их неотъемлемой частью разработки на JavaScript. -->
