@@ -763,6 +763,280 @@
             <!-- Рекомендации по использованию типов данных конец-->
         </div>
         <!-- ТИПЫ ДАННЫХ конец -->
+        <!-- ОПЕРАТОРЫ -->
+        <div class="accordion-header level-1">ОПЕРАТОРЫ</div>
+        <div class="accordion-content">
+            <!-- Арифметические -->
+            <div class="accordion-header level-2">Арифметические</div>
+            <div class="accordion-content">
+                <!-- + сложение -->
+                <div class="accordion-header level-3">+ сложение</div>
+                <div class="accordion-content">
+                    <p>
+                        const sum = 10 + 5;<br>
+                        console.log(sum); // 15
+                    </p>
+                </div>
+                <!-- + сложение конец-->
+                <!-- - вычетание -->
+                <div class="accordion-header level-3">- вычетание</div>
+                <div class="accordion-content">
+                    <p>
+                        const subtraction = 10 - 5;<br>
+                        console.log(subtraction); // 5
+                    </p>
+                </div>
+                <!-- - вычетание конец-->
+                <!-- * умножение -->
+                <div class="accordion-header level-3">* умножение</div>
+                <div class="accordion-content">
+                    <p>
+                        const multiplication = 10 * 5;<br>
+                        console.log(multiplication); // 50
+                    </p>
+                </div>
+                <!-- * умножение конец-->
+                <!-- / деление -->
+                <div class="accordion-header level-3">/ деление</div>
+                <div class="accordion-content">
+                    <p>
+                        const division = 10 / 5;<br>
+                        console.log(division); // 2
+                    </p>
+                </div>
+                <!-- / деление конец-->
+                <!-- % остаток от деления -->
+                <div class="accordion-header level-3">% остаток от деления</div>
+                <div class="accordion-content">
+                    <p>
+                        const remainderOfDivision = 11 % 5;<br>
+                        console.log(remainderOfDivision); // 1
+                    </p>
+                </div>
+                <!-- % остаток от деления конец-->
+                <!-- ** возведение в степень -->
+                <div class="accordion-header level-3">** возведение в степень</div>
+                <div class="accordion-content">
+                    <p>
+                        const exponentiation = 5 ** 2;<br>
+                        console.log(exponentiation); // 25
+                    </p>
+                </div>
+                <!-- ** возведение в степень конец-->
+            </div>
+            <!-- Арифметические конец-->
+            <!-- Операторы сравнения -->
+            <div class="accordion-header level-2">Операторы сравнения</div>
+            <div class="accordion-content">
+                <!-- == не строгое равенство -->
+                <div class="accordion-header level-3">== не строгое равенство и != не равенство</div>
+                <div class="accordion-content">
+                    <p>сравнивает значения</p>
+                    <p>
+                        console.log(1 == 1); // true число 1 равно числу 1<br>
+                        console.log(1 == '1'); // true число 1 равно строке "1"<br>
+                        console.log(1 != 1); // false число 1 не не равно числу 1<br>
+                        console.log(1 != '1'); // false число 1 не не равно строке "1"
+                    </p>
+                </div>
+                <!-- == не строгое равенство конец-->
+                <!-- === строгое равенство -->
+                <div class="accordion-header level-3">=== строгое равенство и !== не равенство</div>
+                <div class="accordion-content">
+                    <p>сравнивает значения и типы</p>
+                    <p>
+                        console.log(1 === 1); // true число 1 равно числу 1<br>
+                        console.log(1 === '1'); // false число 1 не равно строке "1"<br>
+                        console.log(1 !== 1); // false число 1 не не равно числу 1<br>
+                        console.log(1 !== '1'); // true число 1 не равно строке "1"
+                    </p>
+                </div>
+                <!-- === строгое равенство конец-->
+                <!-- <,>,<=,>= -->
+                <div class="accordion-header level-3">больше, меньше, больше или равно, меньше или равно</div>
+                <div class="accordion-content">
+                    <p>сравноваются только значения, а не типы</p>
+                    <p>
+                        console.log(1 > 1); // false<br>
+                        console.log(1 < '1' ); // false<br>
+                            console.log(1 >= 1); // true<br>
+                            console.log(1 <= '1' ); // true </p>
+                </div>
+                <!-- <,>,<=,>= конец-->
+            </div>
+            <!-- Операторы сравнения конец-->
+            <!-- Логические операторы -->
+            <div class="accordion-header level-2">Логические операторы</div>
+            <div class="accordion-content">
+                <!-- && (И) -->
+                <div class="accordion-header level-3">&& (И)</div>
+                <div class="accordion-content">
+                    <p>вернет true, когда все условия правда</p>
+                    <p>
+                        console.log(true && true) // true<br>
+                        console.log(false && true) //false<br>
+                        console.log(true && false) //false<br>
+                        console.log(false && false) //false
+                    </p>
+                </div>
+                <!-- && (И) конец-->
+                <!-- || (ИЛИ) -->
+                <div class="accordion-header level-3">|| (ИЛИ)</div>
+                <div class="accordion-content">
+                    <p>вернет true, когда хотябы одно условие правда</p>
+                    <p>
+                        console.log(true || true) // true<br>
+                        console.log(false || true) // true<br>
+                        console.log(true || false) // true<br>
+                        console.log(false || false) //false
+                    </p>
+                </div>
+                <!-- || (ИЛИ) конец-->
+                <!-- ! (НЕ) -->
+                <div class="accordion-header level-3">! (НЕ)</div>
+                <div class="accordion-content">
+                    <p>
+                        console.log(!true) // false<br>
+                        console.log(!false) // true
+                    </p>
+                </div>
+                <!-- ! (НЕ) конец-->
+            </div>
+            <!-- Логические операторы конец-->
+            <!-- Операторы присваивания -->
+            <div class="accordion-header level-2">Операторы присваивания</div>
+            <div class="accordion-content">
+                <!-- = присваивание -->
+                <div class="accordion-header level-3">= присваивание</div>
+                <div class="accordion-content">
+                    <p>
+                        let num; // объявляем переменную<br>
+                        num = 5; // присваиваем ей число 5<br>
+                        console.log(num); // 5
+                    </p>
+                </div>
+                <!-- = присваивание конец-->
+                <!-- += сложение и присваивание -->
+                <div class="accordion-header level-3">+= сложение и присваивание</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 10;<br>
+                        num += 5; // num = num + 5;<br>
+                        console.log(num); // 15
+                    </p>
+                </div>
+                <!-- += сложение и присваивание конец-->
+                <!-- -= вычитание и присваивание -->
+                <div class="accordion-header level-3">-= вычитание и присваивание</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 10;<br>
+                        num -= 5; // num = num - 5;<br>
+                        console.log(num); // 5
+                    </p>
+                </div>
+                <!-- -= вычитание и присваивание конец-->
+                <!-- *= умножение и присваивание -->
+                <div class="accordion-header level-3">*= умножение и присваивание</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 10;<br>
+                        num *= 5; // num = num * 5;<br>
+                        console.log(num); // 50
+                    </p>
+                </div>
+                <!-- *= умножение и присваивание конец-->
+                <!-- /= деление и присваивание -->
+                <div class="accordion-header level-3">/= деление и присваивание</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 10;<br>
+                        num /= 5; // num = num / 5;<br>
+                        console.log(num); // 2
+                    </p>
+                </div>
+                <!-- /= деление и присваивание конец-->
+            </div>
+            <!-- Операторы присваивания конец-->
+            <!-- Унарные операторы -->
+            <div class="accordion-header level-2">Унарные операторы</div>
+            <div class="accordion-content">
+                <!-- ++ инкремент -->
+                <div class="accordion-header level-3">++ инкремент</div>
+                <div class="accordion-content">
+                    <p>
+                        let a = 10;<br>
+                        let b = a++; // постфиксный инкремент<br>
+                        console.log(b); // 10<br>
+                        console.log(a); // 11
+                    </p>
+                    <p>к 'b' сначала присваивается 10, а затем 'a' увеличивается на 1</p>
+                    <p>
+                        let c = 10;<br>
+                        let d = ++c; // префиксный инкремент<br>
+                        console.log(d); // 11<br>
+                        console.log(c); // 11
+                    </p>
+                    <p>'c' сначала увеличиваеся на 1, а затем присваивается к 'd'</p>
+                </div>
+                <!-- ++ инкремент конец-->
+                <!-- -- декремент -->
+                <div class="accordion-header level-3">-- декремент</div>
+                <div class="accordion-content">
+                    <p>
+                        let a = 10;<br>
+                        let b = a--; // постфиксный декремент<br>
+                        console.log(b); // 10<br>
+                        console.log(a); // 9
+                    </p>
+                    <p>к 'b' сначала присваивается 10, а затем 'a' уменьшается на 1</p>
+                    <p>
+                        let c = 10;<br>
+                        let d = --c; // префиксный декремент<br>
+                        console.log(d); // 9<br>
+                        console.log(c); // 9
+                    </p>
+                    <p>'c' сначала уменьшается на 1, а затем присваивается к 'd'</p>
+                </div>
+                <!-- -- декремент конец-->
+            </div>
+            <!-- Унарные операторы конец-->
+            <!-- Оператор условного (тернарного) выражения -->
+            <div class="accordion-header level-2">Оператор условного (тернарного) выражения</div>
+            <div class="accordion-content">
+                <!-- условие ? правда : ложь -->
+                <div class="accordion-header level-3">условие ? правда : ложь</div>
+                <div class="accordion-content">
+                    <p>
+                        if (5 === 5) {<br>
+                        &emsp;console.log('правда');<br>
+                        } else {<br>
+                        &emsp;console.log('ложь');<br>
+                        }<br> // правда
+                    </p>
+                    <p>запись условия в одну строчку с помощью тернарного выражения</p>
+                    <p>
+                        console.log((5 === 5) ? 'правда' : 'ложь'); // правда
+                    </p>
+                </div>
+                <!-- условие ? правда : ложь конец-->
+            </div>
+            <!-- Оператор условного (тернарного) выражения конец-->
+            <!-- оператор распространения (spread operator) -->
+            <div class="accordion-header level-2">Оператор распространения (spread operator)</div>
+            <div class="accordion-content">
+                <p>Этот оператор позволяет развернуть элементы массива или объекта.</p>
+                <p>
+                    let arr = [1, 2, 3];<br>
+                    let newArr = [...arr, 4, 5];<br>
+                    console.log(newArr); // [1, 2, 3, 4, 5]
+                </p>
+            </div>
+            <!-- оператор распространения (spread operator) конец-->
+        </div>
+        <!-- ОПЕРАТОРЫ конец -->
+
+
         <!-- МАССИВЫ -->
         <div class="accordion-header level-1">МАССИВЫ</div>
         <div class="accordion-content">
@@ -773,7 +1047,8 @@
                 <div class="accordion-header level-3">добавление элементов</div>
                 <div class="accordion-content">
                     <!-- push(): -->
-                    <div class="accordion-header level-4">push(): Этот метод добавляет один или несколько элементов в
+                    <div class="accordion-header level-4">push(): Этот метод добавляет один или несколько элементов
+                        в
                         конец массива и возвращает новую длину массива.</div>
                     <div class="accordion-content">
                         <p>
@@ -785,7 +1060,8 @@
                     </div>
                     <!-- push(): конец-->
                     <!-- unshift(): -->
-                    <div class="accordion-header level-4">unshift(): Этот метод добавляет один или несколько элементов в
+                    <div class="accordion-header level-4">unshift(): Этот метод добавляет один или несколько
+                        элементов в
                         начало массива и также возвращает новую длину
                         массива.</div>
                     <div class="accordion-content">
@@ -811,7 +1087,8 @@
                     </div>
                     <!-- splice(): конец-->
                     <!-- Расширение массива с помощью оператора распространения (...): -->
-                    <div class="accordion-header level-4">Расширение массива с помощью оператора распространения (...):
+                    <div class="accordion-header level-4">Расширение массива с помощью оператора распространения
+                        (...):
                         Вы можете создать новый массив, добавляя элементы к
                         существующему массиву.</div>
                     <div class="accordion-content">
@@ -842,7 +1119,8 @@
                 <div class="accordion-header level-3">удаление элементов</div>
                 <div class="accordion-content">
                     <!-- pop(): -->
-                    <div class="accordion-header level-4">pop(): Удаляет последний элемент из массива и возвращает его.
+                    <div class="accordion-header level-4">pop(): Удаляет последний элемент из массива и возвращает
+                        его.
                         Если массив пуст, возвращает undefined.</div>
                     <div class="accordion-content">
                         <p>
@@ -855,7 +1133,8 @@
                     </div>
                     <!-- pop(): конец-->
                     <!-- shift(): -->
-                    <div class="accordion-header level-4">shift(): Удаляет первый элемент из массива и возвращает его.
+                    <div class="accordion-header level-4">shift(): Удаляет первый элемент из массива и возвращает
+                        его.
                         Если
                         массив пуст, возвращает undefined.</div>
                     <div class="accordion-content">
@@ -883,7 +1162,8 @@
                     </div>
                     <!-- splice(): конец-->
                     <!-- filter(): -->
-                    <div class="accordion-header level-4">filter(): Создает новый массив с элементами, которые прошли
+                    <div class="accordion-header level-4">filter(): Создает новый массив с элементами, которые
+                        прошли
                         проверку, заданную в предоставленной функции. Это
                         позволяет "удалить" элементы, которые не соответствуют условию.</div>
                     <div class="accordion-content">
@@ -933,7 +1213,8 @@
                         <p>
                             let fruits = ['apple', 'banana', 'orange', 'strawberry'];<br>
                             console.log(fruits); // ['apple', 'banana', 'orange', 'strawberry']<br>
-                            fruits.splice(1, 2, 'kiwi', 'grape'); // Удаляет 2 элемента начиная с индекса 1 и добавляет
+                            fruits.splice(1, 2, 'kiwi', 'grape'); // Удаляет 2 элемента начиная с индекса 1 и
+                            добавляет
                             'kiwi' и 'grape' с индекса 1<br>
                             console.log(fruits); // ['apple', 'kiwi', 'grape', 'strawberry']
                         </p>
@@ -953,7 +1234,8 @@
                     </div>
                     <!-- map(): конец-->
                     <!-- forEach(): -->
-                    <div class="accordion-header level-4">forEach(): Этот метод позволяет выполнить функцию для каждого
+                    <div class="accordion-header level-4">forEach(): Этот метод позволяет выполнить функцию для
+                        каждого
                         элемента массива. Однако он не возвращает новый
                         массив, поэтому для изменения элементов нужно использовать прямое присваивание.</div>
                     <div class="accordion-content">
@@ -969,7 +1251,8 @@
                     </div>
                     <!-- forEach(): конец-->
                     <!-- fill(): -->
-                    <div class="accordion-header level-4">fill(): Этот метод заполняет все элементы массива статическим
+                    <div class="accordion-header level-4">fill(): Этот метод заполняет все элементы массива
+                        статическим
                         значением от начального до конечного индекса.</div>
                     <div class="accordion-content">
                         <p>
@@ -1027,7 +1310,8 @@
                 <div class="accordion-header level-3">фильтрация элементов массива</div>
                 <div class="accordion-content">
                     <!-- filter(): -->
-                    <div class="accordion-header level-4">filter(): Создает новый массив с элементами, которые прошли
+                    <div class="accordion-header level-4">filter(): Создает новый массив с элементами, которые
+                        прошли
                         проверку, заданную в предоставленной функции.</div>
                     <div class="accordion-content">
                         <p>
@@ -1117,7 +1401,8 @@
                     </div>
                     <!-- flat(): конец-->
                     <!-- map(): -->
-                    <div class="accordion-header level-3">map(): Как уже упоминалось, этот метод создает новый массив, в
+                    <div class="accordion-header level-3">map(): Как уже упоминалось, этот метод создает новый
+                        массив, в
                         котором каждый элемент изменен в соответствии с заданной
                         функцией.</div>
                     <div class="accordion-content">
@@ -1163,7 +1448,8 @@
                 <div class="accordion-header level-3">итерация по элементам массива</div>
                 <div class="accordion-content">
                     <!-- forEach(): -->
-                    <div class="accordion-header level-4">forEach(): Этот метод выполняет указанную функцию один раз для
+                    <div class="accordion-header level-4">forEach(): Этот метод выполняет указанную функцию один раз
+                        для
                         каждого элемента массива.</div>
                     <div class="accordion-content">
                         <p>
@@ -1203,7 +1489,8 @@
                     </div>
                     <!-- for...in: конец-->
                     <!-- map(): -->
-                    <div class="accordion-header level-4">map(): Этот метод создает новый массив, содержащий результаты
+                    <div class="accordion-header level-4">map(): Этот метод создает новый массив, содержащий
+                        результаты
                         вызова указанной функции для каждого элемента
                         массива.</div>
                     <div class="accordion-content">
@@ -1225,9 +1512,11 @@
 
                         <p>- Сбор данных в новый массив или объект.</p>
 
-                        <p> Выбор метода итерации зависит от конкретной задачи и желаемого результата. Например, если
+                        <p> Выбор метода итерации зависит от конкретной задачи и желаемого результата. Например,
+                            если
                             нужно просто выполнить
-                            действие для каждого элемента, лучше использовать forEach(). Если нужно создать новый массив
+                            действие для каждого элемента, лучше использовать forEach(). Если нужно создать новый
+                            массив
                             на основе существующего, то
                             подойдет map().
                         </p>
@@ -1250,7 +1539,8 @@
                     </div>
                     <!-- includes(): конец-->
                     <!-- indexOf(): -->
-                    <div class="accordion-header level-4">indexOf(): Этот метод возвращает первый индекс, по которому
+                    <div class="accordion-header level-4">indexOf(): Этот метод возвращает первый индекс, по
+                        которому
                         данный элемент может быть найден в массиве, или -1,
                         если элемент не найден.</div>
                     <div class="accordion-content">
@@ -1274,7 +1564,8 @@
                     </div>
                     <!-- find(): конец-->
                     <!-- some(): -->
-                    <div class="accordion-header level-4">some(): Этот метод проверяет, удовлетворяет ли хотя бы один
+                    <div class="accordion-header level-4">some(): Этот метод проверяет, удовлетворяет ли хотя бы
+                        один
                         элемент массива условию, заданному в предоставленной
                         функции. Возвращает true или false.</div>
                     <div class="accordion-content">
@@ -1286,7 +1577,8 @@
                     </div>
                     <!-- some(): конец-->
                     <!-- every(): -->
-                    <div class="accordion-header level-4">every(): Этот метод проверяет, удовлетворяют ли все элементы
+                    <div class="accordion-header level-4">every(): Этот метод проверяет, удовлетворяют ли все
+                        элементы
                         массива условию, заданному в предоставленной функции.
                         Возвращает true или false.</div>
                     <div class="accordion-content">
@@ -1320,7 +1612,8 @@
                 <div class="accordion-header level-3">копирование массивов</div>
                 <div class="accordion-content">
                     <!-- Метод slice(): -->
-                    <div class="accordion-header level-4">Метод slice(): Этот метод возвращает новый массив, содержащий
+                    <div class="accordion-header level-4">Метод slice(): Этот метод возвращает новый массив,
+                        содержащий
                         копию части исходного массива. Если не передать
                         аргументы, он создаст полную копию массива.</div>
                     <div class="accordion-content">
@@ -1349,7 +1642,8 @@
                 <div class="accordion-header level-3">метод преобразования массивов в строки</div>
                 <div class="accordion-content">
                     <!-- join(): -->
-                    <div class="accordion-header level-4">join(): Этот метод объединяет все элементы массива в строку,
+                    <div class="accordion-header level-4">join(): Этот метод объединяет все элементы массива в
+                        строку,
                         используя указанный разделитель. Если разделитель не
                         указан, по умолчанию используется запятая.</div>
                     <div class="accordion-content">
@@ -1391,10 +1685,12 @@
 
                         <p> - Подготавливать данные для передачи в другие функции или API.</p>
 
-                        <p>- Упрощать работу с текстовыми данными, когда необходимо объединить элементы массива в одну
+                        <p>- Упрощать работу с текстовыми данными, когда необходимо объединить элементы массива в
+                            одну
                             строку.</p>
 
-                        <p>Выбор метода преобразования зависит от конкретной задачи. Например, если нужно создать строку
+                        <p>Выбор метода преобразования зависит от конкретной задачи. Например, если нужно создать
+                            строку
                             с определённым
                             разделителем, лучше использовать join(). Если же требуется просто получить строковое
                             представление массива, можно
@@ -1408,7 +1704,8 @@
                 <div class="accordion-header level-3">методы преобразования строк в массив</div>
                 <div class="accordion-content">
                     <!-- Метод split(): -->
-                    <div class="accordion-header level-4">Метод split(): Этот метод разбивает строку на массив подстрок,
+                    <div class="accordion-header level-4">Метод split(): Этот метод разбивает строку на массив
+                        подстрок,
                         используя указанный разделитель. Если разделитель
                         не указан, строка будет разбита на массив, содержащий один элемент — саму строку.</div>
                     <div class="accordion-content">
@@ -1449,16 +1746,19 @@
                             Преобразование строк в массивы позволяет:</p>
                         <p> - Разделять текстовые данные на отдельные элементы для дальнейшей обработки.</p>
 
-                        <p> - Упрощать манипуляции с текстом, например, при анализе или изменении отдельных символов или
+                        <p> - Упрощать манипуляции с текстом, например, при анализе или изменении отдельных символов
+                            или
                             слов.</p>
 
-                        <p> - Подготавливать данные для работы с массивами, когда необходимо выполнять операции, такие
+                        <p> - Подготавливать данные для работы с массивами, когда необходимо выполнять операции,
+                            такие
                             как фильтрация или
                             сортировка.</p>
 
                         <p> Выбор метода преобразования зависит от конкретной задачи. Например, если нужно разбить
                             строку на слова или элементы,
-                            лучше использовать split(). Если требуется получить массив символов, можно воспользоваться
+                            лучше использовать split(). Если требуется получить массив символов, можно
+                            воспользоваться
                             Array.from() или оператором
                             распространения.
                         </p>
@@ -1485,6 +1785,7 @@
 
 
 
+
         <!-- ОБЪЕКТЫ -->
         <div class="accordion-header level-1">ОБЪЕКТЫ</div>
         <div class="accordion-content">
@@ -1492,10 +1793,12 @@
             <div class="accordion-header level-2">Определение</div>
             <div class="accordion-content">
                 <ul>
-                    <li> В JavaScript объекты представляют собой коллекции свойств, где каждое свойство состоит из ключа
+                    <li> В JavaScript объекты представляют собой коллекции свойств, где каждое свойство состоит из
+                        ключа
                         и
                         значения. Объекты
-                        могут содержать различные типы данных, включая строки, числа, массивы и даже другие объекты. Они
+                        могут содержать различные типы данных, включая строки, числа, массивы и даже другие объекты.
+                        Они
                         являются основным
                         способом организации и хранения данных в JavaScript.
                     </li>
@@ -1669,3 +1972,4 @@
 </body>
 
 </html>
+<!-- &emsp; -->
