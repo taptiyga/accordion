@@ -1031,10 +1031,10 @@
                 <div class="accordion-content">
                     <p>сравноваются только значения, а не типы</p>
                     <p>
-                        console.log(1 > 1); // false<br>
-                        console.log(1 < '1' ); // false<br>
-                            console.log(1 >= 1); // true<br>
-                            console.log(1 <= '1' ); // true </p>
+                        console.log(1 &gt; 1); // false<br>
+                        console.log(1 &lt; '1' ); // false<br>
+                        console.log(1 &gt;= 1); // true<br>
+                        console.log(1 &lt;= '1' ); // true </p>
                 </div>
                 <!-- <,>,<=,>= конец-->
             </div>
@@ -1209,7 +1209,124 @@
             <!-- оператор распространения (spread operator) конец-->
         </div>
         <!-- ОПЕРАТОРЫ конец -->
-
+        <!-- УСЛОВНЫЕ ВЕТВЛЕНИЯ -->
+        <div class="accordion-header level-1">УСЛОВНЫЕ ВЕТВЛЕНИЯ</div>
+        <div class="accordion-content">
+            <!-- if else -->
+            <div class="accordion-header level-2">if else</div>
+            <div class="accordion-content">
+                <!-- конструкция -->
+                <div class="accordion-header level-3">конструкция</div>
+                <div class="accordion-content">
+                    <p>Конструкция if...else позволяет выполнять разные блоки кода в зависимости от того, выполняется ли
+                        условие или нет.</p>
+                    <p>
+                        if (условие) {<br>
+                        &emsp;// Код, который выполняется, если условие истинно<br>
+                        } else {<br>
+                        &emsp;// Код, который выполняется, если условие ложно<br>
+                        }
+                    </p>
+                </div>
+                <!-- конструкция конец-->
+                <!-- одно условие -->
+                <div class="accordion-header level-3">одно условие</div>
+                <div class="accordion-content">
+                    <p>выполнится только при любом age не равном 20</p>
+                    <p>
+                        const age = 18;<br>
+                        if (age !== 20) {<br>
+                        &emsp;console.log('тебе не 20 лет');<br>
+                        } // "тебе не 20 лет"
+                    </p>
+                </div>
+                <!-- одно условие конец-->
+                <!-- условие или/или -->
+                <div class="accordion-header level-3">условие или/или</div>
+                <div class="accordion-content">
+                    <p>выполнится либо истинное условие, либо ложное</p>
+                    <p>
+                        let age = 17;<br>
+                        if (age &gt;= 18) {<br>
+                        &emsp;console.log("Вы совершеннолетний."); // Выполнится, если age &gt;= 18<br>
+                        } else {<br>
+                        &emsp;console.log("Вы еще не совершеннолетний."); // Выполнится если age &lt; 18<br>
+                        }
+                    </p>
+                </div>
+                <!-- условие или/или конец-->
+                <!-- несколько условий else if -->
+                <div class="accordion-header level-3">несколько условий else if</div>
+                <div class="accordion-content">
+                    <p>проверяется несколько условий</p>
+                    <p>
+                        let score = 85;<br>
+                        if (score &gt;= 90) {<br>
+                        &emsp;console.log("Отлично!");<br>
+                        } else if (score &gt;= 75) {<br>
+                        &emsp;console.log("Хорошо!"); // 'Хорошо!'<br>
+                        } else {<br>
+                        &emsp;console.log("Неплохо!");<br>
+                        }
+                    </p>
+                </div>
+                <!-- несколько условий else if конец-->
+            </div>
+            <!-- if else конец-->
+            <!-- Тернарный оператор -->
+            <div class="accordion-header level-2">Тернарный оператор</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Тернарный оператор — это короткий способ записи конструкции if...else. Он принимает три операнда
+                        и используется для
+                        возврата одного из двух значений в зависимости от истинности условия.</p>
+                    <p>условие ? выражение1 : выражение2;</p>
+                </div>
+                <!-- определение конец-->
+                <!-- пример -->
+                <div class="accordion-header level-3">пример</div>
+                <div class="accordion-content">
+                    <p>
+                        let age = 16;
+                    <p>let status = age &gt;= 18 ? "Совершеннолетний" : "Несовершеннолетний";</p>
+                    <p>Если age &gt;= 18, то присваиваем "Совершеннолетний", иначе "Несовершеннолетний"<br>
+                        console.log(status); // "Несовершеннолетний"
+                    </p>
+                </div>
+                <!-- пример конец-->
+            </div>
+            <!-- Тернарный оператор конец-->
+            <!-- Falsy и truthy значения -->
+            <div class="accordion-header level-2">Falsy и truthy значения</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>значения которые преобразуются в ложные называются "falsy" значениями</p>
+                    <p>число 0, пустая строка "", null, undefined и NaN</p>
+                    <p>остальные значения становятся true, поэтому их называют "правдивыми" или "truthy" значениями</p>
+                </div>
+                <!-- определение конец-->
+                <!-- пример -->
+                <div class="accordion-header level-3">пример</div>
+                <div class="accordion-content">
+                    <p>
+                        if (0) { console.log('ok') };<br>
+                        if ("") { console.log('ok') };<br>
+                        if (null) { console.log('ok') };<br>
+                        if (undefined) { console.log('ok') };<br>
+                        if (NaN) { console.log('ok') };<br>
+                        if (false) { console.log('ok') };
+                    </p>
+                    <p>Эти значения falsy и ничего не выведут в консоль, любое другое значение выведет "ok"</p>
+                </div>
+                <!-- пример конец-->
+            </div>
+            <!-- Falsy и truthy значения конец-->
+        </div>
+        <!-- УСЛОВНЫЕ ВЕТВЛЕНИЯ конец-->
 
         <!-- МАССИВЫ -->
         <div class="accordion-header level-1">МАССИВЫ</div>
