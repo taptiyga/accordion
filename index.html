@@ -763,6 +763,180 @@
             <!-- Рекомендации по использованию типов данных конец-->
         </div>
         <!-- ТИПЫ ДАННЫХ конец -->
+        <!-- ПРЕОБРАЗОВАНИЕ ТИПОВ -->
+        <div class="accordion-header level-1">ПРЕОБРАЗОВАНИЕ ТИПОВ</div>
+        <div class="accordion-content">
+            <!-- Число в строку -->
+            <div class="accordion-header level-2">Число в строку</div>
+            <div class="accordion-content">
+                <!-- конкатенация с пустой строкой: простой способ преобразования. -->
+                <div class="accordion-header level-3">конкатенация с пустой строкой: простой способ преобразования.
+                </div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 789;<br>
+                        let str = num + '';<br>
+                        console.log(str); // "789"
+                    </p>
+                </div>
+                <!-- конкатенация с пустой строкой: простой способ преобразования. конец-->
+                <!-- конканация с помощью обратных ковычек `` -->
+                <div class="accordion-header level-3">конканация с помощью обратных ковычек ``</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 789;<br>
+                        let str = `${num}`;<br>
+                        console.log(str); // "789"
+                    </p>
+                </div>
+                <!-- конканация с помощью обратных ковычек `` конец-->
+                <!-- метод toString() -->
+                <div class="accordion-header level-3">метод toString()</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 456;<br>
+                        let str = num.toString();<br>
+                        console.log(str); // "456"
+                    </p>
+                </div>
+                <!-- метод toString() конец-->
+                <!-- с помощью глобального объекта String() -->
+                <div class="accordion-header level-3">с помощью глобального объекта String()</div>
+                <div class="accordion-content">
+                    <p>
+                        let num = 123;<br>
+                        let str = String(num);<br>
+                        console.log(str); // "123"
+                    </p>
+                </div>
+                <!-- с помощью глобального объекта String() конец-->
+                <!-- метод toFixed() -->
+                <div class="accordion-header level-3">метод toFixed()</div>
+                <div class="accordion-content">
+                    <p>преобразует число в строку оставляя указанное количество знаков после запятой</p>
+                    <p>
+                        let str = 123.4566.toFixed(2);<br>
+                        console.log(str) // "123.46"
+                    </p>
+                </div>
+                <!-- метод toFixed() конец-->
+            </div>
+            <!-- Число в строку конец-->
+            <!-- Строку в число -->
+            <div class="accordion-header level-2">Строку в число</div>
+            <div class="accordion-content">
+                <!-- с помощью глобального объекта Number() -->
+                <div class="accordion-header level-3">с помощью глобального объекта Number()</div>
+                <div class="accordion-content">
+                    <p>
+                        let str = "123.45";<br>
+                        let num = Number(str);<br>
+                        console.log(num); // 123.45
+                    </p>
+                </div>
+                <!-- с помощью глобального объекта Number() конец-->
+                <!-- с помощью унарного оператора + -->
+                <div class="accordion-header level-3">с помощью унарного оператора +</div>
+                <div class="accordion-content">
+                    <p>
+                        let str = "123.45";<br>
+                        let num = +str;<br>
+                        console.log(num); // 123.45
+                    </p>
+                </div>
+                <!-- с помощью унарного оператора + конец-->
+                <!-- с помощью функции parseInt() -->
+                <div class="accordion-header level-3">с помощью функции parseInt()</div>
+                <div class="accordion-content">
+                    <p>возвращает целое число в начале строки</p>
+                    <p>
+                        let str1 = "123.45";<br>
+                        let num1 = parseInt(str1);<br>
+                        console.log(num1); // 123<br>
+                    </p>
+                    <p>
+                        let str2 = '125adsc2';<br>
+                        let num2 = parseInt(str2);<br>
+                        console.log(num2); // 125
+                    </p>
+                </div>
+                <!-- с помощью функции parseInt() конец-->
+                <!-- с помощью функции parseFloat() -->
+                <div class="accordion-header level-3">с помощью функции parseFloat()</div>
+                <div class="accordion-content">
+                    <p>возвращает числа с точкой</p>
+                    <p>
+                        let str1 = "123.45";<br>
+                        let num1 = parseFloat(str1);<br>
+                        console.log(num1); // 123.45<br>
+                    </p>
+                    <p>
+                        let str2 = '125.4adsc2';<br>
+                        let num2 = parseFloat(str2);<br>
+                        console.log(num2); // 125.4
+                    </p>
+                </div>
+                <!-- с помощью функции parseFloat() конец-->
+            </div>
+            <!-- Строку в число конец-->
+            <!-- Casting -->
+            <div class="accordion-header level-2">Casting</div>
+            <div class="accordion-content">
+                <p>
+                    let value;<br>
+                    value = 10 + "5"; // строка "105"<br>
+                    value = 10 - "5"; // число 5<br>
+                    value = 10 * "5"; // число 50<br>
+                    value = 10 / "5"; // число 2<br>
+                    value = 10 % "3"; // число 1
+                </p>
+                <p>
+                    value = 10 + true; // число 11<br>
+                    value = 10 + false; // число 10<br>
+                    value = 10 + null; // число 10
+                </p>
+                <p>
+                    value = 10 + undefined; // число NaN<br>
+                    value = 10 + NaN; // число NaN<br>
+                    value = 10 + []; // строка 10<br>
+                    value = 10 + {}; // строка 10[object Object]
+                </p>
+                <p>
+                    value = true + true; // число 2<br>
+                    value = true + false; // число 1<br>
+                    value = false + false; // число 0
+                </p>
+            </div>
+            <!-- Casting конец-->
+            <!-- сравнение с преобразованием типов (==) -->
+            <div class="accordion-header level-2">сравнение с преобразованием типов (==)</div>
+            <div class="accordion-content">
+                <p>let res;<br>
+                    res = true == true; // true<br>
+                    res = true === true; // true<br>
+                    res = true == 1; // true<br>
+                    res = true === 1; // false
+                </p>
+                <p>
+                    res = false == 0; // true<br>
+                    res = false === 0; // false
+                </p>
+                <p>
+                    res = 1 == "1" // true<br>
+                    res = 1 === "1" // false
+                </p>
+                <p>
+                    res = null == undefined; // true<br>
+                    res = null === undefined; // false
+                </p>
+                <p>
+                    res = "" == []; // true<br>
+                    res = "" === []; // false
+                </p>
+            </div>
+            <!-- сравнение с преобразованием типов (==) конец-->
+        </div>
+        <!-- ПРЕОБРАЗОВАНИЕ ТИПОВ конец -->
         <!-- ОПЕРАТОРЫ -->
         <div class="accordion-header level-1">ОПЕРАТОРЫ</div>
         <div class="accordion-content">
