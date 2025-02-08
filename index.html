@@ -616,8 +616,13 @@
                 <div class="accordion-content">
                     <p>Представляет числовые значения, как целые, так и дробные.</p>
                     <p>const num = 42;<br>
-                        const pi = 3.14;<br>
-                        console.log(typeof num) // number
+                        console.log(typeof num) // number<br>
+                        pi = Number(3.14);<br>
+                        console.log(typeof pi) // number<br>
+                        x = new Number(10); // экземпдяр класса<br>
+                        console.log(typeof x) // object<br>
+                        console.log(x.valueOf()); // 10<br>
+                        console.log(typeof x.valueOf()); // number
                     </p>
                 </div>
                 <!-- number конец-->
@@ -1045,36 +1050,126 @@
                 <!-- && (И) -->
                 <div class="accordion-header level-3">&& (И)</div>
                 <div class="accordion-content">
-                    <p>вернет true, когда все условия правда</p>
+                    <p>вернет true когда все условия истина, а иначе вернет false</p>
+                    <p>проверяет с лева на право и останавливает проверку на любом false, возвращая его, иначе
+                        возвращает последнее значение</p>
                     <p>
-                        console.log(true && true) // true<br>
-                        console.log(false && true) //false<br>
-                        console.log(true && false) //false<br>
-                        console.log(false && false) //false
+                        console.log(true && true); // true<br>
+                        console.log(3 && 1) // 1; <br>
+                        console.log(false && true); //false<br>
+                        console.log(undefined && 3); // undefined <br>
+                        console.log(true && false); //false<br>
+                        console.log(3 && null); // null <br>
+                        console.log(false && false); //false <br>
+                        console.log(null && undefined); // null <br>
+                        console.log(false && false && true); // false <br>
+                        console.log(null && undefined && 1); // null
                     </p>
                 </div>
                 <!-- && (И) конец-->
                 <!-- || (ИЛИ) -->
                 <div class="accordion-header level-3">|| (ИЛИ)</div>
                 <div class="accordion-content">
-                    <p>вернет true, когда хотябы одно условие правда</p>
+                    <p>вернёт true когда хоть одно условие истина, иначе вернет false</p>
+                    <p>проверяет с лева на право и останавливает проверку на любом true, возвращая его, иначе вернет
+                        последнее значение</p>
                     <p>
-                        console.log(true || true) // true<br>
-                        console.log(false || true) // true<br>
-                        console.log(true || false) // true<br>
-                        console.log(false || false) //false
+                        console.log(true || true); // true<br>
+                        console.log(3 || 1); // 3 <br>
+                        console.log(false || true); // true<br>
+                        console.log(undefined || 3); // 3 <br>
+                        console.log(true || false); // true<br>
+                        console.log(3 || null); // 3 <br>
+                        console.log(false || false); // false <br>
+                        console.log(null || undefined); // undefined <br>
+                        console.log(false || false || true); // true <br>
+                        console.log(null || undefined || 1); // 1
                     </p>
                 </div>
                 <!-- || (ИЛИ) конец-->
                 <!-- ! (НЕ) -->
                 <div class="accordion-header level-3">! (НЕ)</div>
                 <div class="accordion-content">
+                    <p>! - логическое отрицание, по сути меняет значение на противоположное</p>
+                    <p>оператор принимает один аргумент и выполняет следующее <br>
+                        сначала приводит аргумент к логическому типу true/false <br>
+                        затем возвращает противоположное значение
+                    </p>
                     <p>
                         console.log(!true) // false<br>
-                        console.log(!false) // true
+                        console.log(!false) // true<br>
+                        console.log(!0) // true<br>
+                        console.log(!"Hello") // false
                     </p>
                 </div>
                 <!-- ! (НЕ) конец-->
+                <!-- !! - Преобразование значений к логическому типу -->
+                <div class="accordion-header level-3">!! - Преобразование значений к логическому типу</div>
+                <div class="accordion-content">
+                    <p>!! по сути это двойное логическое отрецание (НЕ)</p>
+                    <p>
+                        console.log(!!1); // true <br>
+                        console.log(Boolean(1)); // true <br>
+                        console.log(!!0); // false <br>
+                        console.log(Boolean(0)); // false
+                    </p>
+                </div>
+                <!-- !! - Преобразование значений к логическому типу конец-->
+                <!-- ?? - Оператор нулевого слияния -->
+                <div class="accordion-header level-3">?? - Оператор нулевого слияния</div>
+                <div class="accordion-content">
+                    <p>?? - возвращает первый операнд если левый равен null или undefined, иначе возвращает последний
+                        операнд</p>
+                    <p>
+                        console.log(null ?? 1 ?? undefined); // 1 <br>
+                        console.log(1 ?? null ?? undefined); // 1 <br>
+                        console.log(null ?? undefined ?? 1); // 1 <br>
+                        console.log(null ?? undefined); // undefined <br>
+                        console.log(undefined ?? null); // null
+                    </p>
+                </div>
+                <!-- ?? - Оператор нулевого слияния конец-->
+                <!-- логическое присваивание -->
+                <div class="accordion-header level-3">логическое присваивание</div>
+                <div class="accordion-content">
+                    <!-- &&= -->
+                    <div class="accordion-header level-4">&&=</div>
+                    <div class="accordion-content">
+                        <p>
+                            let a = 0;<br>
+                            a = a && 2;<br>
+                            console.log(a); // 0<br>
+                            a &&= 2; коротка запись<br>
+                            console.log(a); // 0
+                        </p>
+                    </div>
+                    <!-- &&= конец-->
+                    <!-- ||= -->
+                    <div class="accordion-header level-4">||=</div>
+                    <div class="accordion-content">
+                        <p>
+                            let a = 0;<br>
+                            a = a || 2;<br>
+                            console.log(a); // 2<br>
+                            a ||= 2; коротка запись<br>
+                            console.log(a); // 2
+                        </p>
+                    </div>
+                    <!-- ||= конец-->
+                    <!-- ??= -->
+                    <div class="accordion-header level-4">??=</div>
+                    <div class="accordion-content">
+                        <p>
+                            let a = null;<br>
+                            a = a ?? 2;<br>
+                            console.log(a); // 2<br>
+                            a ??= 2; короткая запись<br>
+                            console.log(a); // 2
+                        </p>
+                    </div>
+                    <!-- ??= конец-->
+                </div>
+                <!-- логическое присваивание конец-->
             </div>
             <!-- Логические операторы конец-->
             <!-- Операторы присваивания -->
@@ -2203,6 +2298,100 @@
 
         </div>
         <!-- ОБЪЕКТЫ конец-->
+        <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ -->
+        <div class="accordion-header level-1">ВСТРОЕННЫЕ ОБЪЕКТЫ</div>
+        <div class="accordion-content">
+            <!-- Объект Math -->
+            <div class="accordion-header level-2">Объект Math</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>
+                        В JavaScript объект Math предоставляет различные математические функции и константы для
+                        выполнения вычислений. Он
+                        является встроенным объектом, и его методы и свойства статичны, что означает, что вы можете
+                        вызывать их напрямую через
+                        Math, не создавая экземпляр объекта. Вот краткий обзор основных возможностей объекта Math.
+                    </p>
+                </div>
+                <!-- определение конец-->
+                <!-- основные методы -->
+                <div class="accordion-header level-3">основные методы</div>
+                <div class="accordion-content">
+                    <!-- округление чисел -->
+                    <div class="accordion-header level-4">округление чисел</div>
+                    <div class="accordion-content">
+                        <p>Math.round(x): Округляет x до ближайшего целого числа.</p>
+                        <p>
+                            console.log(Math.round(4.5)); // 5<br>
+                            console.log(Math.round(4.4)); // 4
+                        </p>
+                        <p>Math.ceil(x): Округляет x до ближайшего большего целого числа.</p>
+                        <p>console.log(Math.ceil(4.1)); // 5</p>
+                        <p>Math.floor(x): Округляет x до ближайшего меньшего целого числа.</p>
+                        <p>console.log(Math.floor(4.9)); // 4</p>
+                        <p>Math.trunk(x): Возвращает целую часть числа путем удаления дробных знаков.</p>
+                        <p>console.log(Math.floor(4.9)); // 4</p>
+                    </div>
+                    <!-- округление чисел конец-->
+                    <!-- минимум и максимум -->
+                    <div class="accordion-header level-4">минимум и максимум</div>
+                    <div class="accordion-content">
+                        <p>Math.min(...values): Возвращает наименьшее из переданных значений.</p>
+                        <p>console.log(Math.min(3, 1, 4)); // 1</p>
+                        <p>Math.max(...values): Возвращает наибольшее из переданных значений.</p>
+                        <p>console.log(Math.max(3, 1, 4)); // 4</p>
+                    </div>
+                    <!-- минимум и максимум конец-->
+                    <!-- Случайные числа -->
+                    <div class="accordion-header level-4">случайные числа</div>
+                    <div class="accordion-content">
+                        <p>Math.random(): Возвращает случайное число от 0 (включительно) до 1 (исключительно).</p>
+                        <p>console.log(Math.random()); // Например, 0.123456</p>
+                    </div>
+                    <!-- Случайные числа конец-->
+                    <!-- Степени и корни -->
+                    <div class="accordion-header level-4">степени и корни</div>
+                    <div class="accordion-content">
+                        <p>Math.pow(base, exponent): Возвращает базу, возведенную в степень.</p>
+                        <p>console.log(Math.pow(2, 3)); // 8</p>
+                        <p>Math.sqrt(x): Возвращает квадратный корень из x.</p>
+                        <p>console.log(Math.sqrt(16)); // 4</p>
+                    </div>
+                    <!-- Степени и корни конец-->
+                    <!-- абсолютное хначение числа -->
+                    <div class="accordion-header level-3">абсолютное хначение числа</div>
+                    <div class="accordion-content">
+                        <p>Math.abc() - возвращает абсолютное значение числа.</p>
+                        <p>console.log(Math.abs(-49)); // 49</p>
+                    </div>
+                    <!-- абсолютное хначение числа конец-->
+                </div>
+                <!-- основные методы конец-->
+                <!-- константы Math -->
+                <div class="accordion-header level-3">константы Math</div>
+                <div class="accordion-content">
+                    <p>Math.PI: константа π (пи).</p>
+                    <p>console.log(Math.PI); // 3.141592653589793</p>
+                    <p>Math.E: Константа e (число Эйлера).</p>
+                    <p>console.log(Math.E); // 2.718281828459045</p>
+                </div>
+                <!-- константы Math конец-->
+                <!-- углы и тригонометрия -->
+                <div class="accordion-header level-3">углы и тригонометрия</div>
+                <div class="accordion-content">
+                    <p>Math.sin(x): Возвращает синус угла x (в радианах).</p>
+                    <p>Math.cos(x): Возвращает косинус угла x (в радианах).</p>
+                    <p> Math.tan(x): Возвращает тангенс угла x (в радианах).</p>
+                    <p>Math.asin(x), Math.acos(x), Math.atan(x): Возвращают арксинус, арккосинус и арктангенс
+                        соответственно.</p>
+                </div>
+                <!-- углы и тригонометрия конец-->
+            </div>
+            <!-- Объект Math конец-->
+        </div>
+        <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ конец -->
         <!-- ФУНКЦИИ -->
         <div class="accordion-header level-1">ФУНКЦИИ</div>
         <div class="accordion-content">
