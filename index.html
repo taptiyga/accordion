@@ -671,7 +671,8 @@
                             toLowerCase() — преобразует строку в нижний регистр.<br>
                             substring(start, end) — возвращает подстроку.<br>
                             split(separator)` — разбивает строку на массив подстрок.<br>
-                            padStart('n','!') и padEnd('n','!') - добавляет количество 'n' символов '!' в начале или
+                            padStart('n','!') и padEnd('n','!') - определяет количество символов в строке и если их
+                            меньше 'n' добавляет '!' в начале или
                             конце соответственно<br>
                             String.raw позволяет работать с шаблонными строками, сохраняя escape-последовательности в их
                             исходном виде. Это может
@@ -690,6 +691,8 @@
                             console.log(text.toUpperCase()); // "HELLO, WORLD!"<br>
                             console.log(text.substring(0, 5)); // "Hello"<br>
                             console.log(text.split(", ")); // ["Hello", "world!"]<br>
+                            console.log(text.padEnd('15', '!')) // Hello, world!!!<br>
+                            console.log(text.padStart('15', '!')) // !!Hello, world!<br>
                             Вот пример использования String.raw с путём к файлу:<br>
                             const filePath = String.raw`C:\Development\aboutme.html`;<br>
                             console.log(filePath); // Выведет: C:\Development\aboutme.html
@@ -1603,6 +1606,180 @@
             <!-- Примитивные и ссылочные типы конец-->
         </div>
         <!-- STACK & HEAP конец -->
+        <!-- DATE -->
+        <div class="accordion-header level-1">DATE</div>
+        <div class="accordion-content">
+            <!-- Текущая дата и время -->
+            <div class="accordion-header level-2">Текущая дата и время</div>
+            <div class="accordion-content">
+                <p>
+                    Текущая дата.<br>
+                    let now = new Date(); // Mon Feb 17 2025 09:29:27 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    Время начала эпохи Unix.<br>
+                    let Unix = new Date(0); // Thu Jan 01 1970 00:00:00
+                </p>
+                <p>
+                    Количество милисекунд прошедших с начала эпохи Unix.<br>
+                    let timestamp = Date.now(); // 1739770545384<br>
+                    Целое число, представляющее собой количество милисекунд, прошедших с начала 1970 года, называется
+                    таймстемпом(timestamp)
+                </p>
+            </div>
+            <!-- Текущая дата и время конец-->
+            <!-- Создание даты с заданными параметрами -->
+            <div class="accordion-header level-2">Создание даты с заданными параметрами</div>
+            <div class="accordion-content">
+                <p>
+                    Год, месяц (0-11), день, часы, минуты, секунды
+                </p>
+                <p>
+                    const specificDate = new Date(2025, 0, 5, 12, 0, 0);<br>
+                    // Sun Jan 05 2025 12:00:00 GMT+0400 (Самарское стандартное время
+                </p>
+            </div>
+            <!-- Создание даты с заданными параметрами конец-->
+            <!-- Создание даты из строки -->
+            <div class="accordion-header level-2">Создание даты из строки</div>
+            <div class="accordion-content">
+                <p>
+                    let dateFromString = new Date("2025-01-05");<br>
+                    // Sun Jan 05 2025 04:00:00 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    dateFromString = new Date("2025-01-05 12:00:00");<br>
+                    // Sun Jan 05 2025 12:00:00 GMT+0400 (Самарское стандартное
+                    время)
+                </p>
+                <p>
+                    dateFromString = new Date("01-05-2025");<br>
+                    // Sun Jan 05 2025 00:00:00 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    dateFromString = new Date("2025-01-05T12:00:00");<br>
+                    // Sun Jan 05 2025 12:00:00 GMT+0400 (Самарское стандартное
+                    время)
+                </p>
+            </div>
+            <!-- Создание даты из строки конец-->
+            <!-- Получение компонентов даты -->
+            <div class="accordion-header level-2">Получение компонентов даты</div>
+            <div class="accordion-content">
+                <p>
+                    const date = new Date();<br>
+                    console.log(date.getFullYear()); // Год<br>
+                    console.log(date.getMonth()); // Месяц (0-11)<br>
+                    console.log(date.getDate()); // День месяца<br>
+                    console.log(date.getHours()); // Часы<br>
+                    console.log(date.getMinutes()); // Минуты<br>
+                    console.log(date.getSeconds()); // Секунды
+                </p>
+            </div>
+            <!-- Получение компонентов даты конец-->
+            <!-- Изменение компанентов даты -->
+            <div class="accordion-header level-2">Изменение компанентов даты</div>
+            <div class="accordion-content">
+                <p>
+                    let d = new Date(); // Mon Feb 17 2025 11:31:22 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    d.setDate(1); // Sat Feb 01 2025 11:32:00 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    d.setHours(0); // Sat Feb 01 2025 00:34:32 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    d.setMinutes(0); // Sat Feb 01 2025 00:00:01 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    d.setSeconds(0); // Sat Feb 01 2025 00:00:00 GMT +0400(Самарское стандартное время)
+                </p>
+                <p>
+                    d.setFullYear(2020); // Sat Feb 01 2020 00:00:00 GMT+0400 (Самарское стандартное время)
+                </p>
+                <p>
+                    d.setFullYear(2025, 1, 23); // Sun Feb 23 2025 00:00:00 GMT +0400(Самарское стандартное время)
+                </p>
+            </div>
+            <!-- Изменение компанентов даты конец-->
+            <!-- parse -->
+            <div class="accordion-header level-2">parse</div>
+            <div class="accordion-content">
+                <p>let date = Date.parse("2025-01-05T12:00:00"); // 1736064000000</p>
+            </div>
+            <!-- parse конец-->
+            <!-- Форматирование даты -->
+            <div class="accordion-header level-2">Форматирование даты</div>
+            <div class="accordion-content">
+                <p>
+                    const date = new Date();<br>
+                    console.log(date.toLocaleDateString()); // Формат даты (17.02.2025)<br>
+                    console.log(date.toLocaleTimeString()); // Формат времени (12:19:20)
+                </p>
+                <p>
+                    let d = Intl.DateTimeFormat("default").format(date); // 17.02.2025<br>
+                    d = Intl.DateTimeFormat("en-GB").format(date); // 17/02/2025<br>
+                    d = Intl.DateTimeFormat("ru-RU").format(date); // 17.02.2025<br>
+                    d = Intl.DateTimeFormat("ru-RU", {<br>
+                    &emsp;day: "numeric",<br>
+                    &emsp;month: "long",<br>
+                    &emsp;year: "2-digit"<br>
+                    }).format(date); // 17 февраля 25 г.
+                </p>
+                <p>
+                    d = date.toLocaleString("ru-RU", {<br>
+                    &emsp;day: "numeric",<br>
+                    &emsp;month: "long",<br>
+                    &emsp;year: "2-digit",<br>
+                    &emsp;hour: "numeric",<br>
+                    &emsp;minute: "2-digit",<br>
+                    &emsp;timeZone: "Europe/berlin"<br>
+                    }); // 17 февраля 25 г. в 9:36
+                </p>
+            </div>
+            <!-- Форматирование даты конец-->
+            <!-- Разница между датами -->
+            <div class="accordion-header level-2">Разница между датами</div>
+            <div class="accordion-content">
+                <p>Для вычисления разницы между двумя датами можно использовать метод getTime():</p>
+                <p>
+                    const date1 = new Date("2023-10-05");<br>
+                    const date2 = new Date("2023-10-10");<br>
+                    const differenceInTime = date2.getTime() - date1.getTime();<br>
+                    const differenceInDays = differenceInTime / (1000 * 3600 * 24); // Разница в днях<br>
+                    console.log(differenceInDays); // 5
+                </p>
+            </div>
+            <!-- Разница между датами конец-->
+            <!-- UTC -->
+            <div class="accordion-header level-2">UTC</div>
+            <div class="accordion-content">
+                <p>UTC (Координированное универсальное время) - это стандарт времени, который используется по всему
+                    миру.</p>
+                <p>UTC: подходит для отображения даты и времени в текстовом виде, когда важна читаемость.</p>
+                <p>
+                    const now = new Date();<br>
+                    console.log(now.toUTCString());<br>
+                    // Mon, 17 Feb 2025 08:54:48 GMT
+                </p>
+            </div>
+            <!-- UTC конец-->
+            <!-- ISO -->
+            <div class="accordion-header level-2">ISO</div>
+            <div class="accordion-content">
+                <p>ISO 8601 - это международный стандарт для представлениядат и времени.</p>
+                <p>ISO: предпочтительно использовать для хранения данных и передачи между системами, так как формат
+                    строгий и однозначный</p>
+                <p>
+                    const now = new Date();<br>
+                    console.log(now.toISOString());<br>
+                    // 2025-02-17T08:55:03.443Z
+                </p>
+            </div>
+            <!-- ISO конец-->
+        </div>
+        <!-- DATE конец -->
 
 
 
