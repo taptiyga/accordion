@@ -1536,6 +1536,74 @@
             <!-- Falsy и truthy значения конец-->
         </div>
         <!-- УСЛОВНЫЕ ВЕТВЛЕНИЯ конец-->
+        <!-- SWITCH CASE -->
+        <div class="accordion-header level-1">SWITCH CASE</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <p>В JavaScript оператор switch используется для выполнения одного блока кода среди многих на основе
+                    значения переменной
+                    или выражения. Он часто используется как альтернатива множественным операторам if...else, когда
+                    нужно сравнить одну и ту
+                    же переменную с разными значениями.</p>
+                <p>Вот базовый синтаксис оператора switch:</p>
+                <p>switch (выражение) {<br>
+                    &emsp;case значение1:<br>
+                    &emsp;&emsp;// Код, который будет выполнен, если выражение === значение1<br>
+                    &emsp;&emsp;break;<br>
+                    &emsp;case значение2:<br>
+                    &emsp;&emsp;// Код, который будет выполнен, если выражение === значение2<br>
+                    &emsp;&emsp;break;<br>
+                    // Здесь может быть любое количество операторов case.<br>
+                    &emsp;default:<br>
+                    &emsp;&emsp;// Код, который будет выполнен, если выражение не совпадает ни с одним case
+                    }</p>
+            </div>
+            <!-- Определение конец-->
+            <!-- Пример -->
+            <div class="accordion-header level-2">Пример</div>
+            <div class="accordion-content">
+                <p>let фрукт = 'яблоко';</p>
+                <p>
+                    switch (фрукт) {<br>
+                    &emsp;case 'банан':<br>
+                    &emsp;&emsp;console.log('Банан желтый.');<br>
+                    &emsp;&emsp;break;<br>
+                    &emsp;case 'яблоко':<br>
+                    &emsp;&emsp;console.log('Яблоко красное или зеленое.');<br>
+                    &emsp;&emsp;break;<br>
+                    &emsp;case 'апельсин':<br>
+                    &emsp;&emsp;console.log('Апельсин оранжевый.');<br>
+                    &emsp;&emsp;break;<br>
+                    &emsp;default:<br>
+                    &emsp;&emsp;console.log('Неизвестный фрукт.');<br>
+                    }
+                </p>
+                <p>
+                    Объяснение:<br>
+                    Оператор switch оценивает переменную фрукт.<br>
+                    Он сравнивает значение фрукт с каждым case.<br>
+                    Когда находит соответствие (в данном случае case 'яблоко':), выполняет соответствующий блок
+                    кода.<br>
+                    Оператор break предотвращает выполнение "падения" к следующему оператору case.<br>
+                    Если ни один из случаев не совпадает, выполняется блок default.<br>
+                </p>
+                <p>
+                    Важные заметки:<br>
+                    Оператор switch использует строгую равенство (===) для сравнения.<br>
+                    Если пропустить оператор break, код продолжит выполняться до встречи break или конца блока switch
+                    (такое поведение
+                    называется "падением").<br>
+                    Вы также можете использовать выражения в операторах case, но они должны оцениваться в значение,
+                    которое можно сравнить с
+                    выражением switch.<br>
+                </p>
+
+            </div>
+            <!-- Пример конец-->
+        </div>
+        <!-- SWITCH CASE конец -->
         <!-- STACK & HEAP -->
         <div class="accordion-header level-1">STACK & HEAP (стек и куча)</div>
         <div class="accordion-content">
@@ -1780,13 +1848,629 @@
             <!-- ISO конец-->
         </div>
         <!-- DATE конец -->
+        <!-- ФУНКЦИИ -->
+        <div class="accordion-header level-1">ФУНКЦИИ</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <p>Функции в JavaScript — это один из основных строительных блоков языка, позволяющий организовывать
+                    код, делать его более
+                    читаемым и повторно используемым.</p>
+            </div>
+            <!-- Определение конец-->
+            <!-- Объявление функции -->
+            <div class="accordion-header level-2">Объявление функции </div>
+            <div class="accordion-content">
+                <!-- функциональное объявление (function declaration) -->
+                <div class="accordion-header level-3">функциональное объявление (function declaration)</div>
+                <div class="accordion-content">
+                    <p>Функциональное объявление (function declaration) в JavaScript — это один из способов
+                        объявления функции, который
+                        позволяет создавать именованные функции. В отличие от функциональных выражений,
+                        функциональные объявления поднимаются
+                        (hoisting), что означает, что они могут быть вызваны до их фактического определения в коде.
+                        Вот основные аспекты
+                        функциональных объявлений:</p>
+                    <p>
+                        myFunction(); // "Hello, World!"</p>
+                    <p>
+                        function myFunction() {<br>
+                        &emsp;console.log("Hello, World!");<br>
+                        }
+                    </p>
+                    <p>
+                        // вызов функции<br>
+                        myFunction(); // "Hello, World!"
+                    </p>
+                </div>
+                <!-- функциональное объявление (function declaration) конец-->
+                <!-- функциональное выражение (function expression) -->
+                <div class="accordion-header level-3">функциональное выражение (function expression)</div>
+                <div class="accordion-content">
+                    <p>Функциональное выражение (function expression) в JavaScript — это способ объявления функции,
+                        который присваивает
+                        функцию переменной. В отличие от функционального объявления, функциональное выражение не
+                        поднимается (hoisting), что
+                        означает, что функция не будет доступна до момента, когда интерпретатор дойдет до строки с
+                        её определением.</p>
+                    <p>
+                        functionExpression() // script.js:32 Uncaught ReferenceError: Cannot access
+                        'functionExpression' before initialization
+                        at script.js: 32: 1</p>
+                    <p> const functionExpression = function () {<br>
+                        &emsp;console.log("Hello, World!");<br>
+                        };
+                    </p>
+                    <p>
+                        // вызов функции<br>
+                        functionExpression(); // Hello, World!
+                    </p>
+                </div>
+                <!-- функциональное выражение (function expression) конец-->
+                <!-- стрелочные функции -->
+                <div class="accordion-header level-3">стрелочные функции</div>
+                <div class="accordion-content">
+                    <p>стрелочные функции — это более компактный синтаксис для объявления функций</p>
+                    <p>
+                        const greet = () => {<br>
+                        &emsp;console.log("Hello!");<br>
+                        };
+                    </p>
+                    <p>
+                        // вызов функции<br>
+                        greet(); // Hello!
+                    </p>
+                </div>
+                <!-- стрелочные функции конец-->
+            </div>
+            <!-- Объявление функции конец-->
+            <!-- Выбор названия функции -->
+            <div class="accordion-header level-2">Выбор названия функции</div>
+            <div class="accordion-content">
+                <!-- используйте описательные имена -->
+                <div class="accordion-header level-3">используйте описательные имена</div>
+                <div class="accordion-content">
+                    <p>Имя функции должно четко отражать ее назначение. Например:</p>
+                    <p>function calculateArea(radius) {<br>
+                        &emsp;return Math.PI * radius * radius;<br>
+                        }</p>
+                    <p>Такое имя сразу дает понять, что функция вычисляет площадь круга.</p>
+                </div>
+                <!-- используйте описательные имена конец-->
+                <!-- используйте глаголы -->
+                <div class="accordion-header level-3">используйте глаголы</div>
+                <div class="accordion-content">
+                    <p>Функции обычно выполняют действия, поэтому их имена часто начинаются с глаголов. Например:</p>
+                    <p>
+                        function fetchData() {<br>
+                        &emsp;// код для получения данных<br>
+                        }
+                    </p>
+                </div>
+                <!-- используйте глаголы конец-->
+                <!-- используйте camelCase -->
+                <div class="accordion-header level-3">используйте camelCase</div>
+                <div class="accordion-content">
+                    <p>В JavaScript принято использовать стиль написания имен функций в формате camelCase, где первое
+                        слово пишется с маленькой
+                        буквы, а каждое последующее — с заглавной. Например:</p>
+                    <p>
+                        function getUserInfo() {<br>
+                        &emsp;// код для получения информации о пользователе<br>
+                        }
+                    </p>
+                </div>
+                <!-- используйте camelCase конец-->
+                <!-- избегайте аббревиатур -->
+                <div class="accordion-header level-3">избегайте аббревиатур</div>
+                <div class="accordion-content">
+                    <p>Если возможно, избегайте использования аббревиатур в именах функций, чтобы сделать код более
+                        читаемым. Например, вместо
+                        calc лучше использовать calculate.</p>
+                </div>
+                <!-- избегайте аббревиатур конец-->
+                <!-- учитывайте контекст -->
+                <div class="accordion-header level-3">учитывайте контекст</div>
+                <div class="accordion-content">
+                    <p>Если функция является методом объекта, можно использовать имя, которое отражает действие,
+                        связанное с этим объектом.
+                        Например:</p>
+                    <p>
+                        const car = {<br>
+                        &emsp;startEngine: function() {<br>
+                        &emsp;&emsp;// код для запуска двигателя<br>
+                        &emsp;}<br>
+                        };
+                    </p>
+                </div>
+                <!-- учитывайте контекст конец-->
+                <!-- используйте префиксы для анонимных функций -->
+                <div class="accordion-header level-3">используйте префиксы для анонимных функций</div>
+                <div class="accordion-content">
+                    <p>Если вы используете анонимные функции, например, в качестве коллбеков, можно использовать
+                        префиксы, чтобы указать их
+                        назначение:</p>
+                    <p>
+                        const numbers = [1, 2, 3];<br>
+                        numbers.forEach(function logNumber(num) {<br>
+                        &emsp;console.log(num);<br>
+                        });
+                    </p>
+                </div>
+                <!-- используйте префиксы для анонимных функций конец-->
+            </div>
+            <!-- Выбор названия функции конец-->
+            <!-- Параметры и аргументы -->
+            <div class="accordion-header level-2">Параметры и аргументы</div>
+            <div class="accordion-content">
+                <!-- параметры -->
+                <div class="accordion-header level-3">параметры</div>
+                <div class="accordion-content">
+                    <p>Параметры — это переменные, которые объявляются в определении функции и используются для передачи
+                        значений в функцию.
+                        Они указываются в круглых скобках через запятую. Например:</p>
+                    <p>
+                        function greet(name, age) {<br>
+                        &emsp;console.log(`Hello! I'm ${name} I'm ${age} years ago.`);<br>
+                        }
+                    </p>
+                    <p>
+                        name и age - параметры функции
+                    </p>
+                </div>
+                <!-- параметры конец-->
+                <!-- аргументы -->
+                <div class="accordion-header level-3">аргументы</div>
+                <div class="accordion-content">
+                    <p>Аргументы — это фактические значения, которые передаются в функцию при её вызове. Они могут быть
+                        любого типа: числа,
+                        строки, объекты и т.д. Например:</p>
+                    <p>
+                        function greet(name, age) {<br>
+                        &emsp;console.log(`Hello! I'm ${name} I'm ${age} years ago.`);<br>
+                        }</p>
+                    <p>
+                        greet("Dmitrii", 41) // Hello! I'm Dmitrii I'm 41 years ago.
+                    </p>
+                    <p>"Dmitrii" и 41 - аргументы функции</p>
+                </div>
+                <!-- аргументы конец-->
+                <!-- значения по умолчанию -->
+                <div class="accordion-header level-3">значения по умолчанию</div>
+                <div class="accordion-content">
+                    <p>В JavaScript значения по умолчанию позволяют задавать начальные значения для параметров функции,
+                        если при вызове функции
+                        эти параметры не были переданы. Это упрощает работу с функциями и делает код более читаемым.
+                        Давайте рассмотрим, как это
+                        работает.</p>
+                    <p>Значения по умолчанию задаются при объявлении параметров функции. Если аргумент не передан, будет
+                        использовано значение
+                        по умолчанию.</p>
+                    <p>
+                        function greet(name = "Гость") {<br>
+                        &emsp;console.log(`Привет, ${name}!`);<br>
+                        }
+                    </p>
+                    <p>
+                        greet(); // Привет, Гость!<br>
+                        greet("Алексей"); // Привет, Алексей!
+                    </p>
+                    <p>В этом примере функция greet принимает один параметр name, который по умолчанию равен "Гость".
+                        Если при вызове функции
+                        не передать аргумент, будет использовано значение по умолчанию.</p>
+                </div>
+                <!-- значения по умолчанию конец-->
+            </div>
+            <!-- Параметры и аргументы конец-->
+            <!-- Возврат значений (return) -->
+            <div class="accordion-header level-2">Возврат значений (return)</div>
+            <div class="accordion-content">
+                <!-- возврат одного значения -->
+                <div class="accordion-header level-3">возврат одного значения</div>
+                <div class="accordion-content">
+                    <p>Чтобы вернуть значение из функции, используется ключевое слово return. Когда функция достигает
+                        оператора return, она
+                        завершает своё выполнение и возвращает указанное значение. Например:</p>
+                    <p>
+                        function square(x) {<br>
+                        &emsp;return x * x;<br>
+                        &emsp;console.log('эта строка не сработает, так как выполнение кода завершилось на return')<br>
+                        }
+                    </p>
+                    <p>
+                        const result = square(4);<br>
+                        console.log(result); // 16
+                    </p>
+                </div>
+                <!-- возврат одного значения конец-->
+                <!-- возврат нескольких значений -->
+                <div class="accordion-header level-3">возврат нескольких значений</div>
+                <div class="accordion-content">
+                    <p>JavaScript не поддерживает возврат нескольких значений напрямую, но вы можете обойти это
+                        ограничение, возвращая массив
+                        или объект.</p>
+                    <p><strong>с помощью массива</strong></p>
+                    <p>
+                        function getCoordinates() {<br>
+                        &emsp;return [10, 20]; // Возвращаем массив<br>
+                        }
+                    </p>
+                    <p>
+                        const [x, y] = getCoordinates();<br>
+                        console.log(x, y); // 10 20
+                    </p>
+                    <p><strong>с помощью объекта</strong></p>
+                    <p>function getPerson() {<br>
+                        &emsp;return { name: "Alice", age: 25 }; // Возвращаем объект<br>
+                        }</p>
+                    <p>
+                        const person = getPerson();<br>
+                        console.log(person.name, person.age); // Alice 25</p>
+                </div>
+                <!-- возврат нескольких значений конец-->
+                <!-- отсутствие оператора retutn -->
+                <div class="accordion-header level-3">отсутствие оператора retutn</div>
+                <div class="accordion-content">
+                    <p>Если функция не содержит оператора return, она по умолчанию возвращает undefined. Например:</p>
+                    <p>
+                        function square(x) {<br>
+                        &emsp;x * x;<br>
+                        }</p>
+                    <p>
+                        const result = square(4);<br>
+                        console.log(result); // undefined
+                    </p>
+                </div>
+                <!-- отсутствие оператора retutn конец-->
+                <!-- возврат значений в условиях -->
+                <div class="accordion-header level-3">возврат значений в условиях</div>
+                <div class="accordion-content">
+                    <p>Вы можете использовать оператор return в условных конструкциях, чтобы вернуть разные значения в
+                        зависимости от условий:</p>
+                    <p>
+                        function checkNumber(num) {<br>
+                        &emsp;if (num > 0) {<br>
+                        &emsp;&emsp;return "Positive";<br>
+                        &emsp;} else if (num < 0) {<br>
+                            &emsp;&emsp;return "Negative";<br>
+                            &emsp;} else {<br>
+                            &emsp;&emsp;return "Zero";<br>
+                            &emsp;}<br>
+                            }
+                    </p>
+                    <p>
+                        console.log(checkNumber(5)); // Positive<br>
+                        console.log(checkNumber(-3)); // Negative<br>
+                        console.log(checkNumber(0)); // Zero
+                    </p>
+                </div>
+                <!-- возврат значений в условиях конец-->
+            </div>
+            <!-- Возврат значений (return) конец-->
+            <!-- Область видимости (Scope) -->
+            <div class="accordion-header level-2">Область видимости (Scope)</div>
+            <div class="accordion-content">
+                <!-- глобальная область видимости -->
+                <div class="accordion-header level-3">глобальная область видимости</div>
+                <div class="accordion-content">
+                    <p>Переменные, объявленные вне всех функций, имеют глобальную область видимости. Они доступны из
+                        любой части кода, включая
+                        функции.</p>
+                    <p>
+                        let globalVar = "I am global";
+                    </p>
+                    <p>
+                        function showGlobal() {<br>
+                        &emsp;console.log(globalVar); // Доступ к глобальной переменной<br>
+                        }
+                    </p>
+                    <p>
+                        showGlobal(); // "I am global"
+                    </p>
+                </div>
+                <!-- глобальная область видимости конец-->
+                <!-- локальная область видимости -->
+                <div class="accordion-header level-3">локальная область видимости</div>
+                <div class="accordion-content">
+                    <p>Переменные, объявленные внутри функции, имеют локальную область видимости. Они доступны только
+                        внутри этой функции и
+                        недоступны за ее пределами.</p>
+                    <p>
+                        function localScope() {<br>
+                        &emsp;let localVar = "I am local";<br>
+                        &emsp;console.log(localVar); // Доступ к локальной переменной<br>
+                        }
+                    </p>
+                    <p>
+                        localScope(); // "I am local"<br>
+                        // console.log(localVar); // Ошибка: localVar is not defined
+                    </p>
+                </div>
+                <!-- локальная область видимости конец-->
+                <!-- область видимости блока -->
+                <div class="accordion-header level-3">область видимости блока</div>
+                <div class="accordion-content">
+                    <p>С введением let и const в ES6, JavaScript также поддерживает область видимости блока. Переменные,
+                        объявленные с помощью
+                        let или const внутри блока (например, в условии или цикле), доступны только в этом блоке.</p>
+                    <p>
+                        if (true) {<br>
+                        &emsp;let blockVar = "I am in a block";<br>
+                        &emsp;console.log(blockVar); // Доступ к переменной блока<br>
+                        }
 
+                        // console.log(blockVar); // Ошибка: blockVar is not defined
+                    </p>
+                </div>
+                <!-- область видимости блока конец-->
+            </div>
+            <!-- Область видимости (Scope) конец-->
+            <!-- Анонимные функции -->
+            <div class="accordion-header level-2">Анонимные функции</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Анонимные функции — это функции, которые не имеют имени. Они могут быть полезны в различных
+                        ситуациях, например, когда
+                        вы хотите передать функцию как аргумент другой функции или когда вам не нужно повторно
+                        использовать функцию в других
+                        частях кода. Давайте рассмотрим анонимные функции подробнее.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- определение анонимной функции -->
+                <div class="accordion-header level-3">определение анонимной функции</div>
+                <div class="accordion-content">
+                    <p>Анонимные функции могут быть определены с помощью ключевого слова function, но без указания
+                        имени. Например:</p>
+                    <p>
+                        const greet = function(name) {<br>
+                        &emsp;console.log("Hello, " + name + "!");<br>
+                        };</p>
+                    <p>
+                        greet("Alice"); // Hello, Alice!
+                    </p>
+                    <p>В этом примере мы создали анонимную функцию и присвоили её переменной greet.</p>
+                </div>
+                <!-- определение анонимной функции конец-->
+                <!-- использование анонимных функций как аргументов -->
+                <div class="accordion-header level-3">использование анонимных функций как аргументов</div>
+                <div class="accordion-content">
+                    <p>Анонимные функции часто используются в качестве аргументов для других функций. Например, в
+                        методах массивов, таких как
+                        forEach, map и filter:</p>
+                    <p>const numbers = [1, 2, 3, 4, 5];</p>
 
-
-
-
-
-
+                    <p>numbers.forEach(function (num) {<br>
+                        &emsp;console.log(num * 2);<br>
+                        });
+                        // Вывод: 2, 4, 6, 8, 10</p>
+                </div>
+                <!-- использование анонимных функций как аргументов конец-->
+                <!-- анонимные функции и IIFE -->
+                <div class="accordion-header level-3">анонимные функции и IIFE</div>
+                <div class="accordion-content">
+                    <p>Анонимные функции могут быть использованы как немедленно вызываемые функции (IIFE — Immediately
+                        Invoked Function
+                        Expression). Это позволяет создавать локальную область видимости:</p>
+                    <p>
+                        (function () {&emsp;<br>
+                        &emsp;const message = "Hello, World!";<br>
+                        &emsp;console.log(message);<br>
+                        })();<br>
+                        // Вывод: Hello, World!
+                    </p>
+                </div>
+                <!-- анонимные функции и IIFE конец-->
+                <!-- стрелочные функции -->
+                <div class="accordion-header level-3">стрелочные функции</div>
+                <div class="accordion-content">
+                    <p>С появлением стрелочных функций в ES6, анонимные функции стали более лаконичными. Стрелочные
+                        функции используют более
+                        короткий синтаксис и не имеют своего контекста this:</p>
+                    <p>const add = (a, b) => a + b;
+                    </p>
+                    <p>
+                        console.log(add(2, 3)); // 5</p>
+                </div>
+                <!-- стрелочные функции конец-->
+            </div>
+            <!-- Анонимные функции конец-->
+            <!-- Стрелочные функции -->
+            <div class="accordion-header level-2">Стрелочные функции</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Стрелочные функции — это новый синтаксис для определения функций, который был введён в ECMAScript
+                        6 (ES6). Они
+                        предлагают более краткий и удобный способ написания функций, а также имеют некоторые
+                        особенности, отличающие их от
+                        обычных функций. Давайте рассмотрим стрелочные функции подробнее.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- синтаксис -->
+                <div class="accordion-header level-3">синтаксис</div>
+                <div class="accordion-content">
+                    <!-- с несколькими параметрами -->
+                    <div class="accordion-header level-4">с несколькими параметрами</div>
+                    <div class="accordion-content">
+                        <p>Стрелочные функции имеют более компактный синтаксис. Они определяются с помощью стрелки =>,
+                            которая следует за
+                            параметрами функции.</p>
+                        <p>const multiply = (a, b) => a * b;</p>
+                        <p>console.log(multiply(2, 3)); // 6</p>
+                        <p>В этом примере мы определили стрелочную функцию multiply, которая принимает два параметра и
+                            возвращает их произведение.</p>
+                    </div>
+                    <!-- с несколькими параметрами конец-->
+                    <!-- однопараметрные стрелочные функции -->
+                    <div class="accordion-header level-4">однопараметрные стрелочные функции</div>
+                    <div class="accordion-content">
+                        <p>Если стрелочная функция принимает только один параметр, скобки можно опустить:</p>
+                        <p>const square = x => x * x;</p>
+                        <p>console.log(square(4)); // 16</p>
+                    </div>
+                    <!-- однопараметрные стрелочные функции конец-->
+                    <!-- без параметров -->
+                    <div class="accordion-header level-4">без параметров</div>
+                    <div class="accordion-content">
+                        <p>Если функция не принимает параметров, необходимо использовать пустые скобки:</p>
+                        <p>const greet = () => console.log("Hello!");</p>
+                        <p>greet(); // Hello!</p>
+                    </div>
+                    <!-- без параметров конец-->
+                </div>
+                <!-- синтаксис конец-->
+                <!-- возврат объектов -->
+                <div class="accordion-header level-3">возврат объектов</div>
+                <div class="accordion-content">
+                    <p>Если вы хотите вернуть объект из стрелочной функции, необходимо обернуть объект в круглые скобки,
+                        чтобы избежать
+                        путаницы с фигурными скобками, которые обозначают тело функции:</p>
+                    <p>const getPerson = () => ({ name: "Alice", age: 25 });</p>
+                    <p>const person = getPerson();<br>
+                        console.log(person.name, person.age); // Alice 25</p>
+                </div>
+                <!-- возврат объектов конец-->
+                <!-- контекст this -->
+                <div class="accordion-header level-3">контекст this</div>
+                <div class="accordion-content">
+                    <p>Одной из ключевых особенностей стрелочных функций является то, что они не имеют своего контекста
+                        this. Это означает, что
+                        значение this внутри стрелочной функции будет таким же, как и в окружающем контексте. Это
+                        особенно полезно в ситуациях,
+                        когда вы хотите сохранить контекст, например, в методах объектов:</p>
+                    <p>
+                        const obj = {<br>
+                        &emsp;value: 42,<br>
+                        &emsp;getValue: function() {<br>
+                        &emsp;&emsp;return () => this.value; // this ссылается на obj<br>
+                        &emsp;}<br>
+                        };
+                    </p>
+                    <p>const getValue = obj.getValue();<br>
+                        console.log(getValue()); // 42</p>
+                </div>
+                <!-- контекст this конец-->
+            </div>
+            <!-- Стрелочные функции конец-->
+            <!-- Callback функции -->
+            <div class="accordion-header level-2">Callback функции</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Callback функции — это функции, которые передаются в качестве аргументов другим функциям и
+                        вызываются после завершения
+                        выполнения этих функций. Они широко используются в JavaScript для обработки асинхронных
+                        операций, таких как запросы к
+                        серверу, обработка событий и таймеры.</p>
+                    <p>
+                </div>
+                <!-- определение конец-->
+                <!-- простой пример -->
+                <div class="accordion-header level-3">простой пример</div>
+                <div class="accordion-content">
+                    <p>
+                        function greeting() {<br>
+                        &emsp;console.log("Hello")<br>
+                        }
+                    </p>
+                    <p>
+                        function showGreeting(callback) {<br>
+                        &emsp;callback()<br>
+                        }
+                    </p>
+                    <p>
+                        // функция greeting передается как параметр в функцию showGreeting, где она вызывается
+                    </p>
+                    <p>
+                        showGreeting(greeting); // Hello
+                    </p>
+                </div>
+                <!-- простой пример конец-->
+                <!-- пример с функцией setTimeout -->
+                <div class="accordion-header level-3">пример с функцией setTimeout</div>
+                <div class="accordion-content">
+                    <p>
+                        function greet(name) {<br>
+                        &emsp;console.log(`Привет, ${name}!`);<br>
+                        }
+                    </p>
+                    <p>
+                        setTimeout(function() {<br>
+                        &emsp;greet('Мир');<br>
+                        }, 2000); // Функция greet будет вызвана через 2 секунды
+                    </p>
+                </div>
+                <!-- пример с функцией setTimeout конец-->
+                <!-- callback в массиве -->
+                <div class="accordion-header level-3">callback в массиве</div>
+                <div class="accordion-content">
+                    <p>
+                        const numbers = [1, 2, 3, 4, 5];
+                    </p>
+                    <p>
+                        const doubled = numbers.map(function(num) {<br>
+                        &emsp;return num * 2;<br>
+                        });
+                    </p>
+                    <p>
+                        console.log(doubled); // [2, 4, 6, 8, 10]
+                    </p>
+                </div>
+                <!-- callback в массиве конец-->
+                <!-- callback в асинхронной функции -->
+                <div class="accordion-header level-3">callback в асинхронной функции</div>
+                <div class="accordion-content">
+                    <p>
+                        function fetchData(callback) {<br>
+                        &emsp;setTimeout(function() {<br>
+                        &emsp;&emsp;const data = { id: 1, name: 'John' };<br>
+                        &emsp;&emsp;callback(data); // Вызов callback с полученными данными<br>
+                        &emsp;}, 1000);<br>
+                        }
+                    </p>
+                    <p>
+                        fetchData(function(data) {<br>
+                        &emsp;console.log('Полученные данные:', data);<br>
+                        });
+                    </p>
+                </div>
+                <!-- callback в асинхронной функции конец-->
+                <!-- callback в обработчиках событий -->
+                <div class="accordion-header level-3">callback в обработчиках событий</div>
+                <div class="accordion-content">
+                    <p>
+                        const button = document.getElementById('myButton');
+                    </p>
+                    <p>
+                        button.addEventListener('click', function() {<br>
+                        &emsp;alert('Кнопка нажата!');<br>
+                        });
+                    </p>
+                </div>
+                <!-- callback в обработчиках событий конец-->
+                <!-- стрелочные функции в качестве callback -->
+                <div class="accordion-header level-3">стрелочные функции в качестве callback</div>
+                <div class="accordion-content">
+                    <p>
+                        const numbers = [1, 2, 3, 4, 5];
+                    </p>
+                    <p>
+                        const squared = numbers.map(num => num * num);
+                    </p>
+                    <p>
+                        console.log(squared); // [1, 4, 9, 16, 25]
+                    </p>
+                </div>
+                <!-- стрелочные функции в качестве callback конец-->
+            </div>
+            <!-- Callback функции конец-->
+        </div>
+        <!-- ФУНКЦИИ конец -->
 
 
 
@@ -2527,18 +3211,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- ОБЪЕКТЫ -->
         <div class="accordion-header level-1">ОБЪЕКТЫ</div>
         <div class="accordion-content">
@@ -2759,60 +3431,6 @@
             <!-- Объект Math конец-->
         </div>
         <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ конец -->
-        <!-- ФУНКЦИИ -->
-        <div class="accordion-header level-1">ФУНКЦИИ</div>
-        <div class="accordion-content">
-            <div class="accordion-header level-2">2</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">3</div>
-                <div class="accordion-content">текст</div>
-            </div>
-        </div>
-        <!-- ФУНКЦИИ конец -->
-
-
-
-
-
-
-
-        <!-- <div class="accordion-header level-2">2</div>
-        <div class="accordion-content">
-            <div class="accordion-header level-3">3</div>
-            <div class="accordion-content">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-        </div> -->
-
-
-
-        <!-- <div class="accordion-header level-3">3</div>
-<div class="accordion-content">текст</div> -->
-
-
-
-
-
-        <!-- <div class="accordion-header">1</div>
-        <div class="accordion-content">
-            <div class="accordion-header">2</div>
-            <div class="accordion-content">
-                <div class="accordion-header">3</div>
-                <div class="accordion-content">текст</div>
-            </div>
-        </div> -->
-
-
-
-
-
-
-
-
-
-
 
     </div>
     <script src="script.js"></script>
