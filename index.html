@@ -2471,12 +2471,259 @@
             <!-- Callback функции конец-->
         </div>
         <!-- ФУНКЦИИ конец -->
+        <!-- ОБЪЕКТЫ -->
+        <div class="accordion-header level-1">ОБЪЕКТЫ</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <ul>
+                    <li> В JavaScript объекты представляют собой коллекции свойств, где каждое свойство состоит из
+                        ключа
+                        и
+                        значения. Объекты
+                        могут содержать различные типы данных, включая строки, числа, массивы и даже другие объекты.
+                        Они
+                        являются основным
+                        способом организации и хранения данных в JavaScript.
+                    </li>
+                </ul>
 
+            </div>
+            <!-- Определение конец -->
+            <!-- Создание объектов -->
+            <div class="accordion-header level-2">Создание объектов</div>
+            <div class="accordion-content">
+                <!-- литерал объекта -->
+                <div class="accordion-header level-3">литерал объекта</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30,<br>
+                            &emsp;isStudent: false<br>
+                            };</li>
+                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
+                    </ul>
+                </div>
+                <!-- литерал объекта конец -->
+                <!-- конструктор объекта -->
+                <div class="accordion-header level-3">конструктор объекта</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = new Object();<br>
+                            person.name = 'Иван';<br>
+                            person.age = 30;<br>
+                            person.isStudent = false;</li>
+                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
+                    </ul>
+                </div>
+                <!-- конструктор объекта конец -->
+                <!-- классы (ES6) -->
+                <div class="accordion-header level-3">классы (ES6)</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>class Person {<br>
+                            &emsp;constructor(name, age) {<br>
+                            &emsp;&emsp;this.name = name;<br>
+                            &emsp;&emsp;this.age = age;<br>
+                            &emsp;}<br>
+                            }</li>
+                        <li>let person = new Person('Иван', 30);<br>
+                            console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
+                    </ul>
+                </div>
+                <!-- классы (ES6) конец -->
+            </div>
+            <!-- Создание объектов конец -->
+            <!-- Доступ к свойствам -->
+            <div class="accordion-header level-2">Доступ к свойствам</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">свойства объекта можно получить с помощью точечной нотации или
+                    квадратных скобок:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30<br>
+                            };
+                        </li>
+                        <li>console.log(person.name); // 'Иван'</li>
+                        <li>console.log(person['age']); // 30</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Доступ к свойствам конец -->
+            <!-- Изменение свойств -->
+            <div class="accordion-header level-2">Изменение свойств</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">свойства объекта можно изменять с помощью точечной нотации или
+                    квадратных скобок:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30<br>
+                            };</li>
+                        <li>person.age = 31;</li>
+                        <li>console.log(person); // {name: 'Иван', age: 31}</li>
+                        <li>person['age'] = 32;</li>
+                        <li>console.log(person); // {name: 'Иван', age: 32}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Изменение свойств конец -->
+            <!-- Добавление и удаление свойств -->
+            <div class="accordion-header level-2">Добавление и удаление свойств</div>
+            <div class="accordion-content">
+                <div class="accordion-header level-3">свойства объекта можно добавлять и удалять с помощью точечной
+                    нотации или
+                    квадратных скобок:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>let person = {<br>
+                            &emsp;name: 'Иван',<br>
+                            &emsp;age: 30<br>
+                            };</li>
+                        <li>person.gender = 'мужской'; // person['gender'] = 'мужской'; добавление свойства</li>
+                        <li>console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}</li>
+                        <li>delete person.age; // delete person['age']; удаление свойства</li>
+                        <li>console.log(person); // {name: 'Иван', gender: 'мужской'}</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Добавление и удаление свойств конец -->
+            <!-- Проверка наличия свойств -->
+            <div class="accordion-header level-2">Проверка наличия свойств</div>
+            <div class="accordion-content">
+                <p>
+                    let person = {<br>
+                    &emsp;name: 'Иван',<br>
+                    &emsp;age: 30,<br>
+                    &emsp;isStudent: false<br>
+                    };
+                </p>
+                <p>
+                    console.log("age" in person) // true<br>
+                    console.log("ag" in person) // false
+                </p>
+            </div>
+            <!-- Проверка наличия свойств конец-->
 
-
+        </div>
+        <!-- ОБЪЕКТЫ конец-->
+        <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ -->
+        <div class="accordion-header level-1">ВСТРОЕННЫЕ ОБЪЕКТЫ</div>
+        <div class="accordion-content">
+            <!-- Объект Math -->
+            <div class="accordion-header level-2">Объект Math</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>
+                        В JavaScript объект Math предоставляет различные математические функции и константы для
+                        выполнения вычислений. Он
+                        является встроенным объектом, и его методы и свойства статичны, что означает, что вы можете
+                        вызывать их напрямую через
+                        Math, не создавая экземпляр объекта. Вот краткий обзор основных возможностей объекта Math.
+                    </p>
+                </div>
+                <!-- определение конец-->
+                <!-- основные методы -->
+                <div class="accordion-header level-3">основные методы</div>
+                <div class="accordion-content">
+                    <!-- округление чисел -->
+                    <div class="accordion-header level-4">округление чисел</div>
+                    <div class="accordion-content">
+                        <p>Math.round(x): Округляет x до ближайшего целого числа.</p>
+                        <p>
+                            console.log(Math.round(4.5)); // 5<br>
+                            console.log(Math.round(4.4)); // 4
+                        </p>
+                        <p>Math.ceil(x): Округляет x до ближайшего большего целого числа.</p>
+                        <p>console.log(Math.ceil(4.1)); // 5</p>
+                        <p>Math.floor(x): Округляет x до ближайшего меньшего целого числа.</p>
+                        <p>console.log(Math.floor(4.9)); // 4</p>
+                        <p>Math.trunk(x): Возвращает целую часть числа путем удаления дробных знаков.</p>
+                        <p>console.log(Math.floor(4.9)); // 4</p>
+                    </div>
+                    <!-- округление чисел конец-->
+                    <!-- минимум и максимум -->
+                    <div class="accordion-header level-4">минимум и максимум</div>
+                    <div class="accordion-content">
+                        <p>Math.min(...values): Возвращает наименьшее из переданных значений.</p>
+                        <p>console.log(Math.min(3, 1, 4)); // 1</p>
+                        <p>Math.max(...values): Возвращает наибольшее из переданных значений.</p>
+                        <p>console.log(Math.max(3, 1, 4)); // 4</p>
+                    </div>
+                    <!-- минимум и максимум конец-->
+                    <!-- Случайные числа -->
+                    <div class="accordion-header level-4">случайные числа</div>
+                    <div class="accordion-content">
+                        <p>Math.random(): Возвращает случайное число от 0 (включительно) до 1 (исключительно).</p>
+                        <p>console.log(Math.random()); // Например, 0.123456</p>
+                    </div>
+                    <!-- Случайные числа конец-->
+                    <!-- Степени и корни -->
+                    <div class="accordion-header level-4">степени и корни</div>
+                    <div class="accordion-content">
+                        <p>Math.pow(base, exponent): Возвращает базу, возведенную в степень.</p>
+                        <p>console.log(Math.pow(2, 3)); // 8</p>
+                        <p>Math.sqrt(x): Возвращает квадратный корень из x.</p>
+                        <p>console.log(Math.sqrt(16)); // 4</p>
+                    </div>
+                    <!-- Степени и корни конец-->
+                    <!-- абсолютное хначение числа -->
+                    <div class="accordion-header level-3">абсолютное хначение числа</div>
+                    <div class="accordion-content">
+                        <p>Math.abc() - возвращает абсолютное значение числа.</p>
+                        <p>console.log(Math.abs(-49)); // 49</p>
+                    </div>
+                    <!-- абсолютное хначение числа конец-->
+                </div>
+                <!-- основные методы конец-->
+                <!-- константы Math -->
+                <div class="accordion-header level-3">константы Math</div>
+                <div class="accordion-content">
+                    <p>Math.PI: константа π (пи).</p>
+                    <p>console.log(Math.PI); // 3.141592653589793</p>
+                    <p>Math.E: Константа e (число Эйлера).</p>
+                    <p>console.log(Math.E); // 2.718281828459045</p>
+                </div>
+                <!-- константы Math конец-->
+                <!-- углы и тригонометрия -->
+                <div class="accordion-header level-3">углы и тригонометрия</div>
+                <div class="accordion-content">
+                    <p>Math.sin(x): Возвращает синус угла x (в радианах).</p>
+                    <p>Math.cos(x): Возвращает косинус угла x (в радианах).</p>
+                    <p> Math.tan(x): Возвращает тангенс угла x (в радианах).</p>
+                    <p>Math.asin(x), Math.acos(x), Math.atan(x): Возвращают арксинус, арккосинус и арктангенс
+                        соответственно.</p>
+                </div>
+                <!-- углы и тригонометрия конец-->
+            </div>
+            <!-- Объект Math конец-->
+        </div>
+        <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ конец -->
         <!-- МАССИВЫ -->
         <div class="accordion-header level-1">МАССИВЫ</div>
         <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <p>Массивы в JavaScript — это объекты, которые позволяют хранить упорядоченные коллекции данных. Они
+                    могут содержать
+                    элементы различных типов, включая числа, строки, объекты и даже другие массивы.</p>
+                <p>
+                    const array = [13, "day", true, null, "hello world", [], {}]<br>
+                    console.log(array) // (7) [13, 'day', true, null, 'hello world', Array(0), {…}]<br>
+                    console.log(array[0]) // 13 нумерация элементов массива начинается с 0<br>
+                    console.log(array.length) // 7 длинна массива<br>
+                    console.log(typeof array) // object
+                </p>
+            </div>
+            <!-- Определение конец-->
             <!-- Методы массивов -->
             <div class="accordion-header level-2">Методы массивов</div>
             <div class="accordion-content">
@@ -2718,7 +2965,7 @@
                     </div>
                     <!-- indexOf(): конец-->
                     <!-- find(): -->
-                    <div class="accordion-header level-3">find(): Возвращает значение первого найденного элемента в
+                    <div class="accordion-header level-4">find(): Возвращает значение первого найденного элемента в
                         массиве, который удовлетворяет предоставленной функции.
                         Если ни один элемент не удовлетворяет условию, возвращает undefined.</div>
                     <div class="accordion-content">
@@ -2730,7 +2977,7 @@
                     </div>
                     <!-- find(): конец-->
                     <!-- findIndex(): -->
-                    <div class="accordion-header level-3">findIndex(): Возвращает индекс первого элемента в массиве,
+                    <div class="accordion-header level-4">findIndex(): Возвращает индекс первого элемента в массиве,
                         который удовлетворяет предоставленной функции. Если ни
                         один элемент не удовлетворяет условию, возвращает -1.</div>
                     <div class="accordion-content">
@@ -2759,7 +3006,7 @@
                     </div>
                     <!-- filter(): конец-->
                     <!-- some(): -->
-                    <div class="accordion-header level-3">some(): Проверяет, удовлетворяет ли хотя бы один элемент
+                    <div class="accordion-header level-4">some(): Проверяет, удовлетворяет ли хотя бы один элемент
                         массива условию, заданному в предоставленной функции.
                         Возвращает true или false.</div>
                     <div class="accordion-content">
@@ -2771,7 +3018,7 @@
                     </div>
                     <!-- some(): конец-->
                     <!-- every(): -->
-                    <div class="accordion-header level-3">every(): Проверяет, удовлетворяют ли все элементы массива
+                    <div class="accordion-header level-4">every(): Проверяет, удовлетворяют ли все элементы массива
                         условию, заданному в предоставленной функции. Возвращает
                         true или false.</div>
                     <div class="accordion-content">
@@ -2809,6 +3056,41 @@
                             console.log(numbers); // [1, 2, 5, 8, 10]</p>
                     </div>
                     <!-- sort(): конец-->
+                    <!-- toSorted -->
+                    <div class="accordion-header level-4">toSorted</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [10, 2, 5, 1, 8];<br>
+                            const numbers2 = numbers.toSorted((a, b) => a - b);<br>
+                            // Сортирует массив по возрастанию не изменяя исходный массив<br>
+                            console.log(numbers2); // [1, 2, 5, 8, 10]<br>
+                            console.log(numbers); // [10, 2, 5, 1, 8]
+                        </p>
+                    </div>
+                    <!-- toSorted конец-->
+                    <!-- reverse() -->
+                    <div class="accordion-header level-4">reverse()</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers1 = [1, 2, 3, 4, 5];<br>
+                            console.log(numbers1.reverse()); // [5, 4, 3, 2, 1]<br>
+                            // Переварачивает массив изменяя его<br>
+                            console.log(numbers1); // [5, 4, 3, 2, 1]
+                        </p>
+                    </div>
+                    <!-- reverse() конец-->
+                    <!-- toReversed() -->
+                    <div class="accordion-header level-4">toReversed()</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3, 4, 5];<br>
+                            const numbers2 = numbers.toReversed();<br>
+                            // Переварачивает массив не изменяя исходный массив<br>
+                            console.log(numbers2); // [5, 4, 3, 2, 1]<br>
+                            console.log(numbers); // [1, 2, 3, 4, 5]
+                        </p>
+                    </div>
+                    <!-- toReversed() конец-->
                 </div>
                 <!-- сортировка элементов массива конец-->
                 <!-- преобразование элементов массива -->
@@ -2827,7 +3109,7 @@
                     </div>
                     <!-- reduce(): конец-->
                     <!-- flat(): -->
-                    <div class="accordion-header level-3">flat(): Этот метод создает новый массив с элементами всех
+                    <div class="accordion-header level-4">flat(): Этот метод создает новый массив с элементами всех
                         подмассивов, объединенными в один уровень.</div>
                     <div class="accordion-content">
                         <p>
@@ -2838,7 +3120,7 @@
                     </div>
                     <!-- flat(): конец-->
                     <!-- map(): -->
-                    <div class="accordion-header level-3">map(): Как уже упоминалось, этот метод создает новый
+                    <div class="accordion-header level-4">map(): Как уже упоминалось, этот метод создает новый
                         массив, в
                         котором каждый элемент изменен в соответствии с заданной
                         функцией.</div>
@@ -2868,7 +3150,7 @@
                     </div>
                     <!-- concat(): конец-->
                     <!-- spread operator: -->
-                    <div class="accordion-header level-3">spread operator: Также можно использовать оператор
+                    <div class="accordion-header level-4">spread operator: Также можно использовать оператор
                         распространения для объединения массивов.</div>
                     <div class="accordion-content">
                         <p>
@@ -2938,8 +3220,8 @@
                         </p>
                     </div>
                     <!-- map(): конец-->
-                    <!-- примененик итерации -->
-                    <div class="accordion-header level-4">примененик итерации</div>
+                    <!-- применение итерации -->
+                    <div class="accordion-header level-4">применение итерации</div>
                     <div class="accordion-content">
                         <p>
                             Итерация по массивам позволяет выполнять различные операции, такие как:</p>
@@ -2958,7 +3240,7 @@
                             подойдет map().
                         </p>
                     </div>
-                    <!-- примененик итерации конец-->
+                    <!-- применение итерации конец-->
                 </div>
                 <!-- итерация по элементам массива конец-->
                 <!-- методы проверки массивов -->
@@ -3049,7 +3331,8 @@
                 <div class="accordion-header level-3">копирование массивов</div>
                 <div class="accordion-content">
                     <!-- Метод slice(): -->
-                    <div class="accordion-header level-4">Метод slice(): Этот метод возвращает новый массив,
+                    <div class="accordion-header level-4">
+                        Метод slice(): Этот метод возвращает новый массив,
                         содержащий
                         копию части исходного массива. Если не передать
                         аргументы, он создаст полную копию массива.</div>
@@ -3062,7 +3345,7 @@
                     </div>
                     <!-- Метод slice(): конец-->
                     <!-- Оператор распространения (spread operator): -->
-                    <div class="accordion-header level-3">Оператор распространения (spread operator): С помощью
+                    <div class="accordion-header level-4">Оператор распространения (spread operator): С помощью
                         оператора ... можно создать новый массив, который будет
                         содержать элементы другого массива.</div>
                     <div class="accordion-content">
@@ -3207,231 +3490,431 @@
             <!-- Методы массивов конец-->
         </div>
         <!-- МАССИВЫ конец -->
-
-
-
-
-        <!-- ОБЪЕКТЫ -->
-        <div class="accordion-header level-1">ОБЪЕКТЫ</div>
+        <!-- ЦИКЛЫ -->
+        <div class="accordion-header level-1">ЦИКЛЫ</div>
         <div class="accordion-content">
             <!-- Определение -->
             <div class="accordion-header level-2">Определение</div>
             <div class="accordion-content">
-                <ul>
-                    <li> В JavaScript объекты представляют собой коллекции свойств, где каждое свойство состоит из
-                        ключа
-                        и
-                        значения. Объекты
-                        могут содержать различные типы данных, включая строки, числа, массивы и даже другие объекты.
-                        Они
-                        являются основным
-                        способом организации и хранения данных в JavaScript.
-                    </li>
-                </ul>
-
+                <p>Циклы в JavaScript — это конструкции, которые позволяют выполнять один и тот же блок кода несколько
+                    раз, пока
+                    выполняется определенное условие. Они являются важной частью программирования, так как позволяют
+                    автоматизировать
+                    повторяющиеся задачи и обрабатывать коллекции данных, такие как массивы.</p>
             </div>
-            <!-- Определение конец -->
-            <!-- Создание объектов -->
-            <div class="accordion-header level-2">Создание объектов</div>
+            <!-- Определение конец-->
+            <!-- Цикл for -->
+            <div class="accordion-header level-2">Цикл for</div>
             <div class="accordion-content">
-                <!-- литерал объекта -->
-                <div class="accordion-header level-3">литерал объекта</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30,<br>
-                            &emsp;isStudent: false<br>
-                            };</li>
-                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
-                    </ul>
-                </div>
-                <!-- литерал объекта конец -->
-                <!-- конструктор объекта -->
-                <div class="accordion-header level-3">конструктор объекта</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = new Object();<br>
-                            person.name = 'Иван';<br>
-                            person.age = 30;<br>
-                            person.isStudent = false;</li>
-                        <li>console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
-                    </ul>
-                </div>
-                <!-- конструктор объекта конец -->
-                <!-- классы (ES6) -->
-                <div class="accordion-header level-3">классы (ES6)</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>class Person {<br>
-                            &emsp;constructor(name, age) {<br>
-                            &emsp;&emsp;this.name = name;<br>
-                            &emsp;&emsp;this.age = age;<br>
+                <p>Цикл for используется для выполнения блока кода определенное количество раз. Он состоит из трех
+                    частей: инициализации (let i = 0),
+                    условия (i < 5) и инкремента (i++).</p>
+                        <p>
+                            for (let i = 0; i < 5; i++) {<br>
+                                &emsp;console.log(i); // Выводит числа от 0 до 4<br>
+                                }
+                        </p>
+                        <p>
+                            let i = 0<br>
+                            for (; i < 5; i++) {<br>
+                                &emsp;console.log(i); // Выводит числа от 0 до 4<br>
+                                }
+                        </p>
+                        <p>
+                            let i = 0;<br>
+                            for (; i < 5;) {<br>
+                                &emsp;console.log(i++)<br>
+                                }
+                        </p>
+            </div>
+            <!-- Цикл for конец-->
+            <!-- Цикл for работа с массивом -->
+            <div class="accordion-header level-2"> Цикл for работа с массивом</div>
+            <div class="accordion-content">
+                <p>Вывод в консоль элементов массива</p>
+                <p>
+                    const cars = ['audi', 'bmw', 'mercedes', 'ford', 'mazda'];<br>
+                    for (let i = 0; i < cars.length; i++) {<br>
+                        &emsp;console.log(cars[i]);<br>
+                        }<br>
+                        // audi<br>
+                        // bmw<br>
+                        // mercedes<br>
+                        // ford<br>
+                        // mazda
+                </p>
+                <p>Вывод в обратном порядке</p>
+                <p>
+                    for (let i = cars.length - 1; i >= 0; i--) {<br>
+                    &emsp;console.log(cars[i]);<br>
+                    }<br>
+                    // mazda<br>
+                    // ford<br>
+                    // mercedes<br>
+                    // bmw<br>
+                    // audi
+                </p>
+                <p>Пропустить элемент</p>
+                <p>
+                    for (let i = 0; i < cars.length; i++) { <br>
+                        &emsp;if (cars[i]==='mercedes' ) continue <br>
+                        &emsp;console.log(cars[i]); <br>
+                        }<br>
+                        // audi <br>
+                        // bmw <br>
+                        // ford <br>
+                        // mazda
+                </p>
+                <p>прервать цикл</p>
+                <p>
+                    for (let i = 0; i < cars.length; i++) { <br>
+                        &emsp;if (cars[i]==='mercedes' ) break<br>
+                        &emsp;console.log(cars[i]); <br>
+                        }<br>
+                        // audi <br>
+                        // bmw
+                </p>
+            </div>
+            <!-- Цикл for работа с массивом конец-->
+            <!-- Цикл for работа с объектами -->
+            <div class="accordion-header level-2">Цикл for работа с объектами</div>
+            <div class="accordion-content">
+                <p>
+                    const cars = [<br>
+                    &emsp;{ id: 1, brand: 'audi', year: 20, power: 224 },<br>
+                    &emsp;{ id: 2, brand: 'bmw', year: 22, power: 240 },<br>
+                    &emsp;{ id: 3, brand: 'mercedes', year: 19, power: 249 }<br>
+                    ];<br>
+                    for (let i = 0; i < cars.length; i++) {<br>
+                        &emsp;console.log(`car No.${i + 1}: ${cars[i].brand}, year:${cars[i].year},
+                        power:${cars[i].power}`)<br>
+                        }<br>
+                        // car No.1: audi, year: 20, power: 224<br>
+                        // car No.2: bmw, year: 22, power: 240<br>
+                        // car No.3: mercedes, year: 19, power: 249
+                </p>
+            </div>
+            <!-- Цикл for работа с объектами конец-->
+            <!-- Вложенный цикл -->
+            <div class="accordion-header level-2">Вложенный цикл</div>
+            <div class="accordion-content">
+                <p>
+                    for (let i = 0; i < 3; i++) {<br>
+                        &emsp;console.log(`ЦИКЛ i=${i + 1}`)<br>
+                        &emsp;for (let j=0; j < 3; j++) {<br>
+                            &emsp;&emsp;console.log(`j=${j + 1}`)<br>
                             &emsp;}<br>
-                            }</li>
-                        <li>let person = new Person('Иван', 30);<br>
-                            console.log(person); // { name: 'Иван', age: 30, isStudent: false }</li>
-                    </ul>
-                </div>
-                <!-- классы (ES6) конец -->
+                            }<br>
+                            // ЦИКЛ i=1<br>
+                            // вложенный цикл j=1<br>
+                            // вложенный цикл j=2<br>
+                            // вложенный цикл j=3<br>
+                            // ЦИКЛ i=2<br>
+                            // вложенный цикл j=1<br>
+                            // вложенный цикл j=2<br>
+                            // вложенный цикл j=3<br>
+                            // ЦИКЛ i=3<br>
+                            // вложенный цикл j=1<br>
+                            // вложенный цикл j=2<br>
+                            // вложенный цикл j=3
+                </p>
+                <p>пузырьковая сортировка</p>
+                <p>
+                    const array = [4, 33, 2, 1];<br>
+                    for (let i = 0; i < array.length; i++) {<br>
+                        &emsp;for (let j=0; j < array.length - 1 - i; j++) {<br>
+                            &emsp;&emsp;if(array[j]>array[j + 1]) {<br>
+                            &emsp;&emsp;&emsp;const temp = array[j];<br>
+                            &emsp;&emsp;&emsp;array[j] = array[j + 1];<br>
+                            &emsp;&emsp;&emsp;array[j + 1] = temp<br>
+                            &emsp;&emsp;}<br>
+                            &emsp;}<br>
+                            }<br>
+                            console.log(array) //[1, 2, 4, 33]
+                </p>
             </div>
-            <!-- Создание объектов конец -->
-            <!-- Доступ к свойствам -->
-            <div class="accordion-header level-2">Доступ к свойствам</div>
+            <!-- Вложенный цикл конец-->
+            <!-- Цикл while -->
+            <div class="accordion-header level-2">Цикл while</div>
             <div class="accordion-content">
-                <div class="accordion-header level-3">свойства объекта можно получить с помощью точечной нотации или
-                    квадратных скобок:</div>
+                <!-- определение, синтаксис -->
+                <div class="accordion-header level-3">определение, синтаксис</div>
                 <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30<br>
-                            };
-                        </li>
-                        <li>console.log(person.name); // 'Иван'</li>
-                        <li>console.log(person['age']); // 30</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Доступ к свойствам конец -->
-            <!-- Изменение свойств -->
-            <div class="accordion-header level-2">Изменение свойств</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">свойства объекта можно изменять с помощью точечной нотации или
-                    квадратных скобок:</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30<br>
-                            };</li>
-                        <li>person.age = 31;</li>
-                        <li>console.log(person); // {name: 'Иван', age: 31}</li>
-                        <li>person['age'] = 32;</li>
-                        <li>console.log(person); // {name: 'Иван', age: 32}</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Изменение свойств конец -->
-            <!-- Добавление и удаление свойств -->
-            <div class="accordion-header level-2">Добавление и удаление свойств</div>
-            <div class="accordion-content">
-                <div class="accordion-header level-3">свойства объекта можно добавлять и удалять с помощью точечной
-                    нотации или
-                    квадратных скобок:</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30<br>
-                            };</li>
-                        <li>person.gender = 'мужской'; // person['gender'] = 'мужской'; добавление свойства</li>
-                        <li>console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}</li>
-                        <li>delete person.age; // delete person['age']; удаление свойства</li>
-                        <li>console.log(person); // {name: 'Иван', gender: 'мужской'}</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Добавление и удаление свойств конец -->
 
-
-        </div>
-        <!-- ОБЪЕКТЫ конец-->
-        <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ -->
-        <div class="accordion-header level-1">ВСТРОЕННЫЕ ОБЪЕКТЫ</div>
-        <div class="accordion-content">
-            <!-- Объект Math -->
-            <div class="accordion-header level-2">Объект Math</div>
-            <div class="accordion-content">
-                <!-- определение -->
-                <div class="accordion-header level-3">определение</div>
-                <div class="accordion-content">
+                    <p>Цикл while в JavaScript — это конструкция, которая позволяет выполнять блок кода до тех пор, пока
+                        заданное условие
+                        истинно. Он полезен в ситуациях, когда количество итераций заранее неизвестно, и выполнение
+                        цикла зависит от динамически
+                        изменяющегося условия.</p>
+                    <p>Синтаксис цикла while</p>
                     <p>
-                        В JavaScript объект Math предоставляет различные математические функции и константы для
-                        выполнения вычислений. Он
-                        является встроенным объектом, и его методы и свойства статичны, что означает, что вы можете
-                        вызывать их напрямую через
-                        Math, не создавая экземпляр объекта. Вот краткий обзор основных возможностей объекта Math.
+                        while (условие) {<br>
+                        // Блок кода, который будет выполняться, пока условие истинно<br>
+                        }
+                    </p>
+                    <p>Пример</p>
+                    <p>
+                        let i = 0; // инициализация переменной<br>
+                        while (i < 5) { // условие продолжения цикла<br>
+                            &emsp;console.log(i); // вывод текущего значения i<br>
+                            &emsp;i++; // увеличение i на 1<br>
+                            }<br>
+                            // while - 1<br>
+                            // while - 2<br>
+                            // while - 3<br>
+                            // while - 4<br>
+                            // while - 5
                     </p>
                 </div>
-                <!-- определение конец-->
-                <!-- основные методы -->
-                <div class="accordion-header level-3">основные методы</div>
+                <!-- определение, синтаксис конец-->
+                <!-- когда использовать цикл while -->
+                <div class="accordion-header level-3">когда использовать цикл while</div>
                 <div class="accordion-content">
-                    <!-- округление чисел -->
-                    <div class="accordion-header level-4">округление чисел</div>
-                    <div class="accordion-content">
-                        <p>Math.round(x): Округляет x до ближайшего целого числа.</p>
-                        <p>
-                            console.log(Math.round(4.5)); // 5<br>
-                            console.log(Math.round(4.4)); // 4
-                        </p>
-                        <p>Math.ceil(x): Округляет x до ближайшего большего целого числа.</p>
-                        <p>console.log(Math.ceil(4.1)); // 5</p>
-                        <p>Math.floor(x): Округляет x до ближайшего меньшего целого числа.</p>
-                        <p>console.log(Math.floor(4.9)); // 4</p>
-                        <p>Math.trunk(x): Возвращает целую часть числа путем удаления дробных знаков.</p>
-                        <p>console.log(Math.floor(4.9)); // 4</p>
-                    </div>
-                    <!-- округление чисел конец-->
-                    <!-- минимум и максимум -->
-                    <div class="accordion-header level-4">минимум и максимум</div>
-                    <div class="accordion-content">
-                        <p>Math.min(...values): Возвращает наименьшее из переданных значений.</p>
-                        <p>console.log(Math.min(3, 1, 4)); // 1</p>
-                        <p>Math.max(...values): Возвращает наибольшее из переданных значений.</p>
-                        <p>console.log(Math.max(3, 1, 4)); // 4</p>
-                    </div>
-                    <!-- минимум и максимум конец-->
-                    <!-- Случайные числа -->
-                    <div class="accordion-header level-4">случайные числа</div>
-                    <div class="accordion-content">
-                        <p>Math.random(): Возвращает случайное число от 0 (включительно) до 1 (исключительно).</p>
-                        <p>console.log(Math.random()); // Например, 0.123456</p>
-                    </div>
-                    <!-- Случайные числа конец-->
-                    <!-- Степени и корни -->
-                    <div class="accordion-header level-4">степени и корни</div>
-                    <div class="accordion-content">
-                        <p>Math.pow(base, exponent): Возвращает базу, возведенную в степень.</p>
-                        <p>console.log(Math.pow(2, 3)); // 8</p>
-                        <p>Math.sqrt(x): Возвращает квадратный корень из x.</p>
-                        <p>console.log(Math.sqrt(16)); // 4</p>
-                    </div>
-                    <!-- Степени и корни конец-->
-                    <!-- абсолютное хначение числа -->
-                    <div class="accordion-header level-3">абсолютное хначение числа</div>
-                    <div class="accordion-content">
-                        <p>Math.abc() - возвращает абсолютное значение числа.</p>
-                        <p>console.log(Math.abs(-49)); // 49</p>
-                    </div>
-                    <!-- абсолютное хначение числа конец-->
+                    <ul>
+                        <li>Неизвестное количество итераций: Если вы не знаете заранее, сколько раз нужно выполнить
+                            цикл, например, при обработке
+                            данных, получаемых от пользователя или из внешнего источника.</li>
+                        <li>Ожидание выполнения условия: Когда выполнение цикла должно продолжаться до тех пор, пока не
+                            будет выполнено определенное
+                            условие. Например, ожидание, пока пользователь введет корректные данные.</li>
+                        <li>Динамическое изменение условия: Если условие зависит от изменений, происходящих внутри
+                            цикла, и может изменяться в
+                            процессе выполнения.</li>
+                    </ul>
+                    <p>Пример</p>
+                    <p>
+                        let userInput;<br>
+                        while (userInput !== 'exit') {<br>
+                        &emsp;userInput = prompt("Введите что-нибудь (или 'exit' для выхода):");<br>
+                        &emsp;console.log(userInput);<br>
+                        }
+                    </p>
+                    <p>В этом примере цикл будет продолжаться до тех пор, пока пользователь не введет слово 'exit'. Это
+                        демонстрирует, как
+                        while может быть использован для обработки пользовательского ввода, где количество итераций
+                        заранее неизвестно.</p>
                 </div>
-                <!-- основные методы конец-->
-                <!-- константы Math -->
-                <div class="accordion-header level-3">константы Math</div>
+                <!-- когда использовать цикл while конец-->
+                <!-- важные моменты -->
+                <div class="accordion-header level-3">важные моменты</div>
                 <div class="accordion-content">
-                    <p>Math.PI: константа π (пи).</p>
-                    <p>console.log(Math.PI); // 3.141592653589793</p>
-                    <p>Math.E: Константа e (число Эйлера).</p>
-                    <p>console.log(Math.E); // 2.718281828459045</p>
+                    <ul>
+                        <li>Проверка условия: Условие проверяется перед каждой итерацией. Если оно ложно с самого
+                            начала, блок кода внутри цикла не
+                            выполнится ни разу.</li>
+                        <li>Изменение переменной: Важно изменять переменную, используемую в условии, чтобы избежать
+                            бесконечного цикла.</li>
+                        <li>Осторожность с условиями: Убедитесь, что условие будет достигнуто, чтобы избежать
+                            бесконечных циклов, которые могут
+                            привести к зависанию программы.</li>
+                    </ul>
+                    <p>Цикл while является мощным инструментом для выполнения повторяющихся задач, особенно когда
+                        условия выполнения могут
+                        изменяться в процессе работы программы.</p>
                 </div>
-                <!-- константы Math конец-->
-                <!-- углы и тригонометрия -->
-                <div class="accordion-header level-3">углы и тригонометрия</div>
-                <div class="accordion-content">
-                    <p>Math.sin(x): Возвращает синус угла x (в радианах).</p>
-                    <p>Math.cos(x): Возвращает косинус угла x (в радианах).</p>
-                    <p> Math.tan(x): Возвращает тангенс угла x (в радианах).</p>
-                    <p>Math.asin(x), Math.acos(x), Math.atan(x): Возвращают арксинус, арккосинус и арктангенс
-                        соответственно.</p>
-                </div>
-                <!-- углы и тригонометрия конец-->
+                <!-- важные моменты конец-->
             </div>
-            <!-- Объект Math конец-->
-        </div>
-        <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ конец -->
+            <!-- Цикл while конец-->
+            <!-- Цикл do while -->
+            <div class="accordion-header level-2">Цикл do while</div>
+            <div class="accordion-content">
+                <!-- определение, синтаксис -->
+                <div class="accordion-header level-3">определение, синтаксис</div>
+                <div class="accordion-content">
 
+                    <p>Цикл do while в JavaScript — это конструкция, которая позволяет выполнять блок кода как минимум
+                        один раз, а затем
+                        продолжать выполнение до тех пор, пока заданное условие истинно. Это полезно в ситуациях, когда
+                        необходимо гарантировать
+                        выполнение кода хотя бы один раз, независимо от того, истинно ли условие в первый раз.</p>
+                    <p>Синтаксис цикла while</p>
+                    <p>
+                        do {<br>
+                        // Блок кода, который будет выполнен хотябы один раз<br>
+                        } while (условие);
+                    </p>
+                    <p>Пример</p>
+                    <p>
+                        let number;<br>
+                        do {<br>
+                        &emsp;number = prompt("Введите число больше 10:");<br>
+                        } while (number <= 10);<br>
+                            console.log("Вы ввели число:", number); </p>
+                    <p>В этом примере цикл будет выполняться, пока введенное число меньше или равно 10. Как только
+                        пользователь введет число
+                        больше 10, выполнение цикла завершится, и программа выведет введенное значение.</p>
+                </div>
+                <!-- определение, синтаксис конец-->
+                <!-- когда использовать цикл do while -->
+                <div class="accordion-header level-3">когда использовать цикл do while</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Необходимость в первом выполнении: Когда нужно, чтобы блок кода выполнялся хотя бы один раз,
+                            например, для запроса ввода
+                            у пользователя.</li>
+                        <li>Проверка после выполнения: Когда логика программы требует, чтобы условие проверялось после
+                            выполнения блока кода.</li>
+                    </ul>
+                </div>
+                <!-- когда использовать цикл do while конец-->
+                <!-- важные моменты -->
+                <div class="accordion-header level-3">важные моменты</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Гарантированное выполнение: Код внутри блока do выполняется хотя бы один раз, даже если
+                            условие ложно с самого начала.</li>
+                        <li>Проверка условия: Условие проверяется после выполнения блока кода, что отличает do while от
+                            обычного while.</li>
+                        <li>Изменение переменной: Как и в случае с while, важно изменять переменные, используемые в
+                            условии, чтобы избежать
+                            бесконечных циклов.</li>
+                    </ul>
+                    <p>Цикл do while — это полезный инструмент для выполнения повторяющихся задач, когда необходимо
+                        гарантировать выполнение
+                        кода хотя бы один раз. Он позволяет гибко управлять выполнением кода в зависимости от условий,
+                        которые могут изменяться
+                        в процессе работы программы.</p>
+                </div>
+                <!-- важные моменты конец-->
+            </div>
+            <!-- Цикл while конец-->
+            <!-- Цикл for...of -->
+            <div class="accordion-header level-2">Цикл for...of</div>
+            <div class="accordion-content">
+                <!-- определение, синтаксис -->
+                <div class="accordion-header level-3">определение, синтаксис</div>
+                <div class="accordion-content">
+                    <p>Цикл for...of в JavaScript используется для перебора итерируемых объектов, таких как массивы,
+                        строки, карты, множества и
+                        другие объекты, которые реализуют метод Symbol.iterator. Этот цикл позволяет легко и удобно
+                        получать доступ к элементам
+                        коллекции без необходимости использования индексов.</p>
+                    <p>
+                        for (const element of iterable) {<br>
+                        &emsp;// Блок кода, который будет выполняться для каждого элемента<br>
+                        }
+                    </p>
+                </div>
+                <!-- определение, синтаксис конец-->
+                <!-- когда использовать цикл for...of -->
+                <div class="accordion-header level-3">когда использовать цикл for...of</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Перебор массивов: Когда нужно пройтись по элементам массива и выполнить с ними какие-либо
+                            действия.</li>
+                        <li>Работа со строками: Для перебора символов в строке.</li>
+                        <li>Итерация по объектам, поддерживающим итерацию: Например, Map, Set и другие итерируемые
+                            структуры данных.</li>
+                    </ul>
+                    <p>Пример использования цикла for...of:</p>
+                    <p>
+                        const numbers = [1, 2, 3, 4, 5];<br>
+
+                        for (const number of numbers) {<br>
+                        &emsp;console.log(number);<br>
+                        }<br>
+                        // 1<br>
+                        // 2<br>
+                        // 3<br>
+                        // 4<br>
+                        // 5
+                    </p>
+                </div>
+                <!-- когда использовать цикл for...of конец-->
+                <!-- важные моменты -->
+                <div class="accordion-header level-3">важные моменты</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Простота использования: Цикл for...of упрощает код, так как не требует работы с индексами.
+                        </li>
+                        <li>Итерация по значениям: В отличие от цикла for...in, который перебирает ключи (индексы)
+                            объекта, for...of перебирает
+                            значения.</li>
+                        <li>Не работает с объектами: Цикл for...of не может быть использован для обычных объектов (не
+                            итерируемых). Для перебора
+                            свойств объектов лучше использовать for...in</li>
+                    </ul>
+                    <p>Цикл for...of является мощным инструментом для работы с итерируемыми объектами в JavaScript. Он
+                        позволяет легко и
+                        эффективно перебрать элементы коллекции, делая код более читаемым и понятным.</p>
+                </div>
+                <!-- важные моменты конец-->
+            </div>
+            <!-- Цикл for...of конец-->
+            <!-- Цикл for...in -->
+            <div class="accordion-header level-2">Цикл for...in</div>
+            <div class="accordion-content">
+                <!-- определение, синтаксис -->
+                <div class="accordion-header level-3">определение, синтаксис</div>
+                <div class="accordion-content">
+                    <p>Цикл for...in в JavaScript используется для перебора свойств объектов. Он позволяет пройтись по
+                        всем перечисляемым
+                        свойствам объекта, включая унаследованные свойства. Этот цикл особенно полезен, когда необходимо
+                        работать с объектами, а
+                        не с массивами или другими итерируемыми структурами.</p>
+                    <p>
+                        for (const key in object) {<br>
+                        &emsp;// Блок кода, который будет выполняться для каждого свойства<br>
+                        }
+                    </p>
+                </div>
+                <!-- определение, синтаксис конец-->
+                <!-- когда использовать цикл for...in: -->
+                <div class="accordion-header level-3">когда использовать цикл for...in:</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Перебор свойств объектов: Когда нужно пройтись по всем свойствам объекта и выполнить с ними
+                            какие-либо действия.</li>
+                        <li>Работа с динамическими объектами: Когда свойства объекта могут изменяться во время
+                            выполнения программы.</li>
+                    </ul>
+                    <p>В этом примере цикл for...in проходит по каждому свойству объекта person и выводит имя свойства и
+                        его значение на
+                        консоль.</p>
+                    <p>
+                        const person = {<br>
+                        &emsp;name: "Alice",<br>
+                        &emsp;age: 25,<br>
+                        &emsp;city: "New York"<br>
+                        };<br>
+
+                        for (const key in person) {<br>
+                        &emsp;console.log(`${key}: ${person[key]}`);<br>
+                        }<br>
+                        // name: Alice<br>
+                        // age: 25<br>
+                        // city: New York
+                    </p>
+                </div>
+                <!-- когда использовать цикл for...in: конец-->
+                <!-- важные моменты -->
+                <div class="accordion-header level-3">важные моменты</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Перечисляемые свойства: Цикл for...in перебирает только перечисляемые свойства объекта.
+                            Свойства, которые не являются
+                            перечисляемыми, не будут включены в перебор.</li>
+                        <li>Унаследованные свойства: Цикл for...in также перебирает унаследованные свойства, если они
+                            есть. Если необходимо
+                            перебрать только собственные свойства объекта, можно использовать метод
+                            Object.hasOwnProperty().</li>
+                        <li>Не рекомендуется для массивов: Цикл for...in не рекомендуется использовать для перебора
+                            массивов, так как он может
+                            привести к неожиданным результатам, если массив имеет унаследованные свойства или методы.
+                        </li>
+                    </ul>
+                    <p>Цикл for...in является полезным инструментом для работы с объектами в JavaScript. Он позволяет
+                        легко перебрать свойства
+                        объекта, делая код более гибким и удобным для работы с динамическими структурами данных. Однако
+                        следует быть осторожным
+                        при использовании этого цикла с массивами и учитывать возможность перебора унаследованных
+                        свойств.</p>
+                </div>
+                <!-- важные моменты конец-->
+            </div>
+            <!-- Цикл for...in конец-->
+        </div>
+        <!-- ЦИКЛЫ конец-->
     </div>
     <script src="script.js"></script>
 </body>
