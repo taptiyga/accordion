@@ -2724,11 +2724,11 @@
                 </p>
             </div>
             <!-- Определение конец-->
-            <!-- Методы массивов -->
-            <div class="accordion-header level-2">Методы массивов</div>
+            <!-- Методы массива -->
+            <div class="accordion-header level-2">Методы массива</div>
             <div class="accordion-content">
-                <!-- добавление элементов -->
-                <div class="accordion-header level-3">добавление элементов</div>
+                <!-- добавление элементов массива -->
+                <div class="accordion-header level-3">добавление элементов массива</div>
                 <div class="accordion-content">
                     <!-- push(): -->
                     <div class="accordion-header level-4">push(): Этот метод добавляет один или несколько элементов
@@ -2798,9 +2798,9 @@
                     </div>
                     <!-- concat(): конец-->
                 </div>
-                <!-- добавление элементов конец-->
+                <!-- добавление элементов массива конец-->
                 <!-- удаление элементов -->
-                <div class="accordion-header level-3">удаление элементов</div>
+                <div class="accordion-header level-3">удаление элементов массива</div>
                 <div class="accordion-content">
                     <!-- pop(): -->
                     <div class="accordion-header level-4">pop(): Удаляет последний элемент из массива и возвращает
@@ -2875,7 +2875,7 @@
                     </div>
                     <!-- slice(): конец-->
                 </div>
-                <!-- удаление элементов конец-->
+                <!-- удаление элементов массива конец-->
                 <!-- изменение элементов массива -->
                 <div class="accordion-header level-3">изменение элементов массива</div>
                 <div class="accordion-content">
@@ -2952,6 +2952,21 @@
                 <!-- поиск элементов массива -->
                 <div class="accordion-header level-3">поиск элементов массива</div>
                 <div class="accordion-content">
+                    <!-- at() -->
+                    <div class="accordion-header level-4">at(): используется для доступа к
+                        элементам массива по индексу, позволяя использовать отрицательные
+                        индексы для обращения к элементам с конца массива. Это делает его удобным для работы с
+                        массивами, когда необходимо
+                        получить элементы, находящиеся в конце.</div>
+                    <div class="accordion-content">
+                        <p>const fruits = ['apple', 'banana', 'orange', 'grape', 'kiwi'];</p>
+                        <p>
+                            console.log(fruits.at(0));<br> // Вывод: 'apple' (первый элемент)<br>
+                            console.log(fruits.at(-1));<br> // Вывод: 'kiwi' (последний элемент)<br>
+                            console.log(fruits.at(-2));<br> // Вывод: 'grape' (предпоследний элемент)
+                        </p>
+                    </div>
+                    <!-- at() конец-->
                     <!-- indexOf(): -->
                     <div class="accordion-header level-4">indexOf(): Возвращает первый индекс, по которому данный
                         элемент может быть найден в массиве, или -1, если элемент
@@ -3099,7 +3114,8 @@
                     <!-- reduce(): -->
                     <div class="accordion-header level-4">reduce(): Этот метод применяет функцию к аккумулятору и
                         каждому элементу массива (слева направо), чтобы уменьшить его до
-                        одного значения.</div>
+                        одного значения.
+                    </div>
                     <div class="accordion-content">
                         <p>
                             let numbers = [1, 2, 3, 4];<br>
@@ -3110,7 +3126,8 @@
                     <!-- reduce(): конец-->
                     <!-- flat(): -->
                     <div class="accordion-header level-4">flat(): Этот метод создает новый массив с элементами всех
-                        подмассивов, объединенными в один уровень.</div>
+                        подмассивов, объединенными в один уровень.
+                    </div>
                     <div class="accordion-content">
                         <p>
                             let nestedArray = [1, [2, 3], [4, 5]];<br>
@@ -3123,7 +3140,8 @@
                     <div class="accordion-header level-4">map(): Как уже упоминалось, этот метод создает новый
                         массив, в
                         котором каждый элемент изменен в соответствии с заданной
-                        функцией.</div>
+                        функцией.
+                    </div>
                     <div class="accordion-content">
                         <p>
                             let numbers = [1, 2, 3];<br>
@@ -3243,8 +3261,8 @@
                     <!-- применение итерации конец-->
                 </div>
                 <!-- итерация по элементам массива конец-->
-                <!-- методы проверки массивов -->
-                <div class="accordion-header level-3">методы проверки массивов</div>
+                <!-- методы проверки массива -->
+                <div class="accordion-header level-3">методы проверки массива</div>
                 <div class="accordion-content">
                     <!-- includes(): -->
                     <div class="accordion-header level-4">includes(): Этот метод проверяет, содержит ли массив
@@ -3326,9 +3344,9 @@
                     </div>
                     <!-- применение конец-->
                 </div>
-                <!-- методы проверки массивов конец-->
-                <!-- копирование массивов -->
-                <div class="accordion-header level-3">копирование массивов</div>
+                <!-- методы проверки массива конец-->
+                <!-- копирование массива -->
+                <div class="accordion-header level-3">копирование массива</div>
                 <div class="accordion-content">
                     <!-- Метод slice(): -->
                     <div class="accordion-header level-4">
@@ -3357,9 +3375,9 @@
                     </div>
                     <!-- Оператор распространения (spread operator): конец-->
                 </div>
-                <!-- копирование массивов конец-->
-                <!-- метод преобразования массивов в строки -->
-                <div class="accordion-header level-3">метод преобразования массивов в строки</div>
+                <!-- копирование массива конец-->
+                <!-- метод преобразования массива в строку -->
+                <div class="accordion-header level-3">метод преобразования массива в строку</div>
                 <div class="accordion-content">
                     <!-- join(): -->
                     <div class="accordion-header level-4">join(): Этот метод объединяет все элементы массива в
@@ -3419,9 +3437,9 @@
                     </div>
                     <!-- применение конец-->
                 </div>
-                <!-- метод преобразования массивов в строки конец-->
-                <!-- методы преобразования строк в массив -->
-                <div class="accordion-header level-3">методы преобразования строк в массив</div>
+                <!-- метод преобразования массива в строку конец-->
+                <!-- методы преобразования строки в массив -->
+                <div class="accordion-header level-3">методы преобразования строки в массив</div>
                 <div class="accordion-content">
                     <!-- Метод split(): -->
                     <div class="accordion-header level-4">Метод split(): Этот метод разбивает строку на массив
@@ -3485,9 +3503,275 @@
                     </div>
                     <!-- применение конец-->
                 </div>
-                <!-- методы преобразования строк в массив конец-->
+                <!-- методы преобразования строки в массив конец-->
+                <!-- статические методы массива -->
+                <div class="accordion-header level-3">статические методы массива</div>
+                <div class="accordion-content">
+                    <!-- Array.from(): -->
+                    <div class="accordion-header level-4">Array.from(): создает новый массив из массивоподобного или
+                        итерируемого объекта.</div>
+                    <div class="accordion-content">
+                        <p>
+                            const str = 'hello';<br>
+                            const arr = Array.from(str); // ['h', 'e', 'l', 'l', 'o']<br>
+                            console.log(arr);
+                        </p>
+                    </div>
+                    <!-- Array.from(): конец-->
+                    <!-- Array.isArray() -->
+                    <div class="accordion-header level-4">Array.isArray(): определяет, является ли переданный аргумент
+                        массивом.</div>
+                    <div class="accordion-content">
+                        <p>
+                            console.log(Array.isArray([1, 2, 3])); // true<br>
+                            console.log(Array.isArray('hello')); // false
+                        </p>
+                    </div>
+                    <!-- Array.isArray() конец-->
+                    <!-- Array.of() -->
+                    <div class="accordion-header level-3">Array.of() создает новый массив с заданным количеством
+                        элементов.</div>
+                    <div class="accordion-content">
+                        <p>
+                            const arr = Array.of(1, 2, 3);<br>
+                            console.log(arr);// [1, 2, 3]
+                        </p>
+                    </div>
+                    <!-- Array.of() конец-->
+                </div>
+                <!-- статические методы массива конец-->
+                <!-- деструктуирование массива -->
+                <div class="accordion-header level-3">деструктуирование массива</div>
+                <div class="accordion-content">
+                    <!-- определение -->
+                    <div class="accordion-header level-4">деструктурирование массива в JavaScript — это удобный способ
+                        извлечения значений из массивов и присвоения их переменным.
+                        Этот синтаксис позволяет легко и быстро работать с элементами массива, делая код более чистым и
+                        понятным.
+                    </div>
+                    <!-- определение конец-->
+                    <!-- деструктурирование массива осуществляется с помощью квадратных скобок []. -->
+                    <div class="accordion-header level-4">деструктурирование массива осуществляется с помощью квадратных
+                        скобок [].</div>
+                    <div class="accordion-content">
+                        <p>
+                            const array = [1, 2, 3];<br>
+                            const [first, second, third] = array;
+                        </p>
+                        <p>
+                            console.log(first); // Вывод: 1<br>
+                            console.log(second); // Вывод: 2<br>
+                            console.log(third); // Вывод: 3
+                        </p>
+                    </div>
+                    <!-- деструктурирование массива осуществляется с помощью квадратных скобок []. конец-->
+                    <!-- более сложный пример, где мы можем пропустить некоторые элементы массива: -->
+                    <div class="accordion-header level-4">более сложный пример, где мы можем пропустить некоторые
+                        элементы массива:</div>
+                    <div class="accordion-content">
+                        <p>
+                            const colors = ['red', 'green', 'blue', 'yellow'];
+                        </p>
+                        <p>
+                            // Пропускаем второй элемент<br>
+                            const [firstColor, , thirdColor] = colors;
+                        </p>
+                        <p>
+                            console.log(firstColor); // Вывод: 'red'<br>
+                            console.log(thirdColor); // Вывод: 'blue'
+                        </p>
+                    </div>
+                    <!-- более сложный пример, где мы можем пропустить некоторые элементы массива: конец-->
+                    <!-- можно также задавать значения по умолчанию для переменных, если соответствующий элемент массива отсутствует: -->
+                    <div class="accordion-header level-4">можно также задавать значения по умолчанию для переменных,
+                        если соответствующий элемент массива отсутствует:</div>
+                    <div class="accordion-content">
+                        <p>
+                            const numbers = [1, 2];
+                        </p>
+                        <p>
+                            // Значение по умолчанию для третьего элемента<br>
+                            const [firstNum, secondNum, thirdNum = 3] = numbers;
+                        </p>
+                        <p>
+                            console.log(firstNum); // Вывод: 1<br>
+                            console.log(secondNum); // Вывод: 2<br>
+                            console.log(thirdNum); // Вывод: 3 (значение по умолчанию)
+                        </p>
+                    </div>
+                    <!-- можно также задавать значения по умолчанию для переменных, если соответствующий элемент массива отсутствует: конец-->
+                    <!-- деструктурирование также может быть использовано для обмена значениями между переменными: -->
+                    <div class="accordion-header level-4">деструктурирование также может быть использовано для обмена
+                        значениями между переменными:</div>
+                    <div class="accordion-content">
+                        <p>
+                            let a = 1;<br>
+                            let b = 2;
+                        </p>
+                        <p>
+                            [a, b] = [b, a];
+                        </p>
+                        <p>
+                            console.log(a); // Вывод: 2<br>
+                            console.log(b); // Вывод: 1
+                        </p>
+                    </div>
+                    <!-- деструктурирование также может быть использовано для обмена значениями между переменными: конец-->
+                </div>
+                <!-- деструктуирование массива конец-->
+                <!-- оператор рассширения ... (spread) -->
+                <div class="accordion-header level-3">оператор рассширения ... (spread)</div>
+                <div class="accordion-content">
+                    <!-- определение -->
+                    <div class="accordion-header level-4">оператор расширения (spread operator) в JavaScript — это
+                        мощный инструмент, который позволяет развернуть элементы
+                        массива или объекта в другом массиве или объекте. Он обозначается тремя точками (...) и может
+                        использоваться в различных
+                        контекстах, таких как создание новых массивов, объединение массивов, передача аргументов в
+                        функции и т.д.</div>
+                    <!-- определение конец-->
+                    <!-- объединение массивов -->
+                    <div class="accordion-header level-4">объединение массивов</div>
+                    <div class="accordion-content">
+                        <p>
+                            const arr1 = [1, 2, 3];<br>
+                            const arr2 = [4, 5, 6];<br>
+                            const combined = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]<br>
+                            console.log(combined);
+                        </p>
+                    </div>
+                    <!-- объединение массивов конец-->
+                    <!-- копирование массива -->
+                    <div class="accordion-header level-4">копирование массива</div>
+                    <div class="accordion-content">
+                        <p>
+                            const original = [1, 2, 3];<br>
+                            const copy = [...original];<br>
+                            console.log(copy); // [1, 2, 3]
+                        </p>
+                    </div>
+                    <!-- копирование массива конец-->
+                    <!-- передача аргументов в функции -->
+                    <div class="accordion-header level-4">передача аргументов в функции</div>
+                    <div class="accordion-content">
+                        <p>
+                            const numbers = [1, 2, 3, 4, 5];<br>
+                            const sum = (a, b, c) => a + b + c;<br>
+                            console.log(sum(...numbers)); // Вывод: 6 (1 + 2 + 3)
+                        </p>
+                    </div>
+                    <!-- передача аргументов в функции конец-->
+                    <!-- создание нового массива с добавлением элементов -->
+                    <div class="accordion-header level-4">создание нового массива с добавлением элементов</div>
+                    <div class="accordion-content">
+                        <p>
+                            const fruits = ['apple', 'banana'];<br>
+                            const newFruits = ['orange', ...fruits, 'grape'];<br>
+                            console.log(newFruits); // ['orange', 'apple', 'banana', 'grape']
+                        </p>
+                    </div>
+                    <!-- создание нового массива с добавлением элементов конец-->
+                    <!-- использование с объектами -->
+                    <div class="accordion-header level-3">использование с объектами</div>
+                    <div class="accordion-content">
+                        <p>
+                            const obj1 = { a: 1, b: 2 };<br>
+                            const obj2 = { b: 3, c: 4 };<br>
+                            const merged = { ...obj1, ...obj2 };<br>
+                            console.log(merged); // { a: 1, b: 3, c: 4 }
+                        </p>
+                    </div>
+                    <!-- использование с объектами конец-->
+                </div>
+                <!-- оператор рассширения ... (spread) конец-->
+                <!-- остаточные параметры (...rest) -->
+                <div class="accordion-header level-3">остаточные параметры (...rest)</div>
+                <div class="accordion-content">
+                    <!-- определение -->
+                    <div class="accordion-header level-4">Остаточные параметры (rest parameters) в JavaScript — это
+                        возможность передавать переменное количество аргументов в
+                        функцию. Они обозначаются тремя точками (...) перед именем параметра и позволяют собрать все
+                        оставшиеся переданные
+                        аргументы в массив.</div>
+                    <!-- определение конец-->
+                    <!-- остаточные параметры используются в объявлении функции. -->
+                    <div class="accordion-header level-4">остаточные параметры используются в объявлении функции.</div>
+                    <div class="accordion-content">
+                        <p>
+                            function myFunction(...args) {<br>
+                            console.log(args);<br>
+                            }
+                        </p>
+                        <p>
+                            myFunction(1, 2, 3); // Вывод: [1, 2, 3]<br>
+                            myFunction('a', 'b', 'c'); // Вывод: ['a', 'b', 'c']
+                        </p>
+                        <p>В этом примере ...args собирает все переданные аргументы в массив args.</p>
+
+                    </div>
+                    <!-- остаточные параметры используются в объявлении функции. конец-->
+                    <!-- сложение чисел: -->
+                    <div class="accordion-header level-4">сложение чисел:</div>
+                    <div class="accordion-content">
+                        <p>
+                            function sum(...numbers) {<br>
+                            return numbers.reduce((acc, num) => acc + num, 0);<br>
+                            }
+                        </p>
+                        <p>
+                            console.log(sum(1, 2, 3, 4)); // Вывод: 10<br>
+                            console.log(sum(5, 10, 20)); // Вывод: 35
+                        </p>
+                    </div>
+                    <!-- сложение чисел: конец-->
+                    <!-- работа с остальными параметрами в функции: -->
+                    <div class="accordion-header level-4">работа с остальными параметрами в функции:</div>
+                    <div class="accordion-content">
+                        <p>
+                            function log(arg1, arg2, ...rest) {<br>
+                            console.log(arg1); // Первое значение<br>
+                            console.log(arg2); // Второе значение<br>
+                            console.log(rest); // Остальные параметры в виде массива<br>
+                            }
+                        </p>
+                        <p>
+                            log(1, 2, 3, 4, 5); // Вывод: 1, 2, [3, 4, 5]
+                        </p>
+                    </div>
+                    <!-- работа с остальными параметрами в функции: конец-->
+                    <!-- комбинирование с другими параметрами: -->
+                    <div class="accordion-header level-4">комбинирование с другими параметрами:</div>
+                    <div class="accordion-content">
+                        <p>Остаточные параметры могут быть использованы вместе с обычными параметрами:</p>
+                        <p>function concatenate(separator, ...strings) {<br>
+                            return strings.join(separator);<br>
+                            }</p>
+                        <p>
+                            console.log(concatenate(', ', 'apple', 'banana', 'cherry')); // Вывод: 'apple, banana,
+                            cherry'</p>
+                    </div>
+                    <!-- комбинирование с другими параметрами: конец-->
+                    <!-- использование с методами массивов: -->
+                    <div class="accordion-header level-4">использование с методами массивов:</div>
+                    <div class="accordion-content">
+                        <p>
+                            const numbers = [1, 2, 3, 4, 5];
+                        </p>
+                        <p>
+                            function myFunction(callback, ...args) {<br>
+                            return callback(...args);<br>
+                            }
+                        </p>
+                        <p>
+                            const result = myFunction(Math.max, ...numbers);<br>
+                            console.log(result); // Вывод: 5
+                        </p>
+                    </div>
+                    <!-- использование с методами массивов: конец-->
+                </div>
+                <!-- остаточные параметры (...rest) конец-->
             </div>
-            <!-- Методы массивов конец-->
+            <!-- Методы массива конец-->
         </div>
         <!-- МАССИВЫ конец -->
         <!-- ЦИКЛЫ -->
