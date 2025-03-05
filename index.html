@@ -2539,77 +2539,248 @@
             <!-- Доступ к свойствам -->
             <div class="accordion-header level-2">Доступ к свойствам</div>
             <div class="accordion-content">
-                <div class="accordion-header level-3">свойства объекта можно получить с помощью точечной нотации или
-                    квадратных скобок:</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30<br>
-                            };
-                        </li>
-                        <li>console.log(person.name); // 'Иван'</li>
-                        <li>console.log(person['age']); // 30</li>
-                    </ul>
-                </div>
+                <p>свойства объекта можно получить с помощью точечной нотации или
+                    квадратных скобок:</p>
+                <ul>
+                    <li>let person = {<br>
+                        &emsp;name: 'Иван',<br>
+                        &emsp;age: 30<br>
+                        };
+                    </li>
+                    <li>console.log(person.name); // 'Иван'</li>
+                    <li>console.log(person['age']); // 30</li>
+                </ul>
             </div>
             <!-- Доступ к свойствам конец -->
             <!-- Изменение свойств -->
             <div class="accordion-header level-2">Изменение свойств</div>
             <div class="accordion-content">
-                <div class="accordion-header level-3">свойства объекта можно изменять с помощью точечной нотации или
-                    квадратных скобок:</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30<br>
-                            };</li>
-                        <li>person.age = 31;</li>
-                        <li>console.log(person); // {name: 'Иван', age: 31}</li>
-                        <li>person['age'] = 32;</li>
-                        <li>console.log(person); // {name: 'Иван', age: 32}</li>
-                    </ul>
-                </div>
+                <p>свойства объекта можно изменять с помощью точечной нотации или
+                    квадратных скобок:</p>
+                <ul>
+                    <li>let person = {<br>
+                        &emsp;name: 'Иван',<br>
+                        &emsp;age: 30<br>
+                        };</li>
+                    <li>person.age = 31;</li>
+                    <li>console.log(person); // {name: 'Иван', age: 31}</li>
+                    <li>person['age'] = 32;</li>
+                    <li>console.log(person); // {name: 'Иван', age: 32}</li>
+                </ul>
             </div>
             <!-- Изменение свойств конец -->
             <!-- Добавление и удаление свойств -->
             <div class="accordion-header level-2">Добавление и удаление свойств</div>
             <div class="accordion-content">
-                <div class="accordion-header level-3">свойства объекта можно добавлять и удалять с помощью точечной
+                <p>свойства объекта можно добавлять и удалять с помощью точечной
                     нотации или
-                    квадратных скобок:</div>
-                <div class="accordion-content">
-                    <ul>
-                        <li>let person = {<br>
-                            &emsp;name: 'Иван',<br>
-                            &emsp;age: 30<br>
-                            };</li>
-                        <li>person.gender = 'мужской'; // person['gender'] = 'мужской'; добавление свойства</li>
-                        <li>console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}</li>
-                        <li>delete person.age; // delete person['age']; удаление свойства</li>
-                        <li>console.log(person); // {name: 'Иван', gender: 'мужской'}</li>
-                    </ul>
-                </div>
+                    квадратных скобок:</p>
+                <ul>
+                    <li>let person = {<br>
+                        &emsp;name: 'Иван',<br>
+                        &emsp;age: 30<br>
+                        };</li>
+                    <li>person.gender = 'мужской'; // person['gender'] = 'мужской'; добавление свойства</li>
+                    <li>console.log(person); // {name: 'Иван', age: 30, gender: 'мужской'}</li>
+                    <li>delete person.age; // delete person['age']; удаление свойства</li>
+                    <li>console.log(person); // {name: 'Иван', gender: 'мужской'}</li>
+                </ul>
             </div>
             <!-- Добавление и удаление свойств конец -->
             <!-- Проверка наличия свойств -->
             <div class="accordion-header level-2">Проверка наличия свойств</div>
             <div class="accordion-content">
-                <p>
-                    let person = {<br>
-                    &emsp;name: 'Иван',<br>
-                    &emsp;age: 30,<br>
-                    &emsp;isStudent: false<br>
-                    };
-                </p>
-                <p>
-                    console.log("age" in person) // true<br>
-                    console.log("ag" in person) // false
-                </p>
+                <ul>
+                    <li>let person = {<br>
+                        &emsp;name: 'Иван',<br>
+                        &emsp;age: 30,<br>
+                        &emsp;isStudent: false<br>
+                        };</li>
+                    <li>console.log("age" in person) // true</li>
+                    <li>console.log("ag" in person) // false</li>
+                </ul>
             </div>
             <!-- Проверка наличия свойств конец-->
+            <!-- Получение массива ключей и значений -->
+            <div class="accordion-header level-2">Получение массива ключей и значений</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        console.log(Object.keys(user));<br>
+                        //['id', 'name', 'age', 'position']
+                    </li>
+                    <li>
+                        console.log(Object.values(user));<br>
+                        [4, 'Alena', 25, 'Developer']
+                    </li>
+                </ul>
+            </div>
+            <!-- Получение массива ключей и значений конец-->
+            <!-- Цикл for...in -->
+            <div class="accordion-header level-2">Цикл for...in</div>
+            <div class="accordion-content">
+                <p>Цикл for...in в JavaScript используется для перебора свойств объектов. Он позволяет пройтись по
+                    всем перечисляемым
+                    свойствам объекта, включая унаследованные свойства. Этот цикл особенно полезен, когда необходимо
+                    работать с объектами, а
+                    не с массивами или другими итерируемыми структурами.</p>
+                <ul>
+                    <li>
+                        const user = {<br>
+                        &emsp;id: 4,<br>
+                        &emsp;name: 'Alena',<br>
+                        &emsp;age: 25,<br>
+                        &emsp;position: "Developer"<br>
+                        };
+                    </li>
+                    <li>
+                        for (const key in user) {<br>
+                        &emsp;console.log(`${key}: ${user[key]}`);<br>
+                        }
+                    </li>
+                    <li>
+                        id: 4<br>
+                        name: Alena<br>
+                        age: 25<br>
+                        position: Developer
+                    </li>
+                </ul>
+            </div>
+            <!-- Цикл for...in конец-->
+            <!-- Диструкторизация, диструктирующие присваивание -->
+            <div class="accordion-header level-2">Диструкторизация, диструктирующие присваивание</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        const user = {<br>
+                        &emsp;id: 4,<br>
+                        &emsp;name: 'Alena',<br>
+                        &emsp;age: 25,<br>
+                        &emsp;position: "Developer",<br>
+                        &emsp;address: {<br>
+                        &emsp;&emsp;country: "Australia",<br>
+                        &emsp;&emsp;city: "Sidney"<br>
+                        &emsp;}<br>
+                        };
+                    </li>
+                    <li>
+                        const { name, age, ...restProps } = user;
+                    </li>
+                    <li>
+                        // console.log(name) // Alena<br>
+                        // console.log(age) // 25<br>
+                        // console.log(restProps) // {id: 4, position: 'Developer'}
+                    </li>
+                </ul>
+            </div>
+            <!-- Диструкторизация, диструктирующие присваивание конец-->
+            <!-- Копирование объектов с примитивными значениями -->
+            <div class="accordion-header level-2">Копирование объектов с примитивными значениями</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        const user = {<br>
+                        &emsp;id: 4,<br>
+                        &emsp;name: 'Alena',<br>
+                        &emsp;age: 25,<br>
+                        &emsp;position: "Developer"
+                        };
+                    </li>
+                    <li>
+                        const newUser = {<br>
+                        &emsp;...user;<br>
+                        }
+                    </li>
+                    <li>
+                        console.log(newUser !== user);
+                        // true<br>
+                        созданы два разных объекта, имеющие разные ссылки
+                    </li>
+                </ul>
+                <p>вложенные объекты имеют общую ссылку</p>
+                <ul>
+                    <li>
+                        const user = {<br>
+                        &emsp;address: {<br>
+                        &emsp;&emsp;country: "Australia",<br>
+                        &emsp;&emsp;city: "Sidney"<br>
+                        &emsp;}<br>
+                        };
+                    </li>
+                    <li>
+                        console.log(newUser.address !== user.address);<br>
+                        // false
+                    </li>
+                </ul>
 
+                <p>Пример использования</p>
+                <ul>
+                    <li>
+                        const obj1 = { a: 10, b: 20 };<br>
+                        const obj2 = { c: 30, d: 40 };<br>
+                        const obj3 = {<br>
+                        &emsp;...obj1,<br>
+                        &emsp;...obj2,<br>
+                        &emsp;e: 50<br>
+                        }<br>
+                        console.log(obj3);<br>
+                        //a:10 //b:20 //c:30 //d:40 //e:50
+                    </li>
+                    <p>альтернативная запись</p>
+                    <li>
+                        const obj4 = Object.assign(obj1, obj2, { e: 50 });<br>
+                        console.log(obj4);<br>
+                        //a:10 //b:20 //c:30 //d:40 //e:50
+                    </li>
+                </ul>
+            </div>
+            <!-- Копирование объектов с примитивными значениями конец-->
+            <!-- Методы объекта -->
+            <div class="accordion-header level-2">Методы объекта</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        const user = {<br>
+                        &emsp;id: 4,<br>
+                        &emsp;name: 'Alena',<br>
+                        &emsp;age: 25,<br>
+                        &emsp;position: "Developer",<br>
+                        &emsp;address: {<br>
+                        &emsp;&emsp;country: "Australia",<br>
+                        &emsp;&emsp;city: "Sidney"<br>
+                        &emsp;}<br>
+                        };
+                    </li>
+                    <li>
+                        получение массива ключей<br>
+                        console.log(Object.keys(user));<br>
+                        //['id', 'name', 'age', 'position', 'address']
+                    </li>
+                    <li>
+                        получение массива значений<br>
+                        console.log(Object.values(user));<br>
+                        //[4, 'Alena', 25, 'Developer', {… }]<br>
+                        console.log(Object.values(user.address));<br>
+                        //['Australia', 'Sidney']
+                    </li>
+                    <li>
+                        получение массива содержащего массивы ключ/значение<br>
+                        console.log(Object.entries(user));<br>
+                        //[Array(2), Array(2), Array(2), Array(2), Array(2)]<br>
+                        //Array(2)=[key,value]
+                    </li>
+                    <li>
+                        проверка на наличие ключа<br>
+                        console.log(Object.hasOwn(user, "address"));//true<br>
+                        console.log(Object.hasOwn(user, "skills"));//folse
+                    </li>
+                    <li>
+                        заморозка объекта-запрещает изменять объект<br>
+                        Object.freeze(user);
+                    </li>
+                </ul>
+            </div>
+            <!-- Методы объекта конец-->
         </div>
         <!-- ОБЪЕКТЫ конец-->
         <!-- ВСТРОЕННЫЕ ОБЪЕКТЫ -->
@@ -2770,6 +2941,19 @@
                         </p>
                     </div>
                     <!-- splice(): конец-->
+                    <!-- toSpliced(): -->
+                    <div class="accordion-header level-4">toSpliced(): Этот метод может использоваться для добавления
+                        элементов в произвольное место массива. Он создает новый массив, не изменяя исходный.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana']; <br>
+                            console.log(fruits); // ['apple', 'banana']<br>
+                            const newFruits=fruits.toSpliced(1, 0, 'orange'); // добавляет 'orange' на индекс 1<br>
+                            console.log(newFruits); // ['apple', 'orange', 'banana']<br>
+                            console.log(fruits); // ['apple', 'banana']
+                        </p>
+                    </div>
+                    <!-- toSpliced(): конец-->
                     <!-- Расширение массива с помощью оператора распространения (...): -->
                     <div class="accordion-header level-4">Расширение массива с помощью оператора распространения
                         (...):
@@ -2973,12 +3157,24 @@
                         не найден.</div>
                     <div class="accordion-content">
                         <p>
-                            let fruits = ['apple', 'banana', 'orange'];<br>
-                            let index = fruits.indexOf('banana'); // 1<br>
-                            console.log(index);
+                            let fruits = ['apple', 'banana', 'orange', 'orange'];<br>
+                            console.log(fruits.indexOf('orange')); //2<br>
+                            console.log(fruits.indexOf('orange', 1)); //2<br>
+                            //1 - с какого индекса начинать поиск
                         </p>
                     </div>
                     <!-- indexOf(): конец-->
+                    <!-- lastIndexOf(): -->
+                    <div class="accordion-header level-4">lastIndexOf(): Возвращает последний индекс, по которому данный
+                        элемент может быть найден в массиве, или -1, если элемент
+                        не найден.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let fruits = ['apple', 'banana', 'orange', 'orange'];<br>
+                            console.log(fruits.lastIndexOf('orange')); //3<br>
+                        </p>
+                    </div>
+                    <!-- lastIndexOf(): конец-->
                     <!-- find(): -->
                     <div class="accordion-header level-4">find(): Возвращает значение первого найденного элемента в
                         массиве, который удовлетворяет предоставленной функции.
@@ -3185,16 +3381,40 @@
                 <div class="accordion-header level-3">итерация по элементам массива</div>
                 <div class="accordion-content">
                     <!-- forEach(): -->
-                    <div class="accordion-header level-4">forEach(): Этот метод выполняет указанную функцию один раз
-                        для
-                        каждого элемента массива.</div>
+                    <div class="accordion-header level-4">forEach — это встроенный метод массива,
+                        который позволяет вызывать заданную функцию один раз для
+                        каждого элемента массива. Он используется для перебора элементов массива и выполнения
+                        определенных действий с ними.</div>
                     <div class="accordion-content">
+                        <p>array.forEach(callback(currentValue, index, array), thisArg);</p>
+                        <p>callback: функция, которая будет выполнена для каждого элемента массива.<br>
+                            currentValue: текущее значение элемента массива.<br>
+                            index (необязательный): индекс текущего элемента.<br>
+                            array (необязательный): сам массив, по которому происходит перебор.<br>
+                            thisArg (необязательный): значение, используемое в качестве this при выполнении функции
+                            callback.
+                        </p>
+                        <p>Пример</p>
                         <p>
-                            let fruits = ['apple', 'banana', 'orange'];<br>
-                            fruits.forEach(fruit => {<br>
-                            &emsp;console.log(fruit);<br>
-                            });<br>
-                            // Вывод: apple, banana, orange
+                            const skills = ["html", "css", "js", "ts", "git", "react", "scss"];
+                        </p>
+                        <p>
+                            skills.forEach((value) => console.log(value));<br>
+                            //html//css//js//ts//git//react//scss
+                        </p>
+                        <p>
+                            skills.forEach((value, index) => console.log(`${index}:${value}`));<br>
+                            //0:html//1:css//2:js//3:ts//4:git//5:react//6:scss
+                        </p>
+                        <p>
+                            skills.forEach((value, index, array) => console.log(index, value, array));<br>
+                            // 0 'html'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']<br>
+                            // 1 'css'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']<br>
+                            // 2 'js'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']<br>
+                            // 3 'ts'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']<br>
+                            // 4 'git'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']<br>
+                            // 5 'react'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']<br>
+                            // 6 'scss'(7)['html', 'css', 'js', 'ts', 'git', 'react', 'scss']
                         </p>
                     </div>
                     <!-- forEach(): конец-->
@@ -3300,6 +3520,18 @@
                         </p>
                     </div>
                     <!-- find(): конец-->
+                    <!-- findIndex(): -->
+                    <div class="accordion-header level-4">findIndex(): Этот метод возвращает индекс первого элемента
+                        массива, который удовлетворяет предоставленной функции.
+                        Если ни один элемент не удовлетворяет, возвращает -1.</div>
+                    <div class="accordion-content">
+                        <p>
+                            let numbers = [1, 2, 3, 4, 5];<br>
+                            let found = numbers.findIndex(num => num > 3);<br>
+                            console.log(found); // 3
+                        </p>
+                    </div>
+                    <!-- findIndex(): конец-->
                     <!-- some(): -->
                     <div class="accordion-header level-4">some(): Этот метод проверяет, удовлетворяет ли хотя бы
                         один
