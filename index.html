@@ -11,7 +11,7 @@
 <body>
     <div class="accordion">
         <!-- JavaScript -->
-        <div class="accordion-header level-1">JavaScript</div>
+        <div class="accordion-header level-1">JAVASCRIPT</div>
         <div class="accordion-content">
             <!-- Определение -->
             <div class="accordion-header level-2">Определение</div>
@@ -4656,6 +4656,102 @@
             <!-- Ограничения конец-->
         </div>
         <!-- JSON конец -->
+        <!-- LOCAL & SESSION STORAGE -->
+        <div class="accordion-header level-1">LOCAL & SESSION STORAGE</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <p>Local Storage и Session Storage — это два типа веб-хранилищ, которые позволяют веб-приложениям
+                    сохранять данные в
+                    браузере пользователя. Оба они являются частью Web Storage API и предоставляют возможность хранения
+                    данных в виде пар
+                    ключ-значение. Однако у них есть некоторые ключевые различия.</p>
+            </div>
+            <!-- Определение конец-->
+            <!-- Различия -->
+            <div class="accordion-header level-2">Различия</div>
+            <div class="accordion-content">
+                <p>Local Storage</p>
+                <ul>
+                    <li>
+                        Долговременное хранение: Данные, сохраненные в Local Storage, остаются даже после закрытия
+                        вкладки или браузера. Они
+                        будут доступны при следующем открытии сайта.
+                    </li>
+                    <li>
+                        Объем хранения: Обычно Local Storage позволяет хранить до 5-10 МБ данных, в зависимости от
+                        браузера.
+                    </li>
+                    <li>
+                        Доступность: Данные доступны для всех вкладок и окон, открытых в одном и том же домене.
+                    </li>
+                    <li>
+                        Синхронизация: Local Storage не синхронизируется между устройствами. Если вы сохраните данные на
+                        одном устройстве, они
+                        не будут доступны на другом.
+                    </li>
+                </ul>
+                <p>Session Storage</p>
+                <ul>
+                    <li>
+                        Временное хранение: Данные, сохраненные в Session Storage, доступны только в рамках одной
+                        сессии. Они удаляются, когда
+                        вкладка или браузер закрываются.
+                    </li>
+                    <li>
+                        Объем хранения: Session Storage также позволяет хранить до 5-10 МБ данных.
+                    </li>
+                    <li>
+                        Доступность: Данные доступны только в рамках одной вкладки или окна. Если вы откроете новую
+                        вкладку с тем же доменом,
+                        данные не будут доступны.
+                    </li>
+                    <li>
+                        Синхронизация: Session Storage не синхронизируется между вкладками или окнами.
+                    </li>
+                </ul>
+            </div>
+            <!-- Различия конец-->
+            <!-- Примеры использования -->
+            <div class="accordion-header level-2">Примеры использования</div>
+            <div class="accordion-content">
+                <p>Сохранение данных в Local Storage</p>
+                <ul>
+                    <li>
+                        // Сохранение данных<br>
+                        localStorage.setItem('username', 'Alice');
+                    </li>
+                    <li>
+                        // Получение данных<br>
+                        const username = localStorage.getItem('username');<br>
+                        console.log(username); // Alice
+                    </li>
+                    <li>
+                        // Удаление данных<br>
+                        localStorage.removeItem('username');
+                    </li>
+                </ul>
+                <p>Сохранение данных в Session Storage</p>
+                <ul>
+                    <li>
+                        // Сохранение данных<br>
+                        sessionStorage.setItem('sessionId', '12345');
+                    </li>
+                    <li>
+                        // Получение данных<br>
+                        const sessionId = sessionStorage.getItem('sessionId');<br>
+                        console.log(sessionId); // Вывод: 12345
+                    </li>
+                    <li>
+                        // Удаление данных<br>
+                        sessionStorage.removeItem('sessionId');
+                    </li>
+                </ul>
+            </div>
+            <!-- Примеры использования конец-->
+        </div>
+        <!-- LOCAL & SESSION STORAGE конец -->
     </div>
     <script src="script.js"></script>
 </body>
