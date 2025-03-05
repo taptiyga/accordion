@@ -4431,6 +4431,231 @@
             <!-- Цикл for...in конец-->
         </div>
         <!-- ЦИКЛЫ конец-->
+        <!-- JSON -->
+        <div class="accordion-header level-1">JSON</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <p>JSON (JavaScript Object Notation) — это легковесный формат обмена данными, который удобен для
+                    человека и легко парсится
+                    и генерируется машинами. Он используется для представления структурированных данных, что делает его
+                    популярным для
+                    передачи данных между клиентом и сервером, а также для хранения и обмена данными в приложениях.</p>
+            </div>
+            <!-- Определение конец-->
+            <!-- Структура JSON -->
+            <div class="accordion-header level-2">Структура JSON</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>
+                        <p>Объекты: представляют собой набор пар «ключ: значение», заключенные в фигурные скобки {}.
+                            Ключи
+                            обязательно должны быть
+                            строками (в кавычках).</p>
+                        {<br>
+                        &emsp;"name": "Alice",<br>
+                        &emsp;"age": 25,<br>
+                        &emsp;"isStudent": false<br>
+                        }
+                    </li>
+                    <li>
+                        <p>Массивы: представляют собой упорядоченный набор значений, заключенный в квадратные скобки [].
+                        </p>
+                        {<br>
+                        &emsp;"names": ["Alice", "Bob", "Charlie"]<br>
+                        }
+                    </li>
+                </ul>
+            </div>
+            <!-- Структура JSON конец-->
+            <!-- Типы данных -->
+            <div class="accordion-header level-2">Типы данных</div>
+            <div class="accordion-content">
+                <p>JSON поддерживает следующие типы данных:</p>
+                <ul>
+                    <li>
+                        Строки (в кавычках, например, "hello")
+                    </li>
+                    <li>
+                        Числа (например, 42, 3.14)
+                    </li>
+                    <li>
+                        Булевы значения (true или false)
+                    </li>
+                    <li>
+                        null
+                    </li>
+                    <li>
+                        Объекты
+                    </li>
+                    <li>
+                        Массивы
+                    </li>
+                </ul>
+                <p>Пример сложного объекта JSON:</p>
+                <p>{<br>
+                    &emsp;"person": {<br>
+                    &emsp;&emsp;"name": "Alice",<br>
+                    &emsp;&emsp;"age": 30,<br>
+                    &emsp;&emsp;"children": [<br>
+                    &emsp;&emsp;&emsp;{<br>
+                    &emsp;&emsp;&emsp;&emsp;"name": "Bob",<br>
+                    &emsp;&emsp;&emsp;&emsp;"age": 5<br>
+                    &emsp;&emsp;&emsp;},<br>
+                    &emsp;&emsp;&emsp;{<br>
+                    &emsp;&emsp;&emsp;&emsp;"name": "Charlie",<br>
+                    &emsp;&emsp;&emsp;&emsp;"age": 3<br>
+                    &emsp;&emsp;&emsp;}<br>
+                    &emsp;&emsp;]<br>
+                    &emsp;}<br>
+                    }</p>
+            </div>
+            <!-- Типы данных конец-->
+            <!-- Работа с JSON в JavaScript -->
+            <div class="accordion-header level-2">Работа с JSON в JavaScript</div>
+            <div class="accordion-content">
+                <p>JavaScript имеет встроенные методы для работы с JSON: JSON.stringify() и JSON.parse().</p>
+                <ul>
+                    <li>
+                        <p>JSON.stringify(value): Преобразует JavaScript-значение (объект, массив и т. д.) в строку
+                            формата
+                            JSON.</p>
+                        <p>
+                            const obj = { name: "Alice", age: 25 };<br>
+                            const jsonString = JSON.stringify(obj);<br>
+                            console.log(jsonString); // {"name":"Alice","age":25}
+                        </p>
+                    </li>
+                    <li>
+                        <p>JSON.parse(jsonString): Преобразует строку формата JSON обратно в JavaScript-объект.</p>
+                        <p>
+                            const jsonString = '{"name":"Alice","age":25}';<br>
+                            const obj = JSON.parse(jsonString);<br>
+                            console.log(obj); // {name: 'Alice', age: 25}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Работа с JSON в JavaScript конец-->
+            <!-- Параметры метода JSON.stringify() -->
+            <div class="accordion-header level-2">Параметры метода JSON.stringify()</div>
+            <div class="accordion-content">
+                <p>Метод JSON.stringify() также может принимать два дополнительных параметра:</p>
+                <p>replacer (необязательный): Функция или массив, используемые для фильтрации свойств при
+                    преобразовании.</p>
+                <ul>
+                    <li>
+                        const person = {<br>
+                        &emsp;name: "Alice",<br>
+                        &emsp;age: 30,<br>
+                        &emsp;isStudent: false,<br>
+                        &emsp;hobbies: ["reading", "traveling"]<br>
+                        };
+                    </li>
+                    <li>
+                        // Используем replacer для исключения поля isStudent<br>
+                        const jsonString = JSON.stringify(person, (key, value) => {<br>
+                        &emsp;if (key === "isStudent") {<br>
+                        &emsp;&emsp;return undefined; // Исключаем поле<br>
+                        &emsp;}<br>
+                        &emsp;return value;<br>
+                        });
+                    </li>
+                    <li>
+                        console.log(jsonString);<br>
+                        // {"name":"Alice","age":30,"hobbies":["reading","traveling"]}
+                    </li>
+                </ul>
+                <p>space (необязательный): Строка или число, определяющее количество пробелов для отступа при
+                    форматировании. Это делает
+                    JSON более читабельным.</p>
+                <ul>
+                    <li>
+                        // Форматируем JSON с отступами<br>
+                        const prettyJsonString = JSON.stringify(person, null, 2); // 2 пробела отступа
+                    </li>
+                    <li>
+                        console.log(prettyJsonString);<br>
+                        /*<br>
+                        {<br>
+                        &emsp;"name": "Alice",<br>
+                        &emsp;"age": 30,<br>
+                        &emsp;"isStudent": false,<br>
+                        &emsp;"hobbies": [<br>
+                        &emsp;&emsp;"reading",<br>
+                        &emsp;&emsp;"traveling"<br>
+                        &emsp;]<br>
+                        }<br>
+                        */
+                    </li>
+                </ul>
+            </div>
+            <!-- Параметры метода JSON.stringify() конец-->
+            <!-- Параметр метода JSON.parse() -->
+            <div class="accordion-header level-2">Параметр метода JSON.parse()</div>
+            <div class="accordion-content">
+                <p>Метод JSON.parse() может также принимать необязательный второй параметр — функцию reviver, которая
+                    позволяет
+                    модифицировать значения по мере их обработки:</p>
+                <ul>
+                    <li>
+                        const jsonString = '{"name":"Alice","age":30,"isStudent":false}';
+                    </li>
+                    <li>
+                        const person = JSON.parse(jsonString, (key, value) => {<br>
+                        &emsp;if (key === "age") {<br>
+                        &emsp;&emsp;return value + 1; // Увеличить возраст на 1<br>
+                        &emsp;}<br>
+                        &emsp;return value; // Возврат остальных значений без изменений<br>
+                        });
+                    </li>
+                    <li>
+                        console.log(person);<br>
+                        // {name: 'Alice', age: 31, isStudent: false}
+                    </li>
+                </ul>
+            </div>
+            <!-- Параметр метода JSON.parse() конец-->
+            <!-- Применение JSON -->
+            <div class="accordion-header level-2">Применение JSON</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>API и веб-сервисы: JSON является популярным форматом для передачи данных между клиентом и
+                        сервером в веб-приложениях.</li>
+                    <li>Конфигурационные файлы: JSON используется для хранения конфигурационных данных в приложениях.
+                    </li>
+                    <li>Хранение данных: Многие базы данных (например, MongoDB) поддерживают формат JSON для хранения
+                        документов.</li>
+                </ul>
+            </div>
+            <!-- Применение JSON конец-->
+            <!-- Преимущества JSON -->
+            <div class="accordion-header level-2">Преимущества JSON</div>
+            <div class="accordion-content">
+                <ul>
+                    <li>Читаемость: JSON легко читается и понимается как человеком, так и машиной.</li>
+                    <li>Упрощение обмена данными: JSON хорошо интегрируется с JavaScript и другими языками.</li>
+                    <li>Широкая поддержка: Формат JSON поддерживается во всех современных языках программирования.</li>
+                </ul>
+            </div>
+            <!-- Преимущества JSON конец-->
+            <!-- Ограничения -->
+            <div class="accordion-header level-2">Ограничения</div>
+            <div class="accordion-content">
+                <p>При использовании JSON.stringify() необходимо учитывать:</p>
+                <ul>
+                    <li>Не все типы данных могут быть преобразованы в JSON: Например, функции, символы, undefined и
+                        специальные объекты, такие
+                        как Map и Set, не могут быть сериализованы в JSON.</li>
+                    <li>Циклические ссылки: Если объект содержит циклические ссылки (где объект ссылается сам на себя),
+                        то JSON.stringify()
+                        выбросит ошибку.</li>
+                </ul>
+            </div>
+            <!-- Ограничения конец-->
+        </div>
+        <!-- JSON конец -->
     </div>
     <script src="script.js"></script>
 </body>
