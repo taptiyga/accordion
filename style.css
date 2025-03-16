@@ -12,13 +12,12 @@ body {
     font-size: 18px;
 }
 
-p {
+p,
+ul,
+h4 {
     padding: 10px;
 }
 
-ul {
-    padding: 10px 10px 10px 20px;
-}
 
 li {
     margin-bottom: 5px;

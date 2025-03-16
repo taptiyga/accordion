@@ -4870,6 +4870,494 @@ Document
                     взаимодействий на веб-страницах.</p>
             </div>
             <!-- Основные типы узлов дерева DOM конец-->
+            <!-- Работа с DOM -->
+            <div class="accordion-header level-2">Работа с DOM</div>
+            <div class="accordion-content">
+                <!-- получение элемента -->
+                <div class="accordion-header level-3">получение элемента</div>
+                <div class="accordion-content">
+                    <h4>html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                        &lt;button id="btn"&gt;button&lt;/button&gt;
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>document.getElementById('id')</strong> — это метод, который возвращает ссылку на
+                            элемент с указанным атрибутом id. Поскольку id должен быть уникальным на
+                            странице, этот метод всегда возвращает только один элемент или null, если элемент с
+                            указанным id не найден.
+                            <h4>пример:</h4>
+                            <strong>const element1 = document.getElementById('btn');</strong><br>
+                            console.log(element1);<br>
+                            //&lt;button id="btn"&gt;button&lt;/button&gt;
+                        </li>
+                        <li>
+                            <strong>document.getElementsByClassName('class')</strong> — возвращает "живую коллекцию"
+                            (HTMLCollection)
+                            всех элементов, имеющих указанный класс (или классы). В отличие от
+                            статических коллекций, такие как NodeList, живые коллекции автоматически обновляются, если
+                            изменения происходят в DOM. <br>
+                            HTMLCollection можно перебирать, но оно не является массивом, следовательно, для
+                            использования методов массивов, таких
+                            как forEach, необходимо преобразовать его в массив.
+                            <h4>пример:</h4>
+                            <strong>const element2 = document.getElementsByClassName('item');</strong><br>
+                            console.log(element2);<br>
+                            // HTMLCollection(3)[li.item, li.item, li.item]
+                        </li>
+                        <li>
+                            <strong>document.querySelector('.class')</strong> — возвращает первый элемент,
+                            соответствующий указанному CSS-селектору. Если никаких совпадений не найдено, метод
+                            возвращает null.
+                            <h4>пример:</h4>
+                            <strong>const element3 = document.querySelector('.item');</strong><br>
+                            console.log(element3);<br>
+                            //&lt;li class="item"&gt;1&lt;/li&gt;
+                            <p>querySelector может искать элементы по классу ('.class'), id ('#id'), тегу ('button'),
+                                комбинации селекторов ('#id .class')</p>
+                            <p>querySelector работает от любого элемента например:<br> body.querySelector()</p>
+                        </li>
+                        <li>
+                            <strong>document.querySelectorAll('.class')</strong> — Метод возвращает NodeList, который
+                            является коллекцией
+                            узлов (элементов), которую можно перебирать, как массив. Однако
+                            NodeList не является массивом, поэтому методы массивов, такие как map, не могут быть
+                            применены напрямую.
+                            <h4>пример:</h4>
+                            <strong>const element4 = document.querySelectorAll('.item');</strong><br>
+                            console.log(element4);<br>
+                            //NodeList(3) [li.item, li.item, li.item]
+                            <p>querySelectorAll может искать элементы по классу ('.class'), тегу ('button'),
+                                комбинации селекторов ('button .class')</p>
+                        </li>
+                        <h4>getElementBy... - возвращают живые коллекции, лучше использовать querySelector... или
+                            getElementById()</h4>
+                    </ul>
+                </div>
+                <!-- получение элемента конец-->
+                <!-- получение содержимого элемента -->
+                <div class="accordion-header level-3">получение содержимого элемента</div>
+                <div class="accordion-content">
+                    <h4>html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу list со списком</h4>
+                    <p>const list = document.querySelector(".list");</p>
+                    <h4>textContent - получаем текстовое содержимое list</h4>
+                    <p>
+                        console.log(list.textContent);<br>
+                        // 1<br>
+                        // 2<br>
+                        // 3
+                    </p>
+                    <h4>innerHTML - получаем весь код внутри ul</h4>
+                    <p>
+                        console.log(list.innerHTML);<br>
+                        //&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        //&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        //&lt;li class="item"&gt;3&lt;/li&gt;
+                    </p>
+                    <h4>outerHTML - получаем весь код элемента</h4>
+                    <p>
+                        console.log(list.outerHTML);<br>
+                        //&lt;ul class="list"&gt;<br>
+                        &emsp;//&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;//&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;//&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        //&lt;/ul&gt;
+                    </p>
+                </div>
+                <!-- получение содержимого элемента конец-->
+                <!-- изменение содержимого элемента -->
+                <div class="accordion-header level-3">изменение содержимого элемента</div>
+                <div class="accordion-content">
+                    <!-- innerText, innerHTML -->
+                    <div class="accordion-header level-4">innerText, innerHTML</div>
+                    <div class="accordion-content">
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                            &lt;/ul&gt;<br>
+                        </p>
+                        <h4>js:</h4>
+                        <h4>Создаём константу list со списком</h4>
+                        <p>const list = document.querySelector(".list");</p>
+                        <h4>textContent - меняет все содержимое внутри list на текст</h4>
+                        <p>
+                            list.textContent='ok';
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;ok&lt;/ul&gt;<br>
+                        </p>
+                        <h4>js:</h4>
+                        <h4>innerHTML - меняет все содержимое внутри list на код</h4>
+                        <p>
+                            list.innerHTML='&lt;p&gt;ok&lt;/p&gt;';
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;&lt;p&gt;ok&lt;/p&gt;<br>
+                            &lt;/ul&gt;
+                        </p>
+                        <h4>js:</h4>
+                        <h4>innerHTML - добавить код к существующему</h4>
+                        <p>
+                            list.innerHTML+='&lt;p&gt;ok&lt;/p&gt;';
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;&lt;p&gt;ok&lt;/p&gt;<br>
+                            &emsp;&lt;p&gt;ok&lt;/p&gt;<br>
+                            &lt;/ul&gt;
+                        </p>
+                    </div>
+                    <!-- innerText, innerHTML конец-->
+                    <!-- prepend, append, before, after -->
+                    <div class="accordion-header level-4">prepend, append, before, after</div>
+                    <div class="accordion-content">
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                            &lt;/ul&gt;
+                        </p>
+                        <h4>js:</h4>
+                        <h4>Создаём константу list со списком</h4>
+                        <p>const list = document.querySelector(".list");</p>
+                        <h4>prepend - метод prepend вставляет текст внутри элемента в начало</h4>
+                        <p>
+                            list.prepend="text with prepend";
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;<strong>"text with prepend"</strong><br>
+                            &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                            &lt;/ul&gt;
+                        </p>
+                        <h4>append - метод append вставляет текст внутри элемента в конец</h4>
+                        <p>
+                            list.append="text with append";
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;"text with prepend"<br>
+                            &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                            &emsp;<strong>"text with append"</strong><br>
+                            &lt;/ul&gt;
+                        </p>
+                        <h4>before - метод before вставляет текст перед элементом</h4>
+                        <p>
+                            list.before="text with before";
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            <strong>"text with before"</strong><br>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;"text with prepend"<br>
+                            &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                            &emsp;"text with append"<br>
+                            &lt;/ul&gt;
+                        </p>
+                        <h4>after - метод after вставляет текст после элемента</h4>
+                        <p>
+                            list.after="text with after";
+                        </p>
+                        <h4>html:</h4>
+                        <p>
+                            "text with before"<br>
+                            &lt;ul class="list"&gt;<br>
+                            &emsp;"text with prepend"<br>
+                            &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                            &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                            &emsp;"text with append"<br>
+                            &lt;/ul&gt;<br>
+                            <strong>"text with after"</strong>
+                        </p>
+                    </div>
+                    <!-- prepend, append, before, after конец-->
+                </div>
+                <!-- изменение содержимого элемента конец-->
+                <!-- создание элемента createElement -->
+                <div class="accordion-header level-3">создание элемента createElement</div>
+                <div class="accordion-content">
+                    <h4>html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу list со списком</h4>
+                    <p>const list = document.querySelector(".list");</p>
+                    <h4>Создаем элемент с помощью createElement</h4>
+                    <p>const h2 = document.createElement("h2");</p>
+                    <h4>Вставляем в созданный элемент текст</h4>
+                    <p>h2.textContent = "наш созданный h2";</p>
+                    <h4>Помещаем созданный элемент перед списком</h4>
+                    <p>list.before(h2);</p>
+                    <h4>Получаем html:</h4>
+                    <p>
+                        <strong>&lt;h2&gt;наш созданный h2&lt;/h2&gt;</strong><br>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                </div>
+                <!-- создание элемента createElement конец-->
+                <!-- удаление элемента -->
+                <div class="accordion-header level-3">удаление элемента</div>
+                <div class="accordion-content">
+                    <h4>html:</h4>
+                    <p>
+                        &lt;h2&gt;наш созданный h2&lt;/h2&gt;<br>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу list со списком</h4>
+                    <p>const list = document.querySelector(".list");</p>
+                    <h4>Удаляем контент внутри list</h4>
+                    <p>list.innerHTML = "";</p>
+                    <h4>html:</h4>
+                    <p>
+                        &lt;h2&gt;наш созданный h2&lt;/h2&gt;<br>
+                        &lt;ul class="list"&gt;&lt;/ul&gt;
+                    </p>
+                    <h4>Удаление элемента с помощью метода remove()</h4>
+                    <h4>js:</h4>
+                    <p>list.remove()</p>
+                    <h4>html:</h4>
+                    <p>
+                        &lt;h2&gt;наш созданный h2&lt;/h2&gt;
+                    </p>
+                </div>
+                <!-- удаление элемента конец-->
+                <!-- создание элемента insertAdjacentElement -->
+                <div class="accordion-header level-3">создание элемента insertAdjacentElement</div>
+                <div class="accordion-content">
+                    <h4>Метод insertAdjacentElement принимает два параметра:</h4>
+                    <p>
+                        1.позиция куда вставлять элемент:<br>
+                        beforebegin - перед элементом<br>
+                        afterbegin - внутри элемента в начале<br>
+                        beforeend - внутри элемента в конеце<br>
+                        afterend - после элемента
+                    </p>
+                    <p>
+                        2.элемент;
+                    </p>
+                    <h4>html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li class="item"&gt;3&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу list со списком</h4>
+                    <p>const list = document.querySelector(".list");</p>
+                    <h4>Создаём заголовок списка и помещаем его перед списком</h4>
+                    <p>
+                        const beforeBegin = document.createElement("h4");<br>
+                        beforeBegin.textContent = "beforebegin";<br>
+                        list.insertAdjacentElement("beforebegin", beforeBegin);
+                    </p>
+                    <h4>Создаём элемент списка и помещаем его в начало списка</h4>
+                    <p>
+                        const afterBegin = document.createElement("li");<br>
+                        afterBegin.textContent = "afterbegin";<br>
+                        list.insertAdjacentElement("afterbegin", afterBegin);
+                    </p>
+                    <h4>Создаём элемент списка и помещаем его в конец списка</h4>
+                    <p>
+                        const beforeEnd = document.createElement("li");<br>
+                        beforeEnd.textContent = "beforeend";<br>
+                        list.insertAdjacentElement("beforeend", beforeEnd);
+                    </p>
+                    <h4>Создаём параграф и помещаем его после списка</h4>
+                    <p>
+                        const afterEnd = document.createElement("p");<br>
+                        afterEnd.textContent = "afterend";<br>
+                        list.insertAdjacentElement("afterend", afterEnd);
+                    </p>
+                    <h4>Получаем html:</h4>
+                    <p>
+                        &lt;h4&gt;beforebegin&lt;/h4&gt;<br>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li&gt;afterbegin&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;1&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;2&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;3&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;beforeend&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                        &lt;p&gt;afterend&lt;/p&gt;
+                    </p>
+                </div>
+                <!-- создание элемента insertAdjacentElement конец-->
+                <!-- создание элемента insertAdjacentText -->
+                <div class="accordion-header level-3">создание элемента insertAdjacentText</div>
+                <div class="accordion-content">
+                    <h4>Метод insertAdjacentText принимает два параметра:</h4>
+                    <p>
+                        1.позиция куда вставлять текст:<br>
+                        beforebegin - перед элементом<br>
+                        afterbegin - внутри элемента в начале<br>
+                        beforeend - внутри элемента в конеце<br>
+                        afterend - после элемента
+                    </p>
+                    <p>
+                        2.текст;
+                    </p>
+                    <h4>html:</h4>
+                    <p>
+                        &lt;p class="paragraph"&gt;Основной текст.&lt;/p&gt;
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу paragraph с элементом</h4>
+                    <p>const paragraph = document.querySelector(".paragraph");</p>
+                    <h4>Помещаем текст перед параграфом</h4>
+                    <p>paragraph.insertAdjacentText('beforebegin', "Текст перед элементом");</p>
+                    <h4>Помещаем текст внутри параграфа в начале.</h4>
+                    <p>paragraph.insertAdjacentText('afterbegin', "Текст внутри элемента в начале. ")</p>
+                    <h4>Помещаем текст внутри параграфа в конце.</h4>
+                    <p>paragraph.insertAdjacentText('beforeend', " Текст внутри элемента в конце.")</p>
+                    <h4>Помещаем текст после параграфа</h4>
+                    <p>paragraph.insertAdjacentText('afterend', "Текст после элемента")</p>
+                    <h4>Получаем html:</h4>
+                    <p>
+                        "Текст перед элементом"<br>
+                        &lt;p&gt;<br>
+                        &emsp;"Текст внутри элемента в начале. "<br>
+                        &emsp;"Основной текст."<br>
+                        &emsp;" Текст внутри элемента в конце."<br>
+                        &lt;/p&gt;<br>
+                        "Текст после элемента"
+                    </p>
+                </div>
+                <!-- создание элемента insertAdjacentText конец-->
+                <!-- создание элемента insertAdjacentHTML -->
+                <div class="accordion-header level-3">создание элемента insertAdjacentHTML</div>
+                <div class="accordion-content">
+                    <h4>Метод insertAdjacentHTML принимает два параметра:</h4>
+                    <p>
+                        1.позиция куда вставлять код:<br>
+                        beforebegin - перед элементом<br>
+                        afterbegin - внутри элемента в начале<br>
+                        beforeend - внутри элемента в конеце<br>
+                        afterend - после элемента
+                    </p>
+                    <p>
+                        2.код;
+                    </p>
+                    <h4>html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;Элемент списка&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу list со списком</h4>
+                    <p>const list = document.querySelector(".list");</p>
+                    <h4>Создаём заголовок и помещаем его перед списком</h4>
+                    <p>
+                        list.insertAdjacentHTML('beforebegin', `&lt;h4&gt;Заголовок&lt;/h4&gt;`);
+                    </p>
+                    <h4>Создаём элемент списка и помещаем его в начало</h4>
+                    <p>
+                        list.insertAdjacentHTML('afterbegin', '&lt;li&gt;Новый элемент списка до&lt;/li&gt;');
+                    </p>
+                    <h4>Создаём элемент списка и помещаем его в конец</h4>
+                    <p>
+                        list.insertAdjacentHTML('beforeend', "&lt;li&gt;Новый элемент списка после&lt;/li&gt;")
+                    </p>
+                    <h4>Создаём параграф и помещаем его после списка</h4>
+                    <p>
+                        list.insertAdjacentHTML('afterend', "&lt;p&gt;Текст после элемента&lt;/p&gt;")
+                    </p>
+                    <h4>Получаем html:</h4>
+                    <p>
+                        &lt;h4&gt;Заголовок&lt;/h4&gt;<br>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li&gt;Новый элемент списка до&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;Элемент списка&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;Новый элемент списка после&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                        &lt;p&gt;Текст после элемента&lt;/p&gt;
+                    </p>
+                </div>
+                <!-- создание элемента insertAdjacentHTML конец-->
+                <!-- копирование элемента -->
+                <div class="accordion-header level-3">копирование элемента</div>
+                <div class="accordion-content">
+                    <h4>html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;Элемент списка&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    <h4>js:</h4>
+                    <h4>Создаём константу list со списком</h4>
+                    <p>const list = document.querySelector(".list");</p>
+                    <h4>Глубокая копия контейнера</h4>
+                    <p>
+                        const cloneList = list.cloneNode(true);
+                    </p>
+                    <p>копируется контейнер со всеми вложенным в него элементами</p>
+                    <h4>Получаем html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;<br>
+                        &emsp;&lt;li class="item"&gt;Элемент списка&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </p>
+                    <h4>Простое копирование</h4>
+                    <p>
+                        const cloneList = list.cloneNode();
+                    </p>
+                    <p>копируется только контейнер</p>
+                    <h4>Получаем html:</h4>
+                    <p>
+                        &lt;ul class="list"&gt;&lt;/ul&gt;
+                    </p>
+                </div>
+                <!-- копирование элемента конец-->
+            </div>
+            <!-- Работа с DOM конец-->
         </div>
         <!-- DOM конец -->
         <!-- BOM -->
