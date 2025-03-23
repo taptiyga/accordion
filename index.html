@@ -5358,6 +5358,147 @@ Document
                 <!-- копирование элемента конец-->
             </div>
             <!-- Работа с DOM конец-->
+            <!-- DOM&CSS -->
+            <div class="accordion-header level-2">DOM&CSS</div>
+            <div class="accordion-content">
+                <!-- изменение стилей через свойство style -->
+                <div class="accordion-header level-3">изменение стилей через свойство style</div>
+                <div class="accordion-content">
+                    <h4>Присваиваем тело сраницы константе "body"</h4>
+                    <p>const body=document.querySelector('body');</p>
+                    <h4>Меняем цвет фона, текста, внутренние отступы</h4>
+                    <p>body.style.backgroundColor="#123456";<br>
+                        body.style.color="#fff";<br>
+                        body.style.padding="1em";
+                    </p>
+                    <h4>Свойство cssText</h4>
+                    <p>
+                        body.style.cssText=`<br>
+                        &emsp;background-color: #123456;<br>
+                        &emsp;color: #fff;<br>
+                        &emsp;padding: 1em;<br>
+                        `;
+                    </p>
+                </div>
+                <!-- изменение стилей через свойство style конец-->
+                <!-- изменение стилей через classList -->
+                <div class="accordion-header level-3">изменение стилей через classList</div>
+                <div class="accordion-content">
+                    <h4>Присваиваем кнопку с id="button" константе "btn".</h4>
+                    <p>const btn=document.querySelector('#button');</p>
+                    <h4>Добавляем класс .button{с прописанными стилями} к элементу "btn".</h4>
+                    <p>btn.classList.add("button");</p>
+                    <h4>Проверка на наличие у элемента класса.</h4>
+                    <p>console.log(btn.classList.contains("button"));//true/false</p>
+                    <h4>Удаляем класс у элемента.</h4>
+                    <p>btn.classList.remove("button");</p>
+                    <h4>Удаляет или присваивает класс элементу.</h4>
+                    <p>btn.classList.toggle("button");</p>
+                    <h4>Добавляем несколько классов элементу.</h4>
+                    <p>btn.classList.add("button","button_green");</p>
+                </div>
+                <!-- изменение стилей через classList конец-->
+                <!-- получение стилей элемента -->
+                <div class="accordion-header level-3">получение стилей элемента</div>
+                <div class="accordion-content">
+                    <h4>Присваиваем кнопку с id="button" константе "btn".</h4>
+                    <p>const btn=document.querySelector('#button');</p>
+                    <h4>Присваиваем константе стили кнопки.</h4>
+                    <p>const btnComputerStyles=getComputedStyle(button);</p>
+                    <h4>Выводим в консоль</h4>
+                    <p>
+                        console.log(btnComputerStyles);<br>
+                        console.log(btnComputerStyles.color);<br>
+                        console.log(btnComputerStyles.backgroundColor);
+                    </p>
+                    <h4>Получение позиции элемента относительно viewport</h4>
+                    <p>console.log(btn.getBoundingClientReck());</p>
+                </div>
+                <!-- получение стилей элемента конец-->
+                <!-- работа с атрибутами -->
+                <div class="accordion-header level-3">работа с атрибутами</div>
+                <div class="accordion-content">
+                    <h4>Проверка наличия атрибута</h4>
+                    <h4>html:</h4>
+                    <p>&lt;button class="button" id="button"&gt;кнопка&lt;/button&gt;</p>
+                    <h4>js:</h4>
+                    <h4>Присваиваем кнопку с id="button" константе "btn".</h4>
+                    <p>const btn=document.querySelector('#button');</p>
+                    <h4>Проверяем наличие атрибутов у кнопки</h4>
+                    <p>
+                        console.log(btn.hasAttribute("id"));//true<br>
+                        console.log(btn.hasAttribute("class"));//true<br>
+                        console.log(btn.hasAttribute("href"));//false
+                    </p>
+                    <h4>Получение значения атрибута</h4>
+                    <p>console.log(btn.getAttribute("class"));//button</p>
+                    <h4>Удаление атрибута</h4>
+                    <p>console.log(btn.removeAttribute("id"));//undefined</p>
+                    <h4>Установка атрибутов</h4>
+                    <p>btn.setAttribute("title","это кнопка")</p>
+                </div>
+                <!-- работа с атрибутами конец-->
+                <!-- data-atribute -->
+                <div class="accordion-header level-3">data-atribute</div>
+                <div class="accordion-content">
+                    <p>Дата-атрибуты (data attributes) в HTML — это специальные атрибуты, которые позволяют хранить
+                        пользовательские данные в
+                        элементах. Они начинаются с префикса data-, и могут быть использованы для хранения информации,
+                        которая может быть
+                        полезна для JavaScript или CSS.</p>
+                    <h4>Пример использования дата-атрибутов</h4>
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="ru"&gt;<br>
+                        &lt;head&gt;<br>
+                        &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &emsp;&lt;title&gt;Пример дата-атрибутов&lt;/title&gt;<br>
+                        &lt;/head&gt;<br>
+                        &lt;body&gt;<br>
+                        &emsp;&lt;div id="item" data-name="Книга" data-price="500" data-available="true"&gt;<br>
+                        &emsp;&emsp;Название: Книга<br>
+                        &emsp;&lt;/div&gt;<br>
+                        &emsp;&lt;button onclick="showData()"&gt;Показать данные&lt;/button&gt;<br>
+                        &emsp;&lt;script&gt;<br>
+                        &emsp;&emsp; function showData() {<br>
+                        &emsp; &emsp; &emsp; const item = document.getElementById('item');<br>
+                        &emsp; &emsp; &emsp; const name = item.getAttribute('data-name');<br>
+                        &emsp; &emsp; &emsp; const price = item.getAttribute('data-price');<br>
+                        &emsp; &emsp; &emsp; const available = item.getAttribute('data-available');<br>
+
+                        &emsp;&emsp;&emsp; alert(`Название: ${name}\nЦена: ${price}\nДоступно: ${available}`);<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;&lt;/script&gt;<br>
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </p>
+                    <h4>Доступ к дата-атрибутам через JavaScript</h4>
+                    <p>Вы можете получить доступ к дата-атрибутам с помощью метода getAttribute() или через свойство
+                        dataset:</p>
+                    <p>
+                        const item = document.getElementById('item');<br>
+
+                        // Используя getAttribute<br>
+                        const name = item.getAttribute('data-name');<br>
+                        const price = item.getAttribute('data-price');<br>
+
+                        // Используя dataset<br>
+                        const available = item.dataset.available; // доступ к data-available
+                    </p>
+                    <h4>Преимущества использования дата-атрибутов</h4>
+                    <ul>
+                        <li>Гибкость: Дата-атрибуты позволяют хранить произвольные данные, которые могут быть полезны
+                            для JavaScript.</li>
+                        <li>Читаемость: Они делают HTML более понятным, так как данные, связанные с элементом, находятся
+                            непосредственно в разметке.</li>
+                        <li>Отделение данных от логики: Позволяют отделить данные от логики, что упрощает поддержку
+                            кода.</li>
+                    </ul>
+                </div>
+                <!-- data-atribute конец-->
+            </div>
+            <!-- DOM&CSS конец-->
         </div>
         <!-- DOM конец -->
         <!-- BOM -->
