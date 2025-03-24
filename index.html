@@ -5356,6 +5356,270 @@ Document
                     </p>
                 </div>
                 <!-- копирование элемента конец-->
+                <!-- события и addEventListener -->
+                <div class="accordion-header level-3">события и addEventListener</div>
+                <div class="accordion-content">
+                    <!-- определение -->
+                    <div class="accordion-header level-4">определение</div>
+                    <div class="accordion-content">
+                        <p>В JavaScript события представляют собой действия или изменения состояния, которые происходят
+                            в браузере, и на которые
+                            можно реагировать с помощью кода. Например, события могут возникать при взаимодействии
+                            пользователя с элементами
+                            страницы, таких как клики, нажатия клавиш, перемещения мыши и т.д.</p>
+                    </div>
+                    <!-- определение конец-->
+                    <!-- основные понятия о событиях -->
+                    <div class="accordion-header level-4">основные понятия о событиях</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li><strong>Событие:</strong> Это действие, которое происходит в браузере, например, клик
+                                мыши, нажатие
+                                клавиши, загрузка страницы и т.д.
+                            </li>
+                            <li><strong>Обработчик события:</strong> Это функция, которая выполняется в ответ на
+                                определенное событие.
+                                Например, вы можете создать
+                                обработчик, который будет срабатывать при клике на кнопку.
+                            </li>
+                            <li><strong>Целевой элемент:</strong> Это элемент, на котором произошло событие. Например,
+                                если пользователь
+                                кликнул на кнопку, то эта кнопка
+                                будет целевым элементом.</li>
+                        </ul>
+                    </div>
+                    <!-- основные понятия о событиях конец-->
+                    <!-- использование addEventListener -->
+                    <div class="accordion-header level-4">использование addEventListener</div>
+                    <div class="accordion-content">
+                        <p>Метод addEventListener позволяет вам добавлять обработчики событий к элементам. Он принимает
+                            три аргумента:</p>
+                        <ul>
+                            <li><strong>Тип события:</strong> Строка, указывающая тип события, например, "click",
+                                "keydown", "mouseover" и т.д.
+                            </li>
+                            <li><strong>Обработчик события:</strong> Функция, которая будет вызвана, когда событие
+                                произойдет.
+                            </li>
+                            <li><strong>Опции (необязательный):</strong> Объект, который может содержать дополнительные
+                                параметры, такие как capture, once, и passive.</li>
+                        </ul>
+                    </div>
+                    <!-- использование addEventListener конец-->
+                    <!-- пример использования addEventListener -->
+                    <div class="accordion-header level-4">пример использования addEventListener</div>
+                    <div class="accordion-content">
+                        <p>Вот пример, который демонстрирует, как использовать addEventListener для обработки события
+                            клика на кнопку:</p>
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br><br>
+
+                            &lt;head&gt;<br>
+                            &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                            &emsp;&lt;title&gt;Пример addEventListener&lt;/title&gt;<br>
+                            &lt;/head&gt;<br><br>
+
+                            &lt;body&gt;<br>
+                            &emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br><br>
+
+                            &emsp;&lt;script&gt;<br>
+                            &emsp;&emsp;// Получаем элемент кнопки<br>
+                            &emsp;&emsp;const button = document.getElementById('myButton');<br>
+
+                            &emsp;&emsp;// Определяем обработчик события<br>
+                            &emsp;&emsp;function handleClick() {<br>
+                            &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
+                            &emsp;&emsp;}<br><br>
+
+                            &emsp;&emsp;// Добавляем обработчик события клика<br>
+                            &emsp;&emsp;button.addEventListener('click', handleClick);<br>
+                            &emsp;&lt;/script&gt;<br>
+                            &lt;/body&gt;<br><br>
+
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <!-- пример использования addEventListener конец-->
+                    <!-- удаление обработчика события -->
+                    <div class="accordion-header level-4">удаление обработчика события</div>
+                    <div class="accordion-content">
+                        <p>Если вам нужно удалить обработчик события, вы можете использовать метод removeEventListener.
+                            Для этого необходимо
+                            передать тот же тип события и ту же функцию, которую вы использовали при добавлении
+                            обработчика.</p>
+                        <h4>js:</h4>
+                        <p>button.removeEventListener('click', handleClick);</p>
+                    </div>
+                    <!-- удаление обработчика события конец-->
+                    <!-- опции addEventListener -->
+                    <div class="accordion-header level-4">опции addEventListener</div>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                capture: Если установлено в true, обработчик будет вызван во время фазы захвата события.
+                                По умолчанию это значение
+                                false, и обработчик будет вызван во время фазы всплытия.
+                            </li>
+                            <li>once: Если установлено в true, обработчик будет вызван только один раз после первого
+                                срабатывания события, а затем будет
+                                автоматически удален.
+                            </li>
+                            <li>passive: Если установлено в true, это указывает, что обработчик не будет вызывать
+                                preventDefault(), что может улучшить
+                                производительность при прокрутке.</li>
+                        </ul>
+                        <h4>js:</h4>
+                        <p>button.addEventListener('click', handleClick, { once: true });</p>
+                        <p>В этом примере обработчик handleClick будет вызван только один раз при первом клике на
+                            кнопку.</p>
+                    </div>
+                    <!-- опции addEventListener конец-->
+                    <!-- заключение -->
+                    <div class="accordion-header level-4">заключение</div>
+                    <div class="accordion-content">
+                        <p>Метод addEventListener является мощным инструментом для работы с событиями в JavaScript. Он
+                            позволяет добавлять
+                            несколько обработчиков для одного и того же события, управлять порядком их выполнения и
+                            использовать различные опции для
+                            настройки поведения. Это делает его предпочтительным способом обработки событий по сравнению
+                            с устаревшими методами,
+                            такими как установка обработчиков напрямую через свойства, например, onclick.</p>
+                    </div>
+                    <!-- заключение конец-->
+                </div>
+                <!-- события и addEventListener конец-->
+                <!-- event -->
+                <div class="accordion-header level-3">event</div>
+                <div class="accordion-content">
+                    <!-- определение -->
+                    <div class="accordion-header level-4">определение</div>
+                    <div class="accordion-content">
+                        <p>В JavaScript объект event представляет собой информацию о событии, которое произошло в
+                            браузере. Этот объект содержит
+                            данные о событии, такие как тип события, целевой элемент, координаты мыши и другие
+                            параметры, в зависимости от типа
+                            события. Объект event передается в обработчик события, что позволяет вам получить доступ к
+                            этой информации и реагировать
+                            на событие соответствующим образом.</p>
+                    </div>
+                    <!-- определение конец-->
+                    <!-- основные свойства объекта event -->
+                    <div class="accordion-header level-4">основные свойства объекта event</div>
+                    <div class="accordion-content">
+                        <p>Вот некоторые из наиболее часто используемых свойств объекта event:</p>
+                        <ul>
+                            <li><strong>type:</strong> Строка, указывающая тип события (например, "click", "keydown",
+                                "mouseover" и
+                                т.д.).</li>
+                            <li><strong>target:</strong> Элемент, на котором произошло событие. Это может быть любой
+                                элемент DOM, который вызвал событие.</li>
+                            <li><strong>currentTarget:</strong> Элемент, на котором в данный момент обрабатывается
+                                событие. Это может быть полезно, если вы используете
+                                делегирование событий.</li>
+                            <li><strong>bubbles:</strong> Логическое значение, указывающее, может ли событие всплывать
+                                (булькаться) вверх по дереву DOM.</li>
+                            <li><strong>cancelable:</strong> Логическое значение, указывающее, может ли событие быть
+                                отменено с помощью метода preventDefault().</li>
+                            <li><strong>preventDefault():</strong> Метод, который предотвращает выполнение стандартного
+                                действия, связанного с событием. Например,
+                                предотвращает переход по ссылке при клике на элемент &lt;a&gt;.</li>
+                            <li><strong>stopPropagation():</strong> Метод, который предотвращает дальнейшее
+                                распространение события по дереву DOM. Это может быть
+                                полезно, если вы хотите остановить событие от достижения родительских элементов.</li>
+                        </ul>
+                    </div>
+                    <!-- основные свойства объекта event конец-->
+                    <!-- пример использования объекта event -->
+                    <div class="accordion-header level-4">пример использования объекта event</div>
+                    <div class="accordion-content">
+                        <p>Вот пример, который демонстрирует, как использовать объект event в обработчике события:</p>
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br><br>
+
+                            &lt;head&gt;<br>
+                            &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                            &emsp;&lt;title&gt;Пример объекта event&lt;/title&gt;<br>
+                            &lt;/head&gt;<br><br>
+
+                            &lt;body&gt;<br>
+                            &emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br><br>
+
+                            &emsp;&lt;script&gt;<br>
+                            &emsp;&emsp;const button = document.getElementById('myButton');<br><br>
+
+                            &emsp;&emsp;button.addEventListener('click', function (event) {<br>
+                            &emsp;&emsp;&emsp;// Получаем тип события<br>
+                            &emsp;&emsp;&emsp;console.log('Тип события:', event.type);<br><br>
+
+                            &emsp;&emsp;&emsp;// Получаем целевой элемент<br>
+                            &emsp;&emsp;&emsp;console.log('Целевой элемент:', event.target);<br><br>
+
+                            &emsp;&emsp;&emsp;// Предотвращаем стандартное действие (если это возможно)<br>
+                            &emsp;&emsp;&emsp;// event.preventDefault();<br><br>
+
+                            &emsp;&emsp;&emsp;// Останавливаем распространение события<br>
+                            &emsp;&emsp;&emsp;// event.stopPropagation();<br><br>
+
+                            &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
+                            &emsp;&emsp;});<br>
+                            &emsp;&lt;/script&gt;<br>
+                            &lt;/body&gt;<br><br>
+
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <!-- пример использования объекта event конец-->
+                    <!-- пример с использованием preventDefault и stopPropagation -->
+                    <div class="accordion-header level-4">пример с использованием preventDefault и stopPropagation</div>
+                    <div class="accordion-content">
+                        <p>В этом примере мы можем использовать методы preventDefault и stopPropagation, чтобы
+                            предотвратить стандартное поведение
+                            и остановить распространение события:</p>
+                        <p>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br><br>
+
+                            &lt;head&gt;<br>
+                            &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                            &emsp;&lt;title&gt;Пример preventDefault и stopPropagation&lt;/title&gt;<br>
+                            &lt;/head&gt;<br><br>
+
+                            &lt;body&gt;<br>
+                            &emsp;&lt;div id="parent" style="padding: 20px; background-color: lightgray;"&gt;<br>
+                            &emsp;&emsp;Родительский элемент<br>
+                            &emsp;&emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br>
+                            &emsp;&lt;/div&gt;<br><br>
+
+                            &emsp;&lt;script&gt;<br>
+                            &emsp;&emsp;const button = document.getElementById('myButton');<br>
+                            &emsp;&emsp;const parent = document.getElementById('parent');<br><br>
+
+                            &emsp;&emsp;// Обработчик для родительского элемента<br>
+                            &emsp;&emsp;parent.addEventListener('click', function () {<br>
+                            &emsp;&emsp;&emsp;alert('Родительский элемент был нажат!');<br>
+                            &emsp;&emsp;});<br><br>
+
+                            &emsp;&emsp;// Обработчик для кнопки<br>
+                            &emsp;&emsp;button.addEventListener('click', function (event) {<br>
+                            &emsp;&emsp;&emsp;event.preventDefault(); // Предотвращаем стандартное действие<br>
+                            &emsp;&emsp;&emsp;event.stopPropagation(); // Останавливаем распространение события<br><br>
+
+                            &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
+                            &emsp;&emsp;});<br>
+                            &emsp;&lt;/script&gt;<br>
+                            &lt;/body&gt;<br><br>
+
+                            &lt;/html&gt;
+                        </p>
+                    </div>
+                    <!-- пример с использованием preventDefault и stopPropagation конец-->
+                </div>
+                <!-- event конец-->
             </div>
             <!-- Работа с DOM конец-->
             <!-- DOM&CSS -->
@@ -5499,6 +5763,117 @@ Document
                 <!-- data-atribute конец-->
             </div>
             <!-- DOM&CSS конец-->
+            <!-- Атрибуты defer & async -->
+            <div class="accordion-header level-2">Атрибуты defer & async</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Атрибуты defer и async в HTML используются для управления загрузкой и выполнением
+                        JavaScript-файлов. Оба атрибута
+                        позволяют загружать скрипты асинхронно, но они работают по-разному. Давайте рассмотрим их
+                        подробнее.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- defer -->
+                <div class="accordion-header level-3">defer</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><strong>Асинхронная загрузка:</strong> Скрипты с атрибутом defer загружаются параллельно с
+                            загрузкой
+                            HTML-документа. Это означает, что
+                            браузер не будет ждать завершения загрузки скрипта, чтобы продолжить парсинг HTML.</li>
+                        <li><strong>Порядок выполнения:</strong> Скрипты с defer выполняются в порядке их появления в
+                            документе, после
+                            того, как весь HTML будет
+                            полностью загружен и обработан. Это важно, если у вас есть несколько скриптов, которые
+                            зависят друг от друга</li>
+                        <li><strong>Подходит для DOM-манипуляций:</strong> Поскольку скрипты с defer выполняются после
+                            полной загрузки HTML, вы можете безопасно
+                            манипулировать DOM, не беспокоясь о том, что элементы еще не загружены.</li>
+                    </ul>
+                    <h4>Пример использования defer:</h4>
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br><br>
+
+                        &lt;head&gt;<br>
+                        &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &emsp;&lt;title&gt;Пример использования defer&lt;/title&gt;<br>
+                        &emsp;&lt;script src="script.js" <mark>defer</mark>&gt;&lt;/script&gt;<br>
+                        &lt;/head&gt;<br><br>
+
+                        &lt;body&gt;<br>
+                        &emsp;&lt;h1>Привет, мир!&lt;/h1&gt;<br>
+                        &emsp;&lt;p>Это пример использования атрибута defer.&lt;/p&gt;<br>
+                        &lt;/body&gt;<br><br>
+
+                        &lt;/html&gt;<br>
+                    </p>
+                </div>
+                <!-- defer конец-->
+                <!-- async -->
+                <div class="accordion-header level-3">async</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            <strong>Асинхронная загрузка:</strong> Скрипты с атрибутом async также загружаются
+                            параллельно с загрузкой
+                            HTML-документа. Однако они
+                            выполняются немедленно после завершения загрузки, не дожидаясь завершения парсинга HTML.
+                        </li>
+                        <li>
+                            <strong>Произвольный порядок выполнения:</strong> Скрипты с async могут выполняться в
+                            произвольном порядке, в
+                            зависимости от того, какой
+                            скрипт загрузится первым. Это может привести к проблемам, если один скрипт зависит от
+                            другого.
+                        </li>
+                        <li>
+                            <strong>Подходит для независимых скриптов:</strong> async лучше всего использовать для
+                            скриптов, которые не
+                            зависят от других скриптов
+                            или DOM, например, для аналитики или рекламы.
+                        </li>
+                    </ul>
+                    <h4>Пример использования async:</h4>
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br><br>
+
+                        &lt;head&gt;<br>
+                        &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &emsp;&lt;title&gt;Пример использования async&lt;/title&gt;<br>
+                        &emsp;&lt;script src="script.js" <mark>async</mark>&gt;&lt;/script&gt;<br>
+                        &lt;/head&gt;<br><br>
+
+                        &lt;body&gt;<br>
+                        &emsp;&lt;h1>Привет, мир!&lt;/h1&gt;<br>
+                        &emsp;&lt;p>Это пример использования атрибута defer.&lt;/p&gt;<br>
+                        &lt;/body&gt;<br><br>
+
+                        &lt;/html&gt;<br>
+                    </p>
+                </div>
+                <!-- async конец-->
+                <!-- заключение -->
+                <div class="accordion-header level-3">заключение</div>
+                <div class="accordion-content">
+                    <h4>Выбор между defer и async зависит от ваших потребностей:</h4>
+                    <ul>
+                        <li>Используйте defer, если ваши скрипты зависят от DOM или друг от друга и должны выполняться в
+                            определенном порядке.
+                        </li>
+                        <li>Используйте async, если ваши скрипты независимы и могут выполняться в произвольном порядке,
+                            например, для аналитики или
+                            рекламы.</li>
+                    </ul>
+                </div>
+                <!-- заключение конец-->
+            </div>
+            <!-- Атрибуты defer & async конец-->
         </div>
         <!-- DOM конец -->
         <!-- BOM -->
@@ -5692,6 +6067,74 @@ Document
             <!-- Основные категории Browser API: конец-->
         </div>
         <!-- BROWSER API конец -->
+        <!-- МОДУЛИ -->
+        <div class="accordion-header level-1">МОДУЛИ</div>
+        <div class="accordion-content">
+            <!-- Определение -->
+            <div class="accordion-header level-2">Определение</div>
+            <div class="accordion-content">
+                <p>В JavaScript модули представляют собой способ организации и структурирования кода, позволяющий
+                    разделять его на
+                    отдельные, независимые части. Это помогает улучшить читаемость, повторное использование и поддержку
+                    кода.</p>
+            </div>
+            <!-- Определение конец-->
+            <!-- ES6 Модули -->
+            <div class="accordion-header level-2">ES6 Модули</div>
+            <div class="accordion-content">
+                <h4>С введением ES6 (ECMAScript 2015) в JavaScript был добавлен встроенный механизм модулей.</h4>
+                <p>Основные особенности:</p>
+                <ul>
+                    <li>Экспорт: Вы можете экспортировать переменные, функции или классы из модуля.</li>
+                    <li>Импорт: Вы можете импортировать экспортированные элементы в другие модули.</li>
+                </ul>
+                <p>Пример:</p>
+                <h4>Файл math.js:</h4>
+                <p>
+                    // Экспортируем функции<br><br>
+                    export function add(x, y) {<br>
+                    return x + y;<br>
+                    }<br><br>
+
+                    export function subtract(x, y) {<br>
+                    return x - y;<br>
+                    }<br>
+                </p>
+                <h4>Файл app.js:</h4>
+                <p>
+                    // Импортируем функции<br><br>
+                    import { add, subtract } from './math.js';<br><br>
+
+                    console.log(add(5, 3)); // 8<br>
+                    console.log(subtract(5, 3)); // 2<br>
+                </p>
+
+            </div>
+            <!-- ES6 Модули конец-->
+            <!-- Использование модулей в браузере -->
+            <div class="accordion-header level-2">Использование модулей в браузере</div>
+            <div class="accordion-content">
+                <h4>Для использования ES6 модулей в браузере необходимо указать тип скрипта как module:</h4>
+                <p>html:</p>
+                <p>&lt;script type="module" src="app.js"&gt;&lt;/script&gt;</p>
+            </div>
+            <!-- Использование модулей в браузере конец-->
+            <!-- Преимущества модулей. -->
+            <div class="accordion-header level-2">Преимущества модулей.</div>
+            <div class="accordion-content">
+                <ul>
+                    <li><strong>Изоляция:</strong> Модули помогают изолировать код, предотвращая конфликты между
+                        переменными и функциями.
+                    </li>
+                    <li><strong>Повторное использование:</strong> Модули можно легко повторно использовать в разных
+                        частях приложения или
+                        в разных проектах.</li>
+                    <li><strong>Упрощение тестирования:</strong> Модули можно тестировать независимо друг от друга.</li>
+                </ul>
+            </div>
+            <!-- Преимущества модулей. конец-->
+        </div>
+        <!-- МОДУЛИ конец -->
     </div>
     <script src="script.js"></script>
 </body>
