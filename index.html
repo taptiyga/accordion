@@ -5356,270 +5356,6 @@ Document
                     </p>
                 </div>
                 <!-- копирование элемента конец-->
-                <!-- события и addEventListener -->
-                <div class="accordion-header level-3">события и addEventListener</div>
-                <div class="accordion-content">
-                    <!-- определение -->
-                    <div class="accordion-header level-4">определение</div>
-                    <div class="accordion-content">
-                        <p>В JavaScript события представляют собой действия или изменения состояния, которые происходят
-                            в браузере, и на которые
-                            можно реагировать с помощью кода. Например, события могут возникать при взаимодействии
-                            пользователя с элементами
-                            страницы, таких как клики, нажатия клавиш, перемещения мыши и т.д.</p>
-                    </div>
-                    <!-- определение конец-->
-                    <!-- основные понятия о событиях -->
-                    <div class="accordion-header level-4">основные понятия о событиях</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li><strong>Событие:</strong> Это действие, которое происходит в браузере, например, клик
-                                мыши, нажатие
-                                клавиши, загрузка страницы и т.д.
-                            </li>
-                            <li><strong>Обработчик события:</strong> Это функция, которая выполняется в ответ на
-                                определенное событие.
-                                Например, вы можете создать
-                                обработчик, который будет срабатывать при клике на кнопку.
-                            </li>
-                            <li><strong>Целевой элемент:</strong> Это элемент, на котором произошло событие. Например,
-                                если пользователь
-                                кликнул на кнопку, то эта кнопка
-                                будет целевым элементом.</li>
-                        </ul>
-                    </div>
-                    <!-- основные понятия о событиях конец-->
-                    <!-- использование addEventListener -->
-                    <div class="accordion-header level-4">использование addEventListener</div>
-                    <div class="accordion-content">
-                        <p>Метод addEventListener позволяет вам добавлять обработчики событий к элементам. Он принимает
-                            три аргумента:</p>
-                        <ul>
-                            <li><strong>Тип события:</strong> Строка, указывающая тип события, например, "click",
-                                "keydown", "mouseover" и т.д.
-                            </li>
-                            <li><strong>Обработчик события:</strong> Функция, которая будет вызвана, когда событие
-                                произойдет.
-                            </li>
-                            <li><strong>Опции (необязательный):</strong> Объект, который может содержать дополнительные
-                                параметры, такие как capture, once, и passive.</li>
-                        </ul>
-                    </div>
-                    <!-- использование addEventListener конец-->
-                    <!-- пример использования addEventListener -->
-                    <div class="accordion-header level-4">пример использования addEventListener</div>
-                    <div class="accordion-content">
-                        <p>Вот пример, который демонстрирует, как использовать addEventListener для обработки события
-                            клика на кнопку:</p>
-                        <p>
-                            &lt;!DOCTYPE html&gt;<br>
-                            &lt;html lang="en"&gt;<br><br>
-
-                            &lt;head&gt;<br>
-                            &emsp;&lt;meta charset="UTF-8"&gt;<br>
-                            &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-                            &emsp;&lt;title&gt;Пример addEventListener&lt;/title&gt;<br>
-                            &lt;/head&gt;<br><br>
-
-                            &lt;body&gt;<br>
-                            &emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br><br>
-
-                            &emsp;&lt;script&gt;<br>
-                            &emsp;&emsp;// Получаем элемент кнопки<br>
-                            &emsp;&emsp;const button = document.getElementById('myButton');<br>
-
-                            &emsp;&emsp;// Определяем обработчик события<br>
-                            &emsp;&emsp;function handleClick() {<br>
-                            &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
-                            &emsp;&emsp;}<br><br>
-
-                            &emsp;&emsp;// Добавляем обработчик события клика<br>
-                            &emsp;&emsp;button.addEventListener('click', handleClick);<br>
-                            &emsp;&lt;/script&gt;<br>
-                            &lt;/body&gt;<br><br>
-
-                            &lt;/html&gt;
-                        </p>
-                    </div>
-                    <!-- пример использования addEventListener конец-->
-                    <!-- удаление обработчика события -->
-                    <div class="accordion-header level-4">удаление обработчика события</div>
-                    <div class="accordion-content">
-                        <p>Если вам нужно удалить обработчик события, вы можете использовать метод removeEventListener.
-                            Для этого необходимо
-                            передать тот же тип события и ту же функцию, которую вы использовали при добавлении
-                            обработчика.</p>
-                        <h4>js:</h4>
-                        <p>button.removeEventListener('click', handleClick);</p>
-                    </div>
-                    <!-- удаление обработчика события конец-->
-                    <!-- опции addEventListener -->
-                    <div class="accordion-header level-4">опции addEventListener</div>
-                    <div class="accordion-content">
-                        <ul>
-                            <li>
-                                capture: Если установлено в true, обработчик будет вызван во время фазы захвата события.
-                                По умолчанию это значение
-                                false, и обработчик будет вызван во время фазы всплытия.
-                            </li>
-                            <li>once: Если установлено в true, обработчик будет вызван только один раз после первого
-                                срабатывания события, а затем будет
-                                автоматически удален.
-                            </li>
-                            <li>passive: Если установлено в true, это указывает, что обработчик не будет вызывать
-                                preventDefault(), что может улучшить
-                                производительность при прокрутке.</li>
-                        </ul>
-                        <h4>js:</h4>
-                        <p>button.addEventListener('click', handleClick, { once: true });</p>
-                        <p>В этом примере обработчик handleClick будет вызван только один раз при первом клике на
-                            кнопку.</p>
-                    </div>
-                    <!-- опции addEventListener конец-->
-                    <!-- заключение -->
-                    <div class="accordion-header level-4">заключение</div>
-                    <div class="accordion-content">
-                        <p>Метод addEventListener является мощным инструментом для работы с событиями в JavaScript. Он
-                            позволяет добавлять
-                            несколько обработчиков для одного и того же события, управлять порядком их выполнения и
-                            использовать различные опции для
-                            настройки поведения. Это делает его предпочтительным способом обработки событий по сравнению
-                            с устаревшими методами,
-                            такими как установка обработчиков напрямую через свойства, например, onclick.</p>
-                    </div>
-                    <!-- заключение конец-->
-                </div>
-                <!-- события и addEventListener конец-->
-                <!-- event -->
-                <div class="accordion-header level-3">event</div>
-                <div class="accordion-content">
-                    <!-- определение -->
-                    <div class="accordion-header level-4">определение</div>
-                    <div class="accordion-content">
-                        <p>В JavaScript объект event представляет собой информацию о событии, которое произошло в
-                            браузере. Этот объект содержит
-                            данные о событии, такие как тип события, целевой элемент, координаты мыши и другие
-                            параметры, в зависимости от типа
-                            события. Объект event передается в обработчик события, что позволяет вам получить доступ к
-                            этой информации и реагировать
-                            на событие соответствующим образом.</p>
-                    </div>
-                    <!-- определение конец-->
-                    <!-- основные свойства объекта event -->
-                    <div class="accordion-header level-4">основные свойства объекта event</div>
-                    <div class="accordion-content">
-                        <p>Вот некоторые из наиболее часто используемых свойств объекта event:</p>
-                        <ul>
-                            <li><strong>type:</strong> Строка, указывающая тип события (например, "click", "keydown",
-                                "mouseover" и
-                                т.д.).</li>
-                            <li><strong>target:</strong> Элемент, на котором произошло событие. Это может быть любой
-                                элемент DOM, который вызвал событие.</li>
-                            <li><strong>currentTarget:</strong> Элемент, на котором в данный момент обрабатывается
-                                событие. Это может быть полезно, если вы используете
-                                делегирование событий.</li>
-                            <li><strong>bubbles:</strong> Логическое значение, указывающее, может ли событие всплывать
-                                (булькаться) вверх по дереву DOM.</li>
-                            <li><strong>cancelable:</strong> Логическое значение, указывающее, может ли событие быть
-                                отменено с помощью метода preventDefault().</li>
-                            <li><strong>preventDefault():</strong> Метод, который предотвращает выполнение стандартного
-                                действия, связанного с событием. Например,
-                                предотвращает переход по ссылке при клике на элемент &lt;a&gt;.</li>
-                            <li><strong>stopPropagation():</strong> Метод, который предотвращает дальнейшее
-                                распространение события по дереву DOM. Это может быть
-                                полезно, если вы хотите остановить событие от достижения родительских элементов.</li>
-                        </ul>
-                    </div>
-                    <!-- основные свойства объекта event конец-->
-                    <!-- пример использования объекта event -->
-                    <div class="accordion-header level-4">пример использования объекта event</div>
-                    <div class="accordion-content">
-                        <p>Вот пример, который демонстрирует, как использовать объект event в обработчике события:</p>
-                        <p>
-                            &lt;!DOCTYPE html&gt;<br>
-                            &lt;html lang="en"&gt;<br><br>
-
-                            &lt;head&gt;<br>
-                            &emsp;&lt;meta charset="UTF-8"&gt;<br>
-                            &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-                            &emsp;&lt;title&gt;Пример объекта event&lt;/title&gt;<br>
-                            &lt;/head&gt;<br><br>
-
-                            &lt;body&gt;<br>
-                            &emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br><br>
-
-                            &emsp;&lt;script&gt;<br>
-                            &emsp;&emsp;const button = document.getElementById('myButton');<br><br>
-
-                            &emsp;&emsp;button.addEventListener('click', function (event) {<br>
-                            &emsp;&emsp;&emsp;// Получаем тип события<br>
-                            &emsp;&emsp;&emsp;console.log('Тип события:', event.type);<br><br>
-
-                            &emsp;&emsp;&emsp;// Получаем целевой элемент<br>
-                            &emsp;&emsp;&emsp;console.log('Целевой элемент:', event.target);<br><br>
-
-                            &emsp;&emsp;&emsp;// Предотвращаем стандартное действие (если это возможно)<br>
-                            &emsp;&emsp;&emsp;// event.preventDefault();<br><br>
-
-                            &emsp;&emsp;&emsp;// Останавливаем распространение события<br>
-                            &emsp;&emsp;&emsp;// event.stopPropagation();<br><br>
-
-                            &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
-                            &emsp;&emsp;});<br>
-                            &emsp;&lt;/script&gt;<br>
-                            &lt;/body&gt;<br><br>
-
-                            &lt;/html&gt;
-                        </p>
-                    </div>
-                    <!-- пример использования объекта event конец-->
-                    <!-- пример с использованием preventDefault и stopPropagation -->
-                    <div class="accordion-header level-4">пример с использованием preventDefault и stopPropagation</div>
-                    <div class="accordion-content">
-                        <p>В этом примере мы можем использовать методы preventDefault и stopPropagation, чтобы
-                            предотвратить стандартное поведение
-                            и остановить распространение события:</p>
-                        <p>
-                            &lt;!DOCTYPE html&gt;<br>
-                            &lt;html lang="en"&gt;<br><br>
-
-                            &lt;head&gt;<br>
-                            &emsp;&lt;meta charset="UTF-8"&gt;<br>
-                            &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-                            &emsp;&lt;title&gt;Пример preventDefault и stopPropagation&lt;/title&gt;<br>
-                            &lt;/head&gt;<br><br>
-
-                            &lt;body&gt;<br>
-                            &emsp;&lt;div id="parent" style="padding: 20px; background-color: lightgray;"&gt;<br>
-                            &emsp;&emsp;Родительский элемент<br>
-                            &emsp;&emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br>
-                            &emsp;&lt;/div&gt;<br><br>
-
-                            &emsp;&lt;script&gt;<br>
-                            &emsp;&emsp;const button = document.getElementById('myButton');<br>
-                            &emsp;&emsp;const parent = document.getElementById('parent');<br><br>
-
-                            &emsp;&emsp;// Обработчик для родительского элемента<br>
-                            &emsp;&emsp;parent.addEventListener('click', function () {<br>
-                            &emsp;&emsp;&emsp;alert('Родительский элемент был нажат!');<br>
-                            &emsp;&emsp;});<br><br>
-
-                            &emsp;&emsp;// Обработчик для кнопки<br>
-                            &emsp;&emsp;button.addEventListener('click', function (event) {<br>
-                            &emsp;&emsp;&emsp;event.preventDefault(); // Предотвращаем стандартное действие<br>
-                            &emsp;&emsp;&emsp;event.stopPropagation(); // Останавливаем распространение события<br><br>
-
-                            &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
-                            &emsp;&emsp;});<br>
-                            &emsp;&lt;/script&gt;<br>
-                            &lt;/body&gt;<br><br>
-
-                            &lt;/html&gt;
-                        </p>
-                    </div>
-                    <!-- пример с использованием preventDefault и stopPropagation конец-->
-                </div>
-                <!-- event конец-->
             </div>
             <!-- Работа с DOM конец-->
             <!-- DOM&CSS -->
@@ -5876,6 +5612,571 @@ Document
             <!-- Атрибуты defer & async конец-->
         </div>
         <!-- DOM конец -->
+        <!-- РАБОТА С СОБЫТИЯМИ -->
+        <div class="accordion-header level-1">РАБОТА С СОБЫТИЯМИ</div>
+        <div class="accordion-content">
+            <!-- Cобытия и addEventListener -->
+            <div class="accordion-header level-2">Cобытия и addEventListener</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>В JavaScript события представляют собой действия или изменения состояния, которые происходят
+                        в браузере, и на которые
+                        можно реагировать с помощью кода. Например, события могут возникать при взаимодействии
+                        пользователя с элементами
+                        страницы, таких как клики, нажатия клавиш, перемещения мыши и т.д.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- основные понятия о событиях -->
+                <div class="accordion-header level-3">основные понятия о событиях</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><strong>Событие:</strong> Это действие, которое происходит в браузере, например, клик
+                            мыши, нажатие
+                            клавиши, загрузка страницы и т.д.
+                        </li>
+                        <li><strong>Обработчик события:</strong> Это функция, которая выполняется в ответ на
+                            определенное событие.
+                            Например, вы можете создать
+                            обработчик, который будет срабатывать при клике на кнопку.
+                        </li>
+                        <li><strong>Целевой элемент:</strong> Это элемент, на котором произошло событие. Например,
+                            если пользователь
+                            кликнул на кнопку, то эта кнопка
+                            будет целевым элементом.</li>
+                    </ul>
+                </div>
+                <!-- основные понятия о событиях конец-->
+                <!-- использование addEventListener -->
+                <div class="accordion-header level-3">использование addEventListener</div>
+                <div class="accordion-content">
+                    <p>Метод addEventListener позволяет вам добавлять обработчики событий к элементам. Он принимает
+                        три аргумента:</p>
+                    <ul>
+                        <li><strong>Тип события:</strong> Строка, указывающая тип события, например, "click",
+                            "keydown", "mouseover" и т.д.
+                        </li>
+                        <li><strong>Обработчик события:</strong> Функция, которая будет вызвана, когда событие
+                            произойдет.
+                        </li>
+                        <li><strong>Опции (необязательный):</strong> Объект, который может содержать дополнительные
+                            параметры, такие как capture, once, и passive.</li>
+                    </ul>
+                </div>
+                <!-- использование addEventListener конец-->
+                <!-- пример использования addEventListener -->
+                <div class="accordion-header level-3">пример использования addEventListener</div>
+                <div class="accordion-content">
+                    <p>Вот пример, который демонстрирует, как использовать addEventListener для обработки события
+                        клика на кнопку:</p>
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br><br>
+
+                        &lt;head&gt;<br>
+                        &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &emsp;&lt;title&gt;Пример addEventListener&lt;/title&gt;<br>
+                        &lt;/head&gt;<br><br>
+
+                        &lt;body&gt;<br>
+                        &emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br><br>
+
+                        &emsp;&lt;script&gt;<br>
+                        &emsp;&emsp;// Получаем элемент кнопки<br>
+                        &emsp;&emsp;const button = document.getElementById('myButton');<br>
+
+                        &emsp;&emsp;// Определяем обработчик события<br>
+                        &emsp;&emsp;function handleClick() {<br>
+                        &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
+                        &emsp;&emsp;}<br><br>
+
+                        &emsp;&emsp;// Добавляем обработчик события клика<br>
+                        &emsp;&emsp;button.addEventListener('click', handleClick);<br>
+                        &emsp;&lt;/script&gt;<br>
+                        &lt;/body&gt;<br><br>
+
+                        &lt;/html&gt;
+                    </p>
+                </div>
+                <!-- пример использования addEventListener конец-->
+                <!-- удаление обработчика события -->
+                <div class="accordion-header level-3">удаление обработчика события</div>
+                <div class="accordion-content">
+                    <p>Если вам нужно удалить обработчик события, вы можете использовать метод removeEventListener.
+                        Для этого необходимо
+                        передать тот же тип события и ту же функцию, которую вы использовали при добавлении
+                        обработчика.</p>
+                    <h4>js:</h4>
+                    <p>button.removeEventListener('click', handleClick);</p>
+                </div>
+                <!-- удаление обработчика события конец-->
+                <!-- опции addEventListener -->
+                <div class="accordion-header level-3">опции addEventListener</div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            capture: Если установлено в true, обработчик будет вызван во время фазы захвата события.
+                            По умолчанию это значение
+                            false, и обработчик будет вызван во время фазы всплытия.
+                        </li>
+                        <li>once: Если установлено в true, обработчик будет вызван только один раз после первого
+                            срабатывания события, а затем будет
+                            автоматически удален.
+                        </li>
+                        <li>passive: Если установлено в true, это указывает, что обработчик не будет вызывать
+                            preventDefault(), что может улучшить
+                            производительность при прокрутке.</li>
+                    </ul>
+                    <h4>js:</h4>
+                    <p>button.addEventListener('click', handleClick, { once: true });</p>
+                    <p>В этом примере обработчик handleClick будет вызван только один раз при первом клике на
+                        кнопку.</p>
+                </div>
+                <!-- опции addEventListener конец-->
+                <!-- заключение -->
+                <div class="accordion-header level-3">заключение</div>
+                <div class="accordion-content">
+                    <p>Метод addEventListener является мощным инструментом для работы с событиями в JavaScript. Он
+                        позволяет добавлять
+                        несколько обработчиков для одного и того же события, управлять порядком их выполнения и
+                        использовать различные опции для
+                        настройки поведения. Это делает его предпочтительным способом обработки событий по сравнению
+                        с устаревшими методами,
+                        такими как установка обработчиков напрямую через свойства, например, onclick.</p>
+                </div>
+                <!-- заключение конец-->
+            </div>
+            <!-- Cобытия и addEventListener конец-->
+            <!-- Event -->
+            <div class="accordion-header level-2">Event</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>В JavaScript объект event представляет собой информацию о событии, которое произошло в
+                        браузере. Этот объект содержит
+                        данные о событии, такие как тип события, целевой элемент, координаты мыши и другие
+                        параметры, в зависимости от типа
+                        события. Объект event передается в обработчик события, что позволяет вам получить доступ к
+                        этой информации и реагировать
+                        на событие соответствующим образом.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- основные свойства объекта event -->
+                <div class="accordion-header level-3">основные свойства объекта event</div>
+                <div class="accordion-content">
+                    <p>Вот некоторые из наиболее часто используемых свойств объекта event:</p>
+                    <ul>
+                        <li><strong>type:</strong> Строка, указывающая тип события (например, "click", "keydown",
+                            "mouseover" и
+                            т.д.).</li>
+                        <li><strong>target:</strong> Элемент, на котором произошло событие. Это может быть любой
+                            элемент DOM, который вызвал событие.</li>
+                        <li><strong>currentTarget:</strong> Элемент, на котором в данный момент обрабатывается
+                            событие. Это может быть полезно, если вы используете
+                            делегирование событий.</li>
+                        <li><strong>bubbles:</strong> Логическое значение, указывающее, может ли событие всплывать
+                            (булькаться) вверх по дереву DOM.</li>
+                        <li><strong>cancelable:</strong> Логическое значение, указывающее, может ли событие быть
+                            отменено с помощью метода preventDefault().</li>
+                        <li><strong>preventDefault():</strong> Метод, который предотвращает выполнение стандартного
+                            действия, связанного с событием. Например,
+                            предотвращает переход по ссылке при клике на элемент &lt;a&gt;.</li>
+                        <li><strong>stopPropagation():</strong> Метод, который предотвращает дальнейшее
+                            распространение события по дереву DOM. Это может быть
+                            полезно, если вы хотите остановить событие от достижения родительских элементов.</li>
+                    </ul>
+                </div>
+                <!-- основные свойства объекта event конец-->
+                <!-- пример использования объекта event -->
+                <div class="accordion-header level-3">пример использования объекта event</div>
+                <div class="accordion-content">
+                    <p>Вот пример, который демонстрирует, как использовать объект event в обработчике события:</p>
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br><br>
+
+                        &lt;head&gt;<br>
+                        &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &emsp;&lt;title&gt;Пример объекта event&lt;/title&gt;<br>
+                        &lt;/head&gt;<br><br>
+
+                        &lt;body&gt;<br>
+                        &emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br><br>
+
+                        &emsp;&lt;script&gt;<br>
+                        &emsp;&emsp;const button = document.getElementById('myButton');<br><br>
+
+                        &emsp;&emsp;button.addEventListener('click', function (event) {<br>
+                        &emsp;&emsp;&emsp;// Получаем тип события<br>
+                        &emsp;&emsp;&emsp;console.log('Тип события:', event.type);<br><br>
+
+                        &emsp;&emsp;&emsp;// Получаем целевой элемент<br>
+                        &emsp;&emsp;&emsp;console.log('Целевой элемент:', event.target);<br><br>
+
+                        &emsp;&emsp;&emsp;// Предотвращаем стандартное действие (если это возможно)<br>
+                        &emsp;&emsp;&emsp;// event.preventDefault();<br><br>
+
+                        &emsp;&emsp;&emsp;// Останавливаем распространение события<br>
+                        &emsp;&emsp;&emsp;// event.stopPropagation();<br><br>
+
+                        &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
+                        &emsp;&emsp;});<br>
+                        &emsp;&lt;/script&gt;<br>
+                        &lt;/body&gt;<br><br>
+
+                        &lt;/html&gt;
+                    </p>
+                </div>
+                <!-- пример использования объекта event конец-->
+                <!-- пример с использованием preventDefault и stopPropagation -->
+                <div class="accordion-header level-3">пример с использованием preventDefault и stopPropagation</div>
+                <div class="accordion-content">
+                    <p>В этом примере мы можем использовать методы preventDefault и stopPropagation, чтобы
+                        предотвратить стандартное поведение
+                        и остановить распространение события:</p>
+                    <p>
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br><br>
+
+                        &lt;head&gt;<br>
+                        &emsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &emsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &emsp;&lt;title&gt;Пример preventDefault и stopPropagation&lt;/title&gt;<br>
+                        &lt;/head&gt;<br><br>
+
+                        &lt;body&gt;<br>
+                        &emsp;&lt;div id="parent" style="padding: 20px; background-color: lightgray;"&gt;<br>
+                        &emsp;&emsp;Родительский элемент<br>
+                        &emsp;&emsp;&lt;button id="myButton"&gt;Нажми меня!&lt;/button&gt;<br>
+                        &emsp;&lt;/div&gt;<br><br>
+
+                        &emsp;&lt;script&gt;<br>
+                        &emsp;&emsp;const button = document.getElementById('myButton');<br>
+                        &emsp;&emsp;const parent = document.getElementById('parent');<br><br>
+
+                        &emsp;&emsp;// Обработчик для родительского элемента<br>
+                        &emsp;&emsp;parent.addEventListener('click', function () {<br>
+                        &emsp;&emsp;&emsp;alert('Родительский элемент был нажат!');<br>
+                        &emsp;&emsp;});<br><br>
+
+                        &emsp;&emsp;// Обработчик для кнопки<br>
+                        &emsp;&emsp;button.addEventListener('click', function (event) {<br>
+                        &emsp;&emsp;&emsp;event.preventDefault(); // Предотвращаем стандартное действие<br>
+                        &emsp;&emsp;&emsp;event.stopPropagation(); // Останавливаем распространение события<br><br>
+
+                        &emsp;&emsp;&emsp;alert('Кнопка была нажата!');<br>
+                        &emsp;&emsp;});<br>
+                        &emsp;&lt;/script&gt;<br>
+                        &lt;/body&gt;<br><br>
+
+                        &lt;/html&gt;
+                    </p>
+                </div>
+                <!-- пример с использованием preventDefault и stopPropagation конец-->
+            </div>
+            <!-- Event конец-->
+            <!-- Всплытие событий (Event Bubbling) -->
+            <div class="accordion-header level-2">Всплытие событий (Event Bubbling)</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Всплытие — это процесс, при котором событие, происходящее на элементе, сначала обрабатывается
+                        этим элементом, а затем
+                        "всплывает" вверх по дереву DOM к родительским элементам. Это означает, что если у вас есть
+                        вложенные элементы, и
+                        событие происходит на дочернем элементе, то оно будет сначала обработано на этом дочернем
+                        элементе, а затем будет
+                        передано его родителю, затем родителю родителя и так далее, пока не достигнет корневого элемента
+                        (обычно document).</p>
+                </div>
+                <!-- определение конец-->
+                <!-- пример -->
+                <div class="accordion-header level-3">пример</div>
+                <div class="accordion-content">
+                    <p>
+                        &lt;div id="parent"&gt;<br>
+                        &emsp;&lt;button id="child"&gt;Click me&lt;/button&gt;<br>
+                        &lt;/div&gt;<br><br>
+
+                        &lt;script&gt;<br>
+                        &emsp;document.getElementById('parent').addEventListener('click', function () {<br>
+                        &emsp;&emsp;console.log('Parent clicked');<br>
+                        &emsp;});<br><br>
+
+                        &emsp;document.getElementById('child').addEventListener('click', function () {<br>
+                        &emsp;&emsp;console.log('Child clicked');<br>
+                        &emsp;});<br>
+                        &lt;/script&gt;
+                    </p>
+                    <p>Если вы нажмете на кнопку, в консоли сначала отобразится "Child clicked", а затем "Parent
+                        clicked".</p>
+                </div>
+                <!-- пример конец-->
+                <!-- запрет на всплытие событий -->
+                <div class="accordion-header level-3">запрет на всплытие событий</div>
+                <div class="accordion-content">
+                    <!-- stopPropagation() -->
+                    <div class="accordion-header level-4">stopPropagation()</div>
+                    <div class="accordion-content">
+                        <p>Чтобы предотвратить всплытие события, вы можете использовать метод stopPropagation(). Этот
+                            метод
+                            останавливает
+                            дальнейшее распространение события по дереву DOM, что означает, что событие не будет
+                            передано
+                            родительским элементам.</p>
+                        <h4>Пример:</h4>
+                        <p>
+                            &lt;div id="parent"&gt;<br>
+                            &emsp;&lt;button id="child"&gt;Click me&lt;/button&gt;<br>
+                            &lt;/div&gt;<br><br>
+
+                            &lt;script&gt;<br>
+                            &emsp;document.getElementById('parent').addEventListener('click', function () {<br>
+                            &emsp;&emsp;console.log('Parent clicked');<br>
+                            &emsp;});<br><br>
+
+                            &emsp;document.getElementById('child').addEventListener('click', function (event) {<br>
+                            &emsp;&emsp;console.log('Child clicked');<br>
+                            &emsp;&emsp;event.stopPropagation(); // Останавливаем всплытие<br>
+                            &emsp;});<br>
+                            &lt;/script&gt;
+                        </p>
+                        <p>В этом примере, если вы нажмете на кнопку, в консоли отобразится только "Child clicked", и
+                            "Parent clicked" не будет
+                            выведено, так как всплытие события было остановлено.</p>
+                    </div>
+                    <!-- stopPropagation() конец-->
+                    <!-- stopImmediatePropagation() -->
+                    <div class="accordion-header level-4">stopImmediatePropagation()</div>
+                    <div class="accordion-content">
+                        <p>Метод stopImmediatePropagation() в JavaScript используется для предотвращения дальнейшего
+                            распространения события как по
+                            дереву DOM (всплытие), так и для остановки выполнения других обработчиков событий,
+                            назначенных на тот же элемент.</p>
+                        <h4>Пример:</h4>
+                        <p>
+                            &lt;div id="parent"&gt;<br>
+                            &emsp;&lt;button id="child"&gt;Click me&lt;/button&gt;<br>
+                            &lt;/div&gt;<br><br>
+
+                            &lt;script&gt;<br>
+                            &emsp;document.getElementById('child').addEventListener('click', function (event) {<br>
+                            &emsp;&emsp;console.log('First handler');<br>
+                            &emsp;&emsp;event.stopImmediatePropagation(); // Останавливаем выполнение других
+                            обработчиков<br>
+                            &emsp;});<br><br>
+
+                            &emsp;document.getElementById('child').addEventListener('click', function () {<br>
+                            &emsp;&emsp;console.log('Second handler'); // Этот обработчик не будет вызван<br>
+                            &emsp;});<br><br>
+
+                            &emsp;document.getElementById('parent').addEventListener('click', function () {<br>
+                            &emsp;&emsp;console.log('Parent clicked'); // Этот обработчик тоже не будет вызван<br>
+                            &emsp;});<br>
+                            &lt;/script&gt;
+                        </p>
+                        <h4>Что произойдет при клике на кнопку:</h4>
+                        <ul>
+                            <li>В консоли отобразится "First handler".
+                            </li>
+                            <li>Другие обработчики на элементе &lt;button&gt; (в данном случае "Second handler") и
+                                родительском элементе &lt;div&gt; (в данном
+                                случае "Parent clicked") не будут вызваны.</li>
+                        </ul>
+                        <p>Метод stopImmediatePropagation() является мощным инструментом для управления поведением
+                            событий в JavaScript. Он
+                            позволяет вам более точно контролировать, какие обработчики событий должны выполняться, а
+                            какие — нет, что может быть
+                            особенно полезно в сложных интерфейсах с множеством взаимодействий.</p>
+                    </div>
+                    <!-- stopImmediatePropagation() конец-->
+                </div>
+                <!-- запрет на всплытие событий конец-->
+            </div>
+            <!-- Всплытие событий (Event Bubbling) конец-->
+            <!-- Погружение событий (Event Capturing) -->
+            <div class="accordion-header level-2">Погружение событий (Event Capturing)</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Погружение — это обратный процесс, при котором событие сначала обрабатывается на корневом
+                        элементе и "погружается" вниз
+                        по дереву DOM к целевому элементу. Это менее распространенный метод, но его можно использовать,
+                        если вам нужно
+                        перехватить событие до того, как оно достигнет целевого элемента.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- пример -->
+                <div class="accordion-header level-3">пример</div>
+                <div class="accordion-content">
+                    <p>Чтобы использовать погружение, необходимо указать третий аргумент в методе addEventListener,
+                        установив его в true:</p>
+                    <p>
+                        &lt;div id="parent"&gt;<br>
+                        &emsp;&lt;button id="child"&gt;Click me&lt;/button&gt;<br>
+                        &lt;/div&gt;<br><br>
+
+                        &lt;script&gt;<br>
+                        &emsp;document.getElementById('parent').addEventListener('click', function () {<br>
+                        &emsp;&emsp;console.log('Parent clicked');<br>
+                        &emsp;}, true);<br><br>
+
+                        &emsp;document.getElementById('child').addEventListener('click', function () {<br>
+                        &emsp;&emsp;console.log('Child clicked');<br>
+                        &emsp;});<br>
+                        &lt;/script&gt;
+                    </p>
+                    <p>Теперь, если вы нажмете на кнопку, в консоли сначала отобразится "Parent clicked", а затем "Child
+                        clicked".</p>
+                    <p>Всплытие и погружение событий — это механизмы, которые позволяют управлять тем, как события
+                        обрабатываются в DOM.</p>
+                </div>
+                <!-- пример конец-->
+                <!-- запрет на погружение событий -->
+                <div class="accordion-header level-3">запрет на погружение событий</div>
+                <div class="accordion-content">
+                    <p>Для предотвращения погружения событий в JavaScript нет прямого метода, так как погружение по
+                        умолчанию не является
+                        стандартным поведением. Однако, если вы хотите предотвратить обработку события на родительских
+                        элементах, вы можете
+                        просто не добавлять обработчики событий на родительские элементы или использовать
+                        stopPropagation() в обработчиках
+                        событий на дочерних элементах.</p>
+                </div>
+                <!-- запрет на погружение событий конец-->
+            </div>
+            <!-- Погружение событий (Event Capturing) конец-->
+            <!-- Делегирование событий (Event Delegation) -->
+            <div class="accordion-header level-2">Делегирование событий (Event Delegation)</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Делегирование событий — это техника, при которой вы назначаете обработчик события на родительский
+                        элемент вместо того,
+                        чтобы назначать его на каждый дочерний элемент. Это особенно полезно, когда у вас есть
+                        динамически создаваемые элементы
+                        или когда вы хотите уменьшить количество обработчиков событий.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- пример делегирования событий: -->
+                <div class="accordion-header level-3">пример делегирования событий:</div>
+                <div class="accordion-content">
+                    <p>
+                        &lt;ul id="list"&gt;<br>
+                        &emsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+                        &emsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br><br>
+
+                        &lt;script&gt;<br>
+                        &emsp;document.getElementById('list').addEventListener('click', function (event) {<br>
+                        &emsp;&emsp;if (event.target.tagName === 'LI') {<br>
+                        &emsp;&emsp;&emsp;console.log('List item clicked: ' + event.target.textContent);<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;});<br>
+                        &lt;/script&gt;
+                    </p>
+                    <p>В этом примере обработчик события назначен на элемент
+                        &lt;ul&gt;, и он будет срабатывать для всех элементов &lt;li&gt;, даже если
+                        они будут добавлены позже.</p>
+                    <p>Делегирование событий — это полезная техника, которая позволяет оптимизировать обработку событий,
+                        особенно в случаях с
+                        динамическими элементами.</p>
+                </div>
+                <!-- пример делегирования событий: конец-->
+            </div>
+            <!-- Делегирование событий (Event Delegation) конец-->
+            <!-- Кастомные события (Custom Events) -->
+            <div class="accordion-header level-2">Кастомные события (Custom Events)</div>
+            <div class="accordion-content">
+                <!-- определение -->
+                <div class="accordion-header level-3">определение</div>
+                <div class="accordion-content">
+                    <p>Кастомные события (или пользовательские события) в JavaScript позволяют разработчикам создавать и
+                        управлять событиями,
+                        которые не являются стандартными для DOM. Это может быть полезно для реализации специфического
+                        поведения в приложениях,
+                        когда стандартные события не подходят.</p>
+                </div>
+                <!-- определение конец-->
+                <!-- создание кастомного события -->
+                <div class="accordion-header level-3">создание кастомного события</div>
+                <div class="accordion-content">
+                    <p>Для создания кастомного события в JavaScript вы можете использовать конструктор CustomEvent. Этот
+                        конструктор позволяет
+                        вам создавать события с дополнительными данными, которые можно передать обработчикам.</p>
+                    <h4>Пример:</h4>
+                    <p>
+                        &lt;button id="myButton"&gt;Click me&lt;/button&gt;<br>
+
+                        &lt;script&gt;<br>
+                        &emsp;// Создаем кастомное событие<br>
+                        &emsp;const myCustomEvent = new CustomEvent('myCustomEvent', {<br>
+                        &emsp;&emsp;detail: { message: 'Hello, this is a custom event!' }<br>
+                        &emsp;});<br><br>
+
+                        &emsp;// Добавляем обработчик для кастомного события<br>
+                        &emsp;document.addEventListener('myCustomEvent', function (event) {<br>
+                        &emsp;&emsp;console.log(event.detail.message); // Выводим сообщение из события<br>
+                        &emsp;});<br><br>
+
+                        &emsp;// Добавляем обработчик для кнопки<br>
+                        &emsp;document.getElementById('myButton').addEventListener('click', function () {<br>
+                        &emsp;&emsp;// Диспатчим кастомное событие<br>
+                        &emsp;&emsp;document.dispatchEvent(myCustomEvent);<br>
+                        &emsp;});<br>
+                        &lt;/script&gt;
+                    </p>
+                    <h4>Объяснение кода:</h4>
+                    <ul>
+                        <li>Создание кастомного события: Мы создаем кастомное событие myCustomEvent с помощью new
+                            CustomEvent(). В качестве второго
+                            аргумента передаем объект с параметром detail, который содержит дополнительные данные,
+                            которые мы хотим передать с
+                            событием.</li>
+                        <li>Добавление обработчика события: Мы добавляем обработчик для нашего кастомного события с
+                            помощью addEventListener().
+                            Внутри обработчика мы можем получить доступ к данным события через event.detail.</li>
+                        <li>Диспатчинг события: Когда пользователь нажимает на кнопку, мы вызываем dispatchEvent(),
+                            чтобы инициировать кастомное
+                            событие. Это приведет к вызову обработчика, который выведет сообщение в консоль.</li>
+                    </ul>
+                </div>
+                <!-- создание кастомного события конец-->
+                <!-- применение кастомных событий -->
+                <div class="accordion-header level-3">применение кастомных событий</div>
+                <div class="accordion-content">
+                    <h4>Кастомные события могут быть полезны в различных сценариях:</h4>
+                    <ul>
+                        <li><strong>Компоненты:</strong> В рамках создания компонентов (например, в библиотеке или
+                            фреймворке) вы можете использовать кастомные
+                            события для уведомления родительских компонентов о том, что произошло какое-то действие
+                            (например, изменение состояния).</li>
+                        <li><strong>Модульность:</strong> Кастомные события помогают сделать код более модульным и легко
+                            управляемым, позволяя различным частям
+                            приложения взаимодействовать друг с другом без жесткой связи.</li>
+                        <li><strong>Сложные взаимодействия:</strong> В сложных интерфейсах, где требуется взаимодействие
+                            между несколькими элементами, кастомные
+                            события могут помочь организовать логику и сделать ее более понятной.</li>
+                    </ul>
+                    <p>Кастомные события — это мощный инструмент для создания интерактивных и отзывчивых веб-приложений.
+                        Они позволяют
+                        разработчикам создавать собственные события, которые могут быть использованы для передачи
+                        информации между различными
+                        частями приложения, улучшая его структуру и читаемость.</p>
+                </div>
+                <!-- применение кастомных событий конец-->
+            </div>
+            <!-- Кастомные события (Custom Events) конец-->
+        </div>
+        <!-- РАБОТА С СОБЫТИЯМИ конец -->
         <!-- BOM -->
         <div class="accordion-header level-1">BOM (Browser Object Model)</div>
         <div class="accordion-content">
